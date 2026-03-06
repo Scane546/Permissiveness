@@ -1,0 +1,308 @@
+# Список процессов для завершения
+# Каждый процесс на отдельной строке
+# Строки начинающиеся с # игнорируются (комментарии)
+
+# Zapret
+Zapret
+Zapret.exe
+Zapret (2)
+Zapret (3)
+Zapret (4)
+Zapret (5)
+Zapret2
+Zapret2.exe
+Zapret2 (2)
+Zapret2 (3)
+Zapret2 (4)
+Zapret2 (5)
+zapret: general (ALT5)
+zapret: general (ALT5) (2)
+zapret: general (ALT5) (3)
+zapret: general (ALT5) (4)
+zapret: general (ALT5) (5)
+
+# WinWS
+winws2
+winws2.exe
+winws.exe
+winws.exe (2)
+winws.exe (3)
+winws.exe (4)
+winws.exe (5)
+winws.exe (6)
+winws.exe (7)
+winws.exe (8)
+winws.exe (9)
+winws.exe (10)
+winws.exe (11)
+winws.exe (12)
+winws.exe (13)
+winws.exe (14)
+winws.exe (15)
+winws.exe (16)
+winws.exe (17)
+winws.exe (18)
+winws.exe (19)
+winws.exe (20)
+
+# WARP
+Warp
+WARP
+WARP.exe
+Cloudflare WARP
+1.1.1.1
+
+# Portal WG
+PORTAL WG
+PORTAL WG.exe
+PortalWG
+PortalWG.exe
+portal-wg
+portal-wg.exe
+
+# WireGuard
+WireGuard
+wireguard
+wireguard.exe
+
+# Bat файлы
+general (ALT)
+general (ALT).bat
+general (ALT2)
+general (ALT2).bat
+general (ALT3)
+general (ALT3).bat
+general (ALT4)
+general (ALT4).bat
+general (ALT5)
+general (ALT5).bat
+general (ALT6)
+general (ALT6).bat
+general (ALT7)
+general (ALT7).bat
+general (ALT8)
+general (ALT8).bat
+general (ALT9)
+general (ALT9).bat
+general (ALT10)
+general (ALT10).bat
+general (ALT11)
+general (ALT11).bat
+general (FAKE TLS AUTO ALT)
+general (FAKE TLS AUTO ALT).bat
+general (FAKE TLS AUTO ALT2)
+general (FAKE TLS AUTO ALT2).bat
+general (FAKE TLS AUTO ALT3)
+general (FAKE TLS AUTO ALT3).bat
+general (FAKE TLS AUTO)
+general (FAKE TLS AUTO).bat
+general (SIMPLE FAKE ALT)
+general (SIMPLE FAKE ALT).bat
+general (SIMPLE FAKE ALT2)
+general (SIMPLE FAKE ALT2).bat
+general (SIMPLE FAKE)
+general (SIMPLE FAKE).bat
+general
+general.bat
+service
+service.bat
+
+# OpenVPN
+OpenVPN
+openvpn
+openvpn.exe
+openvpn-gui
+openvpn-gui.exe
+
+# Популярные VPN
+NordVPN
+nordvpn
+nordvpn.exe
+ExpressVPN
+expressvpn
+expressvpn.exe
+ProtonVPN
+protonvpn
+protonvpn.exe
+Surfshark
+surfshark
+surfshark.exe
+CyberGhost
+cyberghost
+cyberghost.exe
+Hotspot Shield
+hotspotshield
+hotspotshield.exe
+TunnelBear
+tunnelbear
+tunnelbear.exe
+Windscribe
+windscribe
+windscribe.exe
+Mullvad
+mullvad
+mullvad.exe
+PrivateVPN
+privatevpn
+privatevpn.exe
+IPVanish
+ipvanish
+ipvanish.exe
+VyprVPN
+vyprvpn
+vyprvpn.exe
+pia-client
+pia-client.exe
+
+# Прокси и обход блокировок
+Psiphon
+psiphon3
+psiphon3.exe
+Lantern
+lantern
+lantern.exe
+tor
+tor.exe
+Amnezia
+AmneziaVPN
+amnezia
+amnezia.exe
+AmneziaWG
+amneziawg
+amneziawg.exe
+Outline
+outline
+outline.exe
+Shadowsocks
+shadowsocks
+shadowsocks.exe
+ss-local
+ss-local.exe
+v2ray
+v2ray.exe
+v2rayN
+v2rayN.exe
+xray
+xray.exe
+clash
+clash.exe
+proxifier
+proxifier.exe
+trojan
+trojan.exe
+trojan-go
+trojan-go.exe
+hysteria
+hysteria.exe
+hysteria2
+hysteria2.exe
+naive
+naive.exe
+brook
+brook.exe
+geph
+geph.exe
+
+# DPI обход
+goodbyedpi
+goodbyedpi.exe
+greentunnel
+greentunnel.exe
+powertunnel
+powertunnel.exe
+dpitunnel
+dpitunnel.exe
+byedpi
+byedpi.exe
+spoofdpi
+spoofdpi.exe
+dnscrypt-proxy
+dnscrypt-proxy.exe
+
+# Другие VPN
+adguardvpn
+adguardvpn.exe
+hola
+hola.exe
+zenmate
+zenmate.exe
+betternet
+betternet.exe
+hideme
+hideme.exe
+avira
+avira.exe
+kaspersky
+kaspersky.exe
+bitdefender
+bitdefender.exe
+norton
+norton.exe
+mcafee
+mcafee.exe
+avast
+avast.exe
+avg
+avg.exe
+tachyon
+tachyon.exe
+mysterium
+mysterium.exe
+sentinel
+sentinel.exe
+orchid
+orchid.exe
+ivpn
+ivpn.exe
+airvpn
+airvpn.exe
+tunnello
+tunnello.exe
+vpnunlimited
+vpnunlimited.exe
+keepsolid
+keepsolid.exe
+strongvpn
+strongvpn.exe
+vpnac
+vpnac.exe
+trustzone
+trustzone.exe
+goosevpn
+goosevpn.exe
+safervpn
+safervpn.exe
+vpnarea
+vpnarea.exe
+bolehvpn
+bolehvpn.exe
+azirevpn
+azirevpn.exe
+ovpn
+ovpn.exe
+proxysh
+proxysh.exe
+vpnsecure
+vpnsecure.exe
+astrill
+astrill.exe
+softether
+softether.exe
+packetix
+packetix.exe
+flyvpn
+flyvpn.exe
+purevpn
+purevpn.exe
+vpnbook
+vpnbook.exe
+freegate
+freegate.exe
+ultrasurf
+ultrasurf.exe
+yourfreedom
+yourfreedom.exe
+privadovpn
+privadovpn.exe
+atlasvpn
+atlasvpn.exe
