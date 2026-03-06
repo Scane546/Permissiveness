@@ -38,10 +38,25 @@ class VPNManager:
         
         # Установка иконки приложения
         try:
-            icon_path = get_resource_path("icon.ico")
-            if os.path.exists(icon_path):
+            # Пробуем найти иконку в разных местах
+            icon_path = None
+            
+            # Если запущен как exe
+            if getattr(sys, 'frozen', False):
+                exe_dir = os.path.dirname(sys.executable)
+                # Сначала ищем рядом с exe
+                if os.path.exists(os.path.join(exe_dir, "icon.ico")):
+                    icon_path = os.path.join(exe_dir, "icon.ico")
+                else:
+                    # Потом в ресурсах
+                    icon_path = get_resource_path("icon.ico")
+            else:
+                # Если запущен как скрипт
+                icon_path = "icon.ico"
+            
+            if icon_path and os.path.exists(icon_path):
                 self.root.iconbitmap(icon_path)
-        except:
+        except Exception as e:
             pass
         
         # Загрузка конфигурации - сохраняем рядом с exe
