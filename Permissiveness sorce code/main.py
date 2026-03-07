@@ -44,18 +44,33 @@ class VPNManager:
             # Если запущен как exe
             if getattr(sys, 'frozen', False):
                 exe_dir = os.path.dirname(sys.executable)
-                # Сначала ищем рядом с exe
-                if os.path.exists(os.path.join(exe_dir, "icon.ico")):
+                # Используем ico4.ico
+                ico4_path = os.path.join(exe_dir, "ico4.ico")
+                if os.path.exists(ico4_path):
+                    icon_path = ico4_path
+                elif os.path.exists(os.path.join(exe_dir, "icon.ico")):
                     icon_path = os.path.join(exe_dir, "icon.ico")
                 else:
-                    # Потом в ресурсах
-                    icon_path = get_resource_path("icon.ico")
+                    icon_path = get_resource_path("ico4.ico")
             else:
                 # Если запущен как скрипт
-                icon_path = "icon.ico"
+                if os.path.exists("ico4.ico"):
+                    icon_path = "ico4.ico"
+                else:
+                    icon_path = "icon.ico"
             
             if icon_path and os.path.exists(icon_path):
                 self.root.iconbitmap(icon_path)
+                # Дополнительно устанавливаем иконку для панели задач
+                try:
+                    from PIL import Image
+                    import io
+                    img = Image.open(icon_path)
+                    # Создаем PhotoImage для tkinter
+                    photo = ctk.CTkImage(light_image=img, dark_image=img, size=(32, 32))
+                    self.root.iconphoto(True, photo._light_image)
+                except:
+                    pass
         except Exception as e:
             pass
         
@@ -161,19 +176,32 @@ PortalWG.exe
             try:
                 with open(self.config_file, 'r', encoding='utf-8') as f:
                     self.config = json.load(f)
+                # Добавляем новые поля если их нет
+                if "disable_auto_connect" not in self.config:
+                    self.config["disable_auto_connect"] = False
+                if "minimize_zapret2_to_tray" not in self.config:
+                    self.config["minimize_zapret2_to_tray"] = False
+                if "minimize_portal_wg_to_tray" not in self.config:
+                    self.config["minimize_portal_wg_to_tray"] = False
             except Exception as e:
                 self.config = {
                     "portal_wg_path": "",
                     "portal_wg_config": "",
                     "zapret2_path": "",
-                    "zapret_bat_folder": ""
+                    "zapret_bat_folder": "",
+                    "disable_auto_connect": False,
+                    "minimize_zapret2_to_tray": False,
+                    "minimize_portal_wg_to_tray": False
                 }
         else:
             self.config = {
                 "portal_wg_path": "",
                 "portal_wg_config": "",
                 "zapret2_path": "",
-                "zapret_bat_folder": ""
+                "zapret_bat_folder": "",
+                "disable_auto_connect": False,
+                "minimize_zapret2_to_tray": False,
+                "minimize_portal_wg_to_tray": False
             }
             self.save_config()
     
@@ -233,64 +261,153 @@ PortalWG.exe
             title = ctk.CTkLabel(self.root, text="Permissiveness", font=("Arial", 24, "bold"))
             title.pack(pady=30)
         
+        # Фрейм для Portal WG с иконкой
+        portal_wg_frame = ctk.CTkFrame(self.root, fg_color="transparent")
+        portal_wg_frame.pack(pady=10)
+        
+        # Иконка Portal WG
+        try:
+            portal_wg_icon_path = get_resource_path("Portal  WG ico.png")
+            if not os.path.exists(portal_wg_icon_path):
+                portal_wg_icon_path = "Portal  WG ico.png"
+            
+            if os.path.exists(portal_wg_icon_path):
+                from PIL import Image
+                portal_wg_pil = Image.open(portal_wg_icon_path)
+                portal_wg_image = ctk.CTkImage(
+                    light_image=portal_wg_pil,
+                    dark_image=portal_wg_pil,
+                    size=(50, 50)
+                )
+                portal_wg_icon_label = ctk.CTkLabel(
+                    portal_wg_frame,
+                    image=portal_wg_image,
+                    text=""
+                )
+                portal_wg_icon_label.pack(side="left", padx=(0, 10))
+        except:
+            pass
+        
         # РљРЅРѕРїРєР° 1: Portal WG
         btn1 = ctk.CTkButton(
-            self.root, 
+            portal_wg_frame, 
             text="Portal WG",
             command=self.launch_portal_wg,
-            width=600,
+            width=540,
             height=60,
             font=("Arial", 16)
         )
-        btn1.pack(pady=10)
+        btn1.pack(side="left")
+        
+        # Фрейм для Zapret 2 с иконкой
+        zapret2_frame = ctk.CTkFrame(self.root, fg_color="transparent")
+        zapret2_frame.pack(pady=10)
+        
+        # Иконка Zapret 2
+        try:
+            zapret2_icon_path = get_resource_path("Zapret2.ico")
+            if not os.path.exists(zapret2_icon_path):
+                zapret2_icon_path = "Zapret2.ico"
+            
+            if os.path.exists(zapret2_icon_path):
+                from PIL import Image
+                zapret2_pil = Image.open(zapret2_icon_path)
+                zapret2_image = ctk.CTkImage(
+                    light_image=zapret2_pil,
+                    dark_image=zapret2_pil,
+                    size=(50, 50)
+                )
+                zapret2_icon_label = ctk.CTkLabel(
+                    zapret2_frame,
+                    image=zapret2_image,
+                    text=""
+                )
+                zapret2_icon_label.pack(side="left", padx=(0, 10))
+        except:
+            pass
         
         # РљРЅРѕРїРєР° 2: Zapret 2
         btn2 = ctk.CTkButton(
-            self.root,
+            zapret2_frame,
             text="Zapret 2",
             command=self.launch_zapret2,
-            width=600,
+            width=540,
             height=60,
             font=("Arial", 16)
         )
-        btn2.pack(pady=10)
+        btn2.pack(side="left")
+        
+        # Фрейм для Zapret.bat с иконкой
+        zapret_bat_frame = ctk.CTkFrame(self.root, fg_color="transparent")
+        zapret_bat_frame.pack(pady=10)
+        
+        # Иконка Zapret.bat
+        try:
+            zapret_bat_icon_path = get_resource_path("Zapret.bat.png")
+            if not os.path.exists(zapret_bat_icon_path):
+                zapret_bat_icon_path = get_resource_path("zapret_icon.ico")
+            if not os.path.exists(zapret_bat_icon_path):
+                zapret_bat_icon_path = "Zapret.bat.png"
+            if not os.path.exists(zapret_bat_icon_path):
+                zapret_bat_icon_path = "zapret_icon.ico"
+            
+            if os.path.exists(zapret_bat_icon_path):
+                from PIL import Image
+                zapret_bat_pil = Image.open(zapret_bat_icon_path)
+                zapret_bat_image = ctk.CTkImage(
+                    light_image=zapret_bat_pil,
+                    dark_image=zapret_bat_pil,
+                    size=(50, 50)
+                )
+                zapret_bat_icon_label = ctk.CTkLabel(
+                    zapret_bat_frame,
+                    image=zapret_bat_image,
+                    text=""
+                )
+                zapret_bat_icon_label.pack(side="left", padx=(0, 10))
+        except:
+            pass
         
         # Кнопка 3: Bat-файлы
         btn3 = ctk.CTkButton(
-            self.root,
+            zapret_bat_frame,
             text="Zapret.bat",
             command=self.show_bat_window,
-            width=600,
+            width=540,
             height=60,
             font=("Arial", 16)
         )
-        btn3.pack(pady=10)
+        btn3.pack(side="left")
         
-        # Кнопка 4: Завершить все процессы
+        # Фрейм для кнопок на одной строке
+        bottom_frame = ctk.CTkFrame(self.root, fg_color="transparent")
+        bottom_frame.pack(pady=10)
+        
+        # Кнопка настройки (маленький квадратик слева)
+        btn_settings = ctk.CTkButton(
+            bottom_frame,
+            text="⚙",
+            command=self.show_settings_menu,
+            width=60,
+            height=60,
+            font=("Arial", 28),
+            fg_color="gray",
+            hover_color="darkgray"
+        )
+        btn_settings.pack(side="left", padx=5)
+        
+        # Кнопка 4: Завершить все процессы (справа от настроек)
         btn4 = ctk.CTkButton(
-            self.root,
+            bottom_frame,
             text="Завершить процессы приложений обхода",
             command=self.kill_all_vpn,
-            width=600,
+            width=535,
             height=60,
             font=("Arial", 16),
             fg_color="red",
             hover_color="darkred"
         )
-        btn4.pack(pady=10)
-        
-        # Кнопка 5: Настройки
-        btn5 = ctk.CTkButton(
-            self.root,
-            text="Настройки путей",
-            command=self.show_settings_window,
-            width=600,
-            height=60,
-            font=("Arial", 16),
-            fg_color="gray",
-            hover_color="darkgray"
-        )
-        btn5.pack(pady=10)
+        btn4.pack(side="left", padx=5)
     
     def launch_portal_wg(self):
         """Запуск Portal WG с автоматическим подключением"""
@@ -304,8 +421,9 @@ PortalWG.exe
         try:
             subprocess.Popen([self.config["portal_wg_path"]])
             
-            # Запуск автоматического подключения в отдельном потоке
-            threading.Thread(target=self.auto_connect_warp, daemon=True).start()
+            # Запуск автоматического подключения в отдельном потоке (если не отключено)
+            if not self.config.get("disable_auto_connect", False):
+                threading.Thread(target=self.auto_connect_warp, daemon=True).start()
             
             # Уведомление только если процессы не были завершены
             if len(killed) == 0:
@@ -473,6 +591,133 @@ PortalWG.exe
         except:
             pass
     
+    def show_settings_menu(self):
+        """Главное меню настроек"""
+        # Очистка окна
+        for widget in self.root.winfo_children():
+            widget.destroy()
+        
+        # Заголовок
+        title = ctk.CTkLabel(self.root, text="Настройки", font=("Arial", 24, "bold"))
+        title.pack(pady=30)
+        
+        # Кнопка: Настройка путей
+        btn_paths = ctk.CTkButton(
+            self.root,
+            text="Настройка путей",
+            command=self.show_settings_window,
+            width=600,
+            height=70,
+            font=("Arial", 16)
+        )
+        btn_paths.pack(pady=15)
+        
+        # Кнопка: Общие настройки
+        btn_general = ctk.CTkButton(
+            self.root,
+            text="Общие настройки",
+            command=self.show_general_settings,
+            width=600,
+            height=70,
+            font=("Arial", 16)
+        )
+        btn_general.pack(pady=15)
+        
+        # Кнопка назад
+        back_btn = ctk.CTkButton(
+            self.root,
+            text="Назад",
+            command=self.show_main_window,
+            width=200,
+            height=40,
+            fg_color="gray",
+            hover_color="darkgray"
+        )
+        back_btn.pack(pady=30)
+    
+    def show_general_settings(self):
+        """Окно общих настроек с галочками"""
+        # Очистка окна
+        for widget in self.root.winfo_children():
+            widget.destroy()
+        
+        # Заголовок
+        title = ctk.CTkLabel(self.root, text="Общие настройки", font=("Arial", 24, "bold"))
+        title.pack(pady=30)
+        
+        # Фрейм для галочек
+        checkboxes_frame = ctk.CTkFrame(self.root, fg_color="transparent")
+        checkboxes_frame.pack(pady=20)
+        
+        # Галочка 1: Отключить автоподключение WARP
+        self.disable_auto_connect_var = ctk.BooleanVar(value=self.config.get("disable_auto_connect", False))
+        checkbox1 = ctk.CTkCheckBox(
+            checkboxes_frame,
+            text="Отключить автоподключение WARP",
+            variable=self.disable_auto_connect_var,
+            font=("Arial", 16),
+            checkbox_width=30,
+            checkbox_height=30
+        )
+        checkbox1.pack(pady=15, anchor="w", padx=50)
+        
+        # Галочка 2: Сворачивать Zapret 2 в трей
+        self.minimize_zapret2_var = ctk.BooleanVar(value=self.config.get("minimize_zapret2_to_tray", False))
+        checkbox2 = ctk.CTkCheckBox(
+            checkboxes_frame,
+            text="Сворачивать Zapret 2 в трей",
+            variable=self.minimize_zapret2_var,
+            font=("Arial", 16),
+            checkbox_width=30,
+            checkbox_height=30
+        )
+        checkbox2.pack(pady=15, anchor="w", padx=50)
+        
+        # Галочка 3: Сворачивать Portal WG в трей
+        self.minimize_portal_wg_var = ctk.BooleanVar(value=self.config.get("minimize_portal_wg_to_tray", False))
+        checkbox3 = ctk.CTkCheckBox(
+            checkboxes_frame,
+            text="Сворачивать Portal WG в трей",
+            variable=self.minimize_portal_wg_var,
+            font=("Arial", 16),
+            checkbox_width=30,
+            checkbox_height=30
+        )
+        checkbox3.pack(pady=15, anchor="w", padx=50)
+        
+        # Кнопка сохранить
+        save_btn = ctk.CTkButton(
+            self.root,
+            text="Сохранить",
+            command=self.save_general_settings,
+            width=300,
+            height=50,
+            font=("Arial", 16),
+            fg_color="green",
+            hover_color="darkgreen"
+        )
+        save_btn.pack(pady=30)
+        
+        # Кнопка назад
+        back_btn = ctk.CTkButton(
+            self.root,
+            text="Назад",
+            command=self.show_settings_menu,
+            width=200,
+            height=40,
+            fg_color="gray",
+            hover_color="darkgray"
+        )
+        back_btn.pack(pady=10)
+    
+    def save_general_settings(self):
+        """Сохранение общих настроек"""
+        self.config["disable_auto_connect"] = self.disable_auto_connect_var.get()
+        self.config["minimize_zapret2_to_tray"] = self.minimize_zapret2_var.get()
+        self.config["minimize_portal_wg_to_tray"] = self.minimize_portal_wg_var.get()
+        self.save_config()
+        messagebox.showinfo("Успешно", "Настройки сохранены")
+    
     def show_settings_window(self):
         """Окно настроек"""
         # Очистка окна
@@ -520,7 +765,7 @@ PortalWG.exe
         back_btn = ctk.CTkButton(
             self.root,
             text="Назад",
-            command=self.show_main_window,
+            command=self.show_settings_menu,
             width=200,
             height=40,
             fg_color="gray",
