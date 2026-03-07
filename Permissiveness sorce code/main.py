@@ -17,6 +17,13 @@ try:
 except ImportError:
     PYWINAUTO_AVAILABLE = False
 
+try:
+    import win32gui
+    import win32con
+    WIN32_AVAILABLE = True
+except ImportError:
+    WIN32_AVAILABLE = False
+
 # Настройка темы
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
@@ -63,7 +70,6 @@ class VPNManager:
                 self.root.iconbitmap(icon_path)
                 # Дополнительно устанавливаем иконку для панели задач
                 try:
-                    from PIL import Image
                     import io
                     img = Image.open(icon_path)
                     # Создаем PhotoImage для tkinter
@@ -234,9 +240,26 @@ PortalWG.exe
             widget.destroy()
         
         # Логотип вместо текста
+        logo_loaded = False
         try:
-            logo_path = get_resource_path("logo.png")
-            if os.path.exists(logo_path):
+            # Пробуем найти логотип в разных местах
+            logo_path = None
+            
+            # Если запущен как exe
+            if getattr(sys, 'frozen', False):
+                exe_dir = os.path.dirname(sys.executable)
+                # Сначала ищем рядом с exe
+                if os.path.exists(os.path.join(exe_dir, "logo.png")):
+                    logo_path = os.path.join(exe_dir, "logo.png")
+                else:
+                    # Потом в упакованных ресурсах
+                    logo_path = get_resource_path("logo.png")
+            else:
+                # Если запущен как скрипт
+                if os.path.exists("logo.png"):
+                    logo_path = "logo.png"
+            
+            if logo_path and os.path.exists(logo_path):
                 # Открываем изображение и масштабируем пропорционально
                 pil_image = Image.open(logo_path)
                 # Масштабируем до ширины 600px с сохранением пропорций
@@ -245,19 +268,19 @@ PortalWG.exe
                 new_width = 600
                 new_height = int((new_width / original_width) * original_height)
                 
-                logo_image = ctk.CTkImage(
+                self.logo_image = ctk.CTkImage(
                     light_image=pil_image,
                     dark_image=pil_image,
                     size=(new_width, new_height)
                 )
-                logo_label = ctk.CTkLabel(self.root, image=logo_image, text="")
+                logo_label = ctk.CTkLabel(self.root, image=self.logo_image, text="")
                 logo_label.pack(pady=10)
-            else:
-                # Если логотип не найден, показываем текст
-                title = ctk.CTkLabel(self.root, text="Permissiveness", font=("Arial", 24, "bold"))
-                title.pack(pady=30)
+                logo_loaded = True
         except Exception as e:
-            # Если ошибка загрузки, показываем текст
+            pass
+        
+        if not logo_loaded:
+            # Если логотип не найден, показываем текст
             title = ctk.CTkLabel(self.root, text="Permissiveness", font=("Arial", 24, "bold"))
             title.pack(pady=30)
         
@@ -272,7 +295,6 @@ PortalWG.exe
                 portal_wg_icon_path = "Portal  WG ico.png"
             
             if os.path.exists(portal_wg_icon_path):
-                from PIL import Image
                 portal_wg_pil = Image.open(portal_wg_icon_path)
                 portal_wg_image = ctk.CTkImage(
                     light_image=portal_wg_pil,
@@ -310,7 +332,6 @@ PortalWG.exe
                 zapret2_icon_path = "Zapret2.ico"
             
             if os.path.exists(zapret2_icon_path):
-                from PIL import Image
                 zapret2_pil = Image.open(zapret2_icon_path)
                 zapret2_image = ctk.CTkImage(
                     light_image=zapret2_pil,
@@ -352,7 +373,6 @@ PortalWG.exe
                 zapret_bat_icon_path = "zapret_icon.ico"
             
             if os.path.exists(zapret_bat_icon_path):
-                from PIL import Image
                 zapret_bat_pil = Image.open(zapret_bat_icon_path)
                 zapret_bat_image = ctk.CTkImage(
                     light_image=zapret_bat_pil,
@@ -419,11 +439,15 @@ PortalWG.exe
         
         # Запуск Portal WG
         try:
-            subprocess.Popen([self.config["portal_wg_path"]])
+            process = subprocess.Popen([self.config["portal_wg_path"]])
             
             # Запуск автоматического подключения в отдельном потоке (если не отключено)
             if not self.config.get("disable_auto_connect", False):
                 threading.Thread(target=self.auto_connect_warp, daemon=True).start()
+            
+            # Сворачивание в трей если включено
+            if self.config.get("minimize_portal_wg_to_tray", False):
+                threading.Thread(target=self.minimize_to_tray, args=("PORTAL WG", process.pid), daemon=True).start()
             
             # Уведомление только если процессы не были завершены
             if len(killed) == 0:
@@ -484,6 +508,42 @@ PortalWG.exe
             # Не выводим ошибки - они не критичны
             pass
     
+    def minimize_to_tray(self, window_title_part, process_pid):
+        """Сворачивание окна в трей"""
+        if not WIN32_AVAILABLE:
+            return
+        
+        try:
+            # Ждем появления окна
+            time.sleep(2)
+            
+            # Ищем окно по части заголовка
+            def find_window_by_title(title_part):
+                windows = []
+                def callback(hwnd, extra):
+                    if win32gui.IsWindowVisible(hwnd):
+                        window_text = win32gui.GetWindowText(hwnd)
+                        if title_part.lower() in window_text.lower():
+                            windows.append(hwnd)
+                    return True
+                
+                win32gui.EnumWindows(callback, None)
+                return windows
+            
+            # Пытаемся найти окно несколько раз
+            for attempt in range(10):
+                windows = find_window_by_title(window_title_part)
+                if windows:
+                    for hwnd in windows:
+                        # Сворачиваем окно
+                        win32gui.ShowWindow(hwnd, win32con.SW_MINIMIZE)
+                        # Скрываем с панели задач
+                        win32gui.ShowWindow(hwnd, win32con.SW_HIDE)
+                    break
+                time.sleep(1)
+        except Exception as e:
+            pass
+    
     def launch_zapret2(self):
         """Запуск Zapret 2"""
         if not self.config["zapret2_path"]:
@@ -494,7 +554,12 @@ PortalWG.exe
         
         # Запуск Zapret 2
         try:
-            subprocess.Popen([self.config["zapret2_path"]])
+            process = subprocess.Popen([self.config["zapret2_path"]])
+            
+            # Сворачивание в трей если включено
+            if self.config.get("minimize_zapret2_to_tray", False):
+                threading.Thread(target=self.minimize_to_tray, args=("Zapret", process.pid), daemon=True).start()
+            
             # Уведомление только если процессы не были завершены
             if len(killed) == 0:
                 messagebox.showinfo("Уведомление", "Ни один процесс не был завершен")

@@ -1,0 +1,7 @@
+C:\Users\Scane\AppData\Local\Programs\Python\Python312\Lib\site-packages\pywinauto\__init__.py:80: UserWarning: Revert to STA COM threading mode
+  warnings.warn("Revert to STA COM threading mode", UserWarning)
+Traceback (most recent call last):
+  File "C:\Users\Scane\Desktop\Permissiveness sorce code\main.py", line 268, in show_main_window
+    pil_image = Image.open(logo_path)
+                ^^^^^
+UnboundLocalError: cannot access local variable 'Image' where it is not associated with a value
