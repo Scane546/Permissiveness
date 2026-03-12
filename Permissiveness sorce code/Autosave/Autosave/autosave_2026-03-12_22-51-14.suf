@@ -2373,8 +2373,8 @@ end
 <Control>
 <Type>1</Type>
 <ID>101</ID>
-<Visible>0</Visible>
-<Enabled>0</Enabled>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
 <TabOrder>76</TabOrder>
 <FTButton>1</FTButton>
 </Control>
@@ -2389,8 +2389,8 @@ end
 <Control>
 <Type>1</Type>
 <ID>102</ID>
-<Visible>0</Visible>
-<Enabled>0</Enabled>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
 <TabOrder>-9</TabOrder>
 <FTButton>1</FTButton>
 </Control>
@@ -4406,7 +4406,7 @@ g_HandleSystemReboot();
 </SessionVar>
 <SessionVar>
 <Name>%ProductVer%</Name>
-<Value>1.5</Value>
+<Value>1.4</Value>
 <Type>1</Type>
 </SessionVar>
 <SessionVar>
@@ -4467,8 +4467,8 @@ g_HandleSystemReboot();
 <Arguments/>
 <UseCustomIcon>1</UseCustomIcon>
 <CustomIconFile>C:\Users\Scane\Desktop\Permissiveness\assets\images\ico4.ico</CustomIconFile>
-<ResourceFileVersion>1.5</ResourceFileVersion>
-<ResourceProductVersion>1.5</ResourceProductVersion>
+<ResourceFileVersion>1.4</ResourceFileVersion>
+<ResourceProductVersion>1.4</ResourceProductVersion>
 <ResourceCompanyName>Scane546</ResourceCompanyName>
 <ResourceProductName>Permissiveness</ResourceProductName>
 <ResourceComments/>

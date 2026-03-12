@@ -14,7 +14,12 @@ echo [2/3] Sborka prilozheniya s PyInstaller...
 pyinstaller --noconfirm --onefile --windowed ^
     --name "Permissiveness" ^
     --icon "assets\images\ico4.ico" ^
-    --add-data "assets;assets" ^
+    --add-data "assets\images\ico4.ico;assets\images" ^
+    --add-data "assets\images\icon.ico;assets\images" ^
+    --add-data "assets\images\logo.png;assets\images" ^
+    --add-data "assets\images\Portal  WG ico.png;assets\images" ^
+    --add-data "assets\images\Zapret.bat.png;assets\images" ^
+    --add-data "assets\images\Zapret2.ico;assets\images" ^
     --add-data "config.json;." ^
     --add-data "processes_to_kill.txt;." ^
     main.py

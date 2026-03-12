@@ -4,11 +4,11 @@ import psutil
 import json
 import os
 import sys
-from tkinter import messagebox, Label, PhotoImage
+from tkinter import messagebox
 import native_dialog
 import time
 import threading
-from PIL import Image, ImageTk
+from PIL import Image
 
 try:
     from pywinauto import Application
@@ -24,13 +24,6 @@ try:
 except ImportError:
     WIN32_AVAILABLE = False
 
-try:
-    import pystray
-    from pystray import MenuItem as item
-    PYSTRAY_AVAILABLE = True
-except ImportError:
-    PYSTRAY_AVAILABLE = False
-
 # Настройка темы
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
@@ -44,39 +37,34 @@ def get_resource_path(relative_path):
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
 
-def get_image_path(image_name):
-    """Получить путь к изображению из папки assets/images"""
-    # Если запущен как exe
-    if getattr(sys, 'frozen', False):
-        exe_dir = os.path.dirname(sys.executable)
-        # Сначала ищем в папке assets/images рядом с exe
-        image_path = os.path.join(exe_dir, "assets", "images", image_name)
-        if os.path.exists(image_path):
-            return image_path
-        # Потом в упакованных ресурсах
-        return get_resource_path(os.path.join("assets", "images", image_name))
-    else:
-        # Если запущен как скрипт
-        image_path = os.path.join("assets", "images", image_name)
-        if os.path.exists(image_path):
-            return image_path
-        # Fallback на старый путь для совместимости
-        return image_name
-
 class VPNManager:
     def __init__(self):
         self.root = ctk.CTk()
         self.root.title("Permissiveness")
         self.root.geometry("800x600")
         
-        # Словарь для хранения иконок в трее и свернутых окон
-        self.tray_icons = {}  # {app_name: {'icon': pystray_icon, 'windows': [hwnd1, hwnd2]}}
-        
         # Установка иконки приложения
         try:
-            icon_path = get_image_path("ico4.ico")
-            if not os.path.exists(icon_path):
-                icon_path = get_image_path("icon.ico")
+            # Пробуем найти иконку в разных местах
+            icon_path = None
+            
+            # Если запущен как exe
+            if getattr(sys, 'frozen', False):
+                exe_dir = os.path.dirname(sys.executable)
+                # Используем ico4.ico
+                ico4_path = os.path.join(exe_dir, "ico4.ico")
+                if os.path.exists(ico4_path):
+                    icon_path = ico4_path
+                elif os.path.exists(os.path.join(exe_dir, "icon.ico")):
+                    icon_path = os.path.join(exe_dir, "icon.ico")
+                else:
+                    icon_path = get_resource_path("ico4.ico")
+            else:
+                # Если запущен как скрипт
+                if os.path.exists("ico4.ico"):
+                    icon_path = "ico4.ico"
+                else:
+                    icon_path = "icon.ico"
             
             if icon_path and os.path.exists(icon_path):
                 self.root.iconbitmap(icon_path)
@@ -195,35 +183,21 @@ PortalWG.exe
                 with open(self.config_file, 'r', encoding='utf-8') as f:
                     self.config = json.load(f)
                 # Добавляем новые поля если их нет
-                if "enable_auto_connect" not in self.config:
-                    # Миграция со старой настройки
-                    if "disable_auto_connect" in self.config:
-                        self.config["enable_auto_connect"] = not self.config["disable_auto_connect"]
-                        del self.config["disable_auto_connect"]
-                    else:
-                        self.config["enable_auto_connect"] = True  # По умолчанию включено
+                if "disable_auto_connect" not in self.config:
+                    self.config["disable_auto_connect"] = False
                 if "minimize_zapret2_to_tray" not in self.config:
                     self.config["minimize_zapret2_to_tray"] = False
                 if "minimize_portal_wg_to_tray" not in self.config:
                     self.config["minimize_portal_wg_to_tray"] = False
-                if "minimize_zapret_bat_to_tray" not in self.config:
-                    self.config["minimize_zapret_bat_to_tray"] = False
-                # Миграция со старой структуры (папка -> список файлов)
-                if "zapret_bat_folder" in self.config and "zapret_bat_files" not in self.config:
-                    self.config["zapret_bat_files"] = []
-                    del self.config["zapret_bat_folder"]
-                if "zapret_bat_files" not in self.config:
-                    self.config["zapret_bat_files"] = []
             except Exception as e:
                 self.config = {
                     "portal_wg_path": "",
                     "portal_wg_config": "",
                     "zapret2_path": "",
                     "zapret_bat_folder": "",
-                    "enable_auto_connect": True,
+                    "disable_auto_connect": False,
                     "minimize_zapret2_to_tray": False,
-                    "minimize_portal_wg_to_tray": False,
-                    "minimize_zapret_bat_to_tray": False
+                    "minimize_portal_wg_to_tray": False
                 }
         else:
             self.config = {
@@ -231,10 +205,9 @@ PortalWG.exe
                 "portal_wg_config": "",
                 "zapret2_path": "",
                 "zapret_bat_folder": "",
-                "enable_auto_connect": True,
+                "disable_auto_connect": False,
                 "minimize_zapret2_to_tray": False,
-                "minimize_portal_wg_to_tray": False,
-                "minimize_zapret_bat_to_tray": False
+                "minimize_portal_wg_to_tray": False
             }
             self.save_config()
     
@@ -269,7 +242,22 @@ PortalWG.exe
         # Логотип вместо текста
         logo_loaded = False
         try:
-            logo_path = get_image_path("logo.png")
+            # Пробуем найти логотип в разных местах
+            logo_path = None
+            
+            # Если запущен как exe
+            if getattr(sys, 'frozen', False):
+                exe_dir = os.path.dirname(sys.executable)
+                # Сначала ищем рядом с exe
+                if os.path.exists(os.path.join(exe_dir, "logo.png")):
+                    logo_path = os.path.join(exe_dir, "logo.png")
+                else:
+                    # Потом в упакованных ресурсах
+                    logo_path = get_resource_path("logo.png")
+            else:
+                # Если запущен как скрипт
+                if os.path.exists("logo.png"):
+                    logo_path = "logo.png"
             
             if logo_path and os.path.exists(logo_path):
                 # Открываем изображение и масштабируем пропорционально
@@ -296,209 +284,150 @@ PortalWG.exe
             title = ctk.CTkLabel(self.root, text="Permissiveness", font=("Arial", 24, "bold"))
             title.pack(pady=30)
         
-        # Кнопка 1: Portal WG с иконкой
+        # Фрейм для Portal WG с иконкой
         portal_wg_frame = ctk.CTkFrame(self.root, fg_color="transparent")
         portal_wg_frame.pack(pady=10)
         
-        # Кнопка на весь фрейм
+        # Иконка Portal WG
+        try:
+            portal_wg_icon_path = get_resource_path("Portal  WG ico.png")
+            if not os.path.exists(portal_wg_icon_path):
+                portal_wg_icon_path = "Portal  WG ico.png"
+            
+            if os.path.exists(portal_wg_icon_path):
+                portal_wg_pil = Image.open(portal_wg_icon_path)
+                portal_wg_image = ctk.CTkImage(
+                    light_image=portal_wg_pil,
+                    dark_image=portal_wg_pil,
+                    size=(50, 50)
+                )
+                portal_wg_icon_label = ctk.CTkLabel(
+                    portal_wg_frame,
+                    image=portal_wg_image,
+                    text=""
+                )
+                portal_wg_icon_label.pack(side="left", padx=(0, 10))
+        except:
+            pass
+        
+        # РљРЅРѕРїРєР° 1: Portal WG
         btn1 = ctk.CTkButton(
             portal_wg_frame, 
             text="Portal WG",
             command=self.launch_portal_wg,
-            width=600,
-            height=70,
-            font=("Arial", 18)
+            width=540,
+            height=60,
+            font=("Arial", 16)
         )
-        btn1.pack()
+        btn1.pack(side="left")
         
-        # Иконка поверх кнопки
-        try:
-            portal_wg_icon_path = get_image_path("Portal  WG ico.png")
-            if os.path.exists(portal_wg_icon_path):
-                portal_wg_pil = Image.open(portal_wg_icon_path)
-                self.portal_wg_image = ctk.CTkImage(
-                    light_image=portal_wg_pil,
-                    dark_image=portal_wg_pil,
-                    size=(60, 60)
-                )
-                
-                # Получаем цвета кнопки
-                button_color = btn1.cget("fg_color")
-                hover_color = btn1.cget("hover_color")
-                if isinstance(button_color, tuple):
-                    button_color = button_color[1]
-                if isinstance(hover_color, tuple):
-                    hover_color = hover_color[1]
-                
-                portal_wg_icon_label = ctk.CTkLabel(portal_wg_frame, image=self.portal_wg_image, text="", fg_color=button_color)
-                portal_wg_icon_label.place(x=10, y=5)
-                
-                # Обработчики для изменения цвета при наведении
-                def on_enter_portal(e, label=portal_wg_icon_label, color=hover_color):
-                    label.configure(fg_color=color)
-                def on_leave_portal(e, label=portal_wg_icon_label, color=button_color):
-                    label.configure(fg_color=color)
-                
-                btn1.bind("<Enter>", on_enter_portal)
-                btn1.bind("<Leave>", on_leave_portal)
-        except:
-            pass
-        
-        # Кнопка 2: Zapret 2 с иконкой
+        # Фрейм для Zapret 2 с иконкой
         zapret2_frame = ctk.CTkFrame(self.root, fg_color="transparent")
         zapret2_frame.pack(pady=10)
         
-        # Кнопка на весь фрейм
+        # Иконка Zapret 2
+        try:
+            zapret2_icon_path = get_resource_path("Zapret2.ico")
+            if not os.path.exists(zapret2_icon_path):
+                zapret2_icon_path = "Zapret2.ico"
+            
+            if os.path.exists(zapret2_icon_path):
+                zapret2_pil = Image.open(zapret2_icon_path)
+                zapret2_image = ctk.CTkImage(
+                    light_image=zapret2_pil,
+                    dark_image=zapret2_pil,
+                    size=(50, 50)
+                )
+                zapret2_icon_label = ctk.CTkLabel(
+                    zapret2_frame,
+                    image=zapret2_image,
+                    text=""
+                )
+                zapret2_icon_label.pack(side="left", padx=(0, 10))
+        except:
+            pass
+        
+        # РљРЅРѕРїРєР° 2: Zapret 2
         btn2 = ctk.CTkButton(
             zapret2_frame,
             text="Zapret 2",
             command=self.launch_zapret2,
-            width=600,
-            height=70,
-            font=("Arial", 18)
+            width=540,
+            height=60,
+            font=("Arial", 16)
         )
-        btn2.pack()
+        btn2.pack(side="left")
         
-        # Иконка поверх кнопки
-        try:
-            zapret2_icon_path = get_image_path("Zapret2.ico")
-            if os.path.exists(zapret2_icon_path):
-                zapret2_pil = Image.open(zapret2_icon_path)
-                self.zapret2_image = ctk.CTkImage(
-                    light_image=zapret2_pil,
-                    dark_image=zapret2_pil,
-                    size=(60, 60)
-                )
-                
-                # Получаем цвета кнопки
-                button_color = btn2.cget("fg_color")
-                hover_color = btn2.cget("hover_color")
-                if isinstance(button_color, tuple):
-                    button_color = button_color[1]
-                if isinstance(hover_color, tuple):
-                    hover_color = hover_color[1]
-                
-                zapret2_icon_label = ctk.CTkLabel(zapret2_frame, image=self.zapret2_image, text="", fg_color=button_color)
-                zapret2_icon_label.place(x=10, y=5)
-                
-                # Обработчики для изменения цвета при наведении
-                def on_enter_zapret2(e, label=zapret2_icon_label, color=hover_color):
-                    label.configure(fg_color=color)
-                def on_leave_zapret2(e, label=zapret2_icon_label, color=button_color):
-                    label.configure(fg_color=color)
-                
-                btn2.bind("<Enter>", on_enter_zapret2)
-                btn2.bind("<Leave>", on_leave_zapret2)
-        except:
-            pass
-        
-        # Кнопка 3: Zapret.bat с иконкой
+        # Фрейм для Zapret.bat с иконкой
         zapret_bat_frame = ctk.CTkFrame(self.root, fg_color="transparent")
         zapret_bat_frame.pack(pady=10)
         
-        # Кнопка на весь фрейм
+        # Иконка Zapret.bat
+        try:
+            zapret_bat_icon_path = get_resource_path("Zapret.bat.png")
+            if not os.path.exists(zapret_bat_icon_path):
+                zapret_bat_icon_path = get_resource_path("zapret_icon.ico")
+            if not os.path.exists(zapret_bat_icon_path):
+                zapret_bat_icon_path = "Zapret.bat.png"
+            if not os.path.exists(zapret_bat_icon_path):
+                zapret_bat_icon_path = "zapret_icon.ico"
+            
+            if os.path.exists(zapret_bat_icon_path):
+                zapret_bat_pil = Image.open(zapret_bat_icon_path)
+                zapret_bat_image = ctk.CTkImage(
+                    light_image=zapret_bat_pil,
+                    dark_image=zapret_bat_pil,
+                    size=(50, 50)
+                )
+                zapret_bat_icon_label = ctk.CTkLabel(
+                    zapret_bat_frame,
+                    image=zapret_bat_image,
+                    text=""
+                )
+                zapret_bat_icon_label.pack(side="left", padx=(0, 10))
+        except:
+            pass
+        
+        # Кнопка 3: Bat-файлы
         btn3 = ctk.CTkButton(
             zapret_bat_frame,
             text="Zapret.bat",
             command=self.show_bat_window,
-            width=600,
-            height=70,
-            font=("Arial", 18)
+            width=540,
+            height=60,
+            font=("Arial", 16)
         )
-        btn3.pack()
-        
-        # Иконка поверх кнопки
-        try:
-            zapret_bat_icon_path = get_image_path("Zapret.bat.png")
-            if os.path.exists(zapret_bat_icon_path):
-                zapret_bat_pil = Image.open(zapret_bat_icon_path)
-                self.zapret_bat_image = ctk.CTkImage(
-                    light_image=zapret_bat_pil,
-                    dark_image=zapret_bat_pil,
-                    size=(60, 60)
-                )
-                
-                # Получаем цвета кнопки
-                button_color = btn3.cget("fg_color")
-                hover_color = btn3.cget("hover_color")
-                if isinstance(button_color, tuple):
-                    button_color = button_color[1]
-                if isinstance(hover_color, tuple):
-                    hover_color = hover_color[1]
-                
-                zapret_bat_icon_label = ctk.CTkLabel(zapret_bat_frame, image=self.zapret_bat_image, text="", fg_color=button_color)
-                zapret_bat_icon_label.place(x=10, y=5)
-                
-                # Обработчики для изменения цвета при наведении
-                def on_enter_bat(e, label=zapret_bat_icon_label, color=hover_color):
-                    label.configure(fg_color=color)
-                def on_leave_bat(e, label=zapret_bat_icon_label, color=button_color):
-                    label.configure(fg_color=color)
-                
-                btn3.bind("<Enter>", on_enter_bat)
-                btn3.bind("<Leave>", on_leave_bat)
-        except:
-            pass
+        btn3.pack(side="left")
         
         # Фрейм для кнопок на одной строке
         bottom_frame = ctk.CTkFrame(self.root, fg_color="transparent")
         bottom_frame.pack(pady=10)
         
-        # Кнопка настройки (квадрат слева, выровнен под иконками)
+        # Кнопка настройки (маленький квадратик слева)
         btn_settings = ctk.CTkButton(
             bottom_frame,
             text="⚙",
             command=self.show_settings_menu,
-            width=80,
-            height=70,
-            font=("Arial", 50),
-            fg_color="transparent",
-            text_color="white",
-            text_color_disabled="white",
-            border_width=0
+            width=60,
+            height=60,
+            font=("Arial", 28),
+            fg_color="gray",
+            hover_color="darkgray"
         )
-        btn_settings.pack(side="left", padx=(0, 10))
-        
-        # Переменные для анимации
-        self.settings_animation_running = False
-        self.settings_animation_frames = ["⚙", "⚙", "⚙", "⚙"]  # Можно добавить разные символы для вращения
-        self.settings_frame_index = 0
-        
-        # Обработчики для изменения цвета и анимации шестеренки при наведении
-        def animate_settings():
-            if self.settings_animation_running and btn_settings.winfo_exists():
-                self.settings_frame_index = (self.settings_frame_index + 1) % len(self.settings_animation_frames)
-                try:
-                    btn_settings.configure(text=self.settings_animation_frames[self.settings_frame_index])
-                    self.root.after(100, animate_settings)  # Обновление каждые 100мс
-                except:
-                    self.settings_animation_running = False
-        
-        def on_enter_settings(e):
-            btn_settings.configure(text_color="red")
-            self.settings_animation_running = True
-            animate_settings()
-        
-        def on_leave_settings(e):
-            btn_settings.configure(text_color="white", text="⚙")
-            self.settings_animation_running = False
-            self.settings_frame_index = 0
-        
-        btn_settings.bind("<Enter>", on_enter_settings)
-        btn_settings.bind("<Leave>", on_leave_settings)
+        btn_settings.pack(side="left", padx=5)
         
         # Кнопка 4: Завершить все процессы (справа от настроек)
         btn4 = ctk.CTkButton(
             bottom_frame,
             text="Завершить процессы приложений обхода",
             command=self.kill_all_vpn,
-            width=510,
-            height=70,
+            width=535,
+            height=60,
             font=("Arial", 16),
             fg_color="red",
             hover_color="darkred"
         )
-        btn4.pack(side="left")
+        btn4.pack(side="left", padx=5)
     
     def launch_portal_wg(self):
         """Запуск Portal WG с автоматическим подключением"""
@@ -512,18 +441,12 @@ PortalWG.exe
         try:
             process = subprocess.Popen([self.config["portal_wg_path"]])
             
-            # Если включено и автоподключение, и сворачивание - делаем последовательно
-            auto_connect_enabled = self.config.get("enable_auto_connect", True)
-            minimize_enabled = self.config.get("minimize_portal_wg_to_tray", False)
-            
-            if auto_connect_enabled and minimize_enabled:
-                # Сначала автоподключение, потом сворачивание
-                threading.Thread(target=self.auto_connect_and_minimize_portal_wg, args=(process.pid,), daemon=True).start()
-            elif auto_connect_enabled:
-                # Только автоподключение
+            # Запуск автоматического подключения в отдельном потоке (если не отключено)
+            if not self.config.get("disable_auto_connect", False):
                 threading.Thread(target=self.auto_connect_warp, daemon=True).start()
-            elif minimize_enabled:
-                # Только сворачивание
+            
+            # Сворачивание в трей если включено
+            if self.config.get("minimize_portal_wg_to_tray", False):
                 threading.Thread(target=self.minimize_to_tray, args=("PORTAL WG", process.pid), daemon=True).start()
             
             # Уведомление только если процессы не были завершены
@@ -531,15 +454,6 @@ PortalWG.exe
                 messagebox.showinfo("Уведомление", "Ни один процесс не был завершен")
         except:
             pass
-    
-    def auto_connect_and_minimize_portal_wg(self, process_pid):
-        """Автоподключение WARP, затем сворачивание в трей"""
-        # Сначала автоподключение
-        self.auto_connect_warp()
-        # Ждем немного после подключения
-        time.sleep(1)
-        # Потом сворачивание
-        self.minimize_to_tray("PORTAL WG", process_pid)
     
     def auto_connect_warp(self):
         """Автоматическое подключение WARP в Portal WG (без движения мыши)"""
@@ -594,14 +508,8 @@ PortalWG.exe
             # Не выводим ошибки - они не критичны
             pass
     
-    def minimize_to_tray(self, window_title_part, process_pid, minimize_all=False):
-        """Сворачивание окна в трей с созданием иконки
-        
-        Args:
-            window_title_part: Часть заголовка окна для поиска
-            process_pid: PID процесса (не используется, оставлен для совместимости)
-            minimize_all: Если True, сворачивает все найденные окна (для Zapret 2)
-        """
+    def minimize_to_tray(self, window_title_part, process_pid):
+        """Сворачивание окна в трей"""
         if not WIN32_AVAILABLE:
             return
         
@@ -623,151 +531,18 @@ PortalWG.exe
                 return windows
             
             # Пытаемся найти окно несколько раз
-            max_attempts = 15 if minimize_all else 10
-            found_windows = []
-            
-            for attempt in range(max_attempts):
+            for attempt in range(10):
                 windows = find_window_by_title(window_title_part)
                 if windows:
                     for hwnd in windows:
-                        if hwnd not in found_windows:
-                            found_windows.append(hwnd)
-                            # Сворачиваем окно
-                            win32gui.ShowWindow(hwnd, win32con.SW_MINIMIZE)
-                            # Скрываем с панели задач
-                            win32gui.ShowWindow(hwnd, win32con.SW_HIDE)
-                    
-                    # Если minimize_all, продолжаем искать новые окна
-                    if minimize_all:
-                        time.sleep(1)
-                        continue
-                    else:
-                        break
-                time.sleep(1)
-            
-            # Создаем иконку в трее если нашли окна
-            if found_windows and PYSTRAY_AVAILABLE:
-                self.create_tray_icon(window_title_part, found_windows)
-                
-        except Exception as e:
-            pass
-    
-    def create_tray_icon(self, app_name, window_handles):
-        """Создание иконки в системном трее"""
-        if not PYSTRAY_AVAILABLE:
-            return
-        
-        try:
-            # Определяем иконку в зависимости от приложения
-            icon_file = "ico4.ico"  # По умолчанию
-            if "zapret" in app_name.lower():
-                if "winws" in app_name.lower():
-                    icon_file = "Zapret.bat.png"
-                else:
-                    icon_file = "Zapret2.ico"
-            elif "portal" in app_name.lower():
-                icon_file = "Portal  WG ico.png"
-            
-            icon_path = get_image_path(icon_file)
-            if not os.path.exists(icon_path):
-                icon_path = get_image_path("ico4.ico")
-            
-            # Загружаем иконку
-            image = Image.open(icon_path)
-            if image.mode != 'RGBA':
-                image = image.convert('RGBA')
-            
-            # Создаем меню для иконки
-            menu = pystray.Menu(
-                item('Развернуть', lambda: self.restore_windows(app_name)),
-                item('Закрыть иконку', lambda: self.remove_tray_icon(app_name))
-            )
-            
-            # Создаем иконку
-            icon = pystray.Icon(
-                f"permissiveness_{app_name}",
-                image,
-                app_name,
-                menu
-            )
-            
-            # Сохраняем информацию
-            self.tray_icons[app_name] = {
-                'icon': icon,
-                'windows': window_handles
-            }
-            
-            # Запускаем иконку в отдельном потоке
-            threading.Thread(target=icon.run, daemon=True).start()
-            
-            # Запускаем мониторинг окон
-            threading.Thread(target=self.monitor_windows, args=(app_name,), daemon=True).start()
-            
-        except Exception as e:
-            pass
-    
-    def monitor_windows(self, app_name):
-        """Мониторинг окон - автоматически удаляет иконку если все окна закрыты"""
-        if app_name not in self.tray_icons:
-            return
-        
-        try:
-            while app_name in self.tray_icons:
-                time.sleep(2)  # Проверяем каждые 2 секунды
-                
-                windows = self.tray_icons[app_name]['windows']
-                all_closed = True
-                
-                # Проверяем каждое окно
-                for hwnd in windows:
-                    try:
-                        if win32gui.IsWindow(hwnd):
-                            all_closed = False
-                            break
-                    except:
-                        pass
-                
-                # Если все окна закрыты - удаляем иконку
-                if all_closed:
-                    self.remove_tray_icon(app_name)
+                        # Сворачиваем окно
+                        win32gui.ShowWindow(hwnd, win32con.SW_MINIMIZE)
+                        # Скрываем с панели задач
+                        win32gui.ShowWindow(hwnd, win32con.SW_HIDE)
                     break
-                    
+                time.sleep(1)
         except Exception as e:
             pass
-    
-    def restore_windows(self, app_name):
-        """Разворачивание окон из трея"""
-        if app_name not in self.tray_icons:
-            return
-        
-        try:
-            windows = self.tray_icons[app_name]['windows']
-            for hwnd in windows:
-                try:
-                    # Показываем окно
-                    win32gui.ShowWindow(hwnd, win32con.SW_SHOW)
-                    # Разворачиваем
-                    win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
-                    # Выводим на передний план
-                    win32gui.SetForegroundWindow(hwnd)
-                except:
-                    pass
-            
-            # Удаляем иконку из трея
-            self.remove_tray_icon(app_name)
-            
-        except Exception as e:
-            pass
-    
-    def remove_tray_icon(self, app_name):
-        """Удаление иконки из трея"""
-        if app_name in self.tray_icons:
-            try:
-                icon = self.tray_icons[app_name]['icon']
-                icon.stop()
-                del self.tray_icons[app_name]
-            except:
-                pass
     
     def launch_zapret2(self):
         """Запуск Zapret 2"""
@@ -781,9 +556,9 @@ PortalWG.exe
         try:
             process = subprocess.Popen([self.config["zapret2_path"]])
             
-            # Сворачивание в трей если включено (сворачиваем все окна - загрузочное и основное)
+            # Сворачивание в трей если включено
             if self.config.get("minimize_zapret2_to_tray", False):
-                threading.Thread(target=self.minimize_to_tray, args=("Zapret", process.pid, True), daemon=True).start()
+                threading.Thread(target=self.minimize_to_tray, args=("Zapret", process.pid), daemon=True).start()
             
             # Уведомление только если процессы не были завершены
             if len(killed) == 0:
@@ -809,33 +584,43 @@ PortalWG.exe
         title = ctk.CTkLabel(self.root, text="Выберите Bat-файл", font=("Arial", 24, "bold"))
         title.pack(pady=20)
         
-        # Проверяем есть ли выбранные файлы
-        if not self.config.get("zapret_bat_files"):
-            # Если файлов нет - показываем сообщение
-            no_files_label = ctk.CTkLabel(
-                self.root, 
-                text="Нет выбранных bat-файлов.\nДобавьте файлы в настройках.",
-                font=("Arial", 16)
+        # Создание прокручиваемого фрейма
+        scroll_frame = ctk.CTkScrollableFrame(self.root, width=700, height=450)
+        scroll_frame.pack(pady=10, padx=20, fill="both", expand=True)
+        
+        # Список bat-файлов
+        bat_files = [
+            "general (ALT).bat",
+            "general (ALT2).bat",
+            "general (ALT3).bat",
+            "general (ALT4).bat",
+            "general (ALT5).bat",
+            "general (ALT6).bat",
+            "general (ALT7).bat",
+            "general (ALT8).bat",
+            "general (ALT9).bat",
+            "general (ALT10).bat",
+            "general (ALT11).bat",
+            "general (FAKE TLS AUTO ALT).bat",
+            "general (FAKE TLS AUTO ALT2).bat",
+            "general (FAKE TLS AUTO ALT3).bat",
+            "general (FAKE TLS AUTO).bat",
+            "general (SIMPLE FAKE ALT).bat",
+            "general (SIMPLE FAKE ALT2).bat",
+            "general (SIMPLE FAKE).bat"
+        ]
+        
+        # Создание кнопок для каждого bat-файла
+        for bat_file in bat_files:
+            btn = ctk.CTkButton(
+                scroll_frame,
+                text=bat_file,
+                command=lambda f=bat_file: self.launch_bat_file(f),
+                width=650,
+                height=50,
+                font=("Arial", 14)
             )
-            no_files_label.pack(pady=50)
-        else:
-            # Создание прокручиваемого фрейма
-            scroll_frame = ctk.CTkScrollableFrame(self.root, width=700, height=450)
-            scroll_frame.pack(pady=10, padx=20, fill="both", expand=True)
-            
-            # Создание кнопок для каждого bat-файла
-            for bat_file_path in self.config["zapret_bat_files"]:
-                if os.path.exists(bat_file_path):
-                    bat_file_name = os.path.basename(bat_file_path)
-                    btn = ctk.CTkButton(
-                        scroll_frame,
-                        text=bat_file_name,
-                        command=lambda f=bat_file_path: self.launch_bat_file(f),
-                        width=650,
-                        height=50,
-                        font=("Arial", 14)
-                    )
-                    btn.pack(pady=5)
+            btn.pack(pady=5)
         
         # Кнопка назад
         back_btn = ctk.CTkButton(
@@ -849,10 +634,14 @@ PortalWG.exe
         )
         back_btn.pack(pady=10)
     
-    def launch_bat_file(self, bat_file_path):
+    def launch_bat_file(self, bat_file):
         """Запуск выбранного bat-файла"""
-        if not os.path.exists(bat_file_path):
-            messagebox.showerror("Ошибка", f"Файл не найден:\n{bat_file_path}")
+        if not self.config["zapret_bat_folder"]:
+            return
+        
+        bat_path = os.path.join(self.config["zapret_bat_folder"], bat_file)
+        
+        if not os.path.exists(bat_path):
             return
         
         # Завершение всех VPN процессов
@@ -860,61 +649,11 @@ PortalWG.exe
         
         # Запуск bat-файла
         try:
-            bat_folder = os.path.dirname(bat_file_path)
-            process = subprocess.Popen([bat_file_path], cwd=bat_folder, shell=True)
-            
-            # Сворачивание в трей если включено
-            if self.config.get("minimize_zapret_bat_to_tray", False):
-                threading.Thread(target=self.minimize_bat_windows, args=(process.pid,), daemon=True).start()
-            
+            subprocess.Popen([bat_path], cwd=self.config["zapret_bat_folder"], shell=True)
             # Уведомление только если процессы не были завершены
             if len(killed) == 0:
                 messagebox.showinfo("Уведомление", "Ни один процесс не был завершен")
-        except Exception as e:
-            messagebox.showerror("Ошибка", f"Не удалось запустить файл:\n{str(e)}")
-    
-    def minimize_bat_windows(self, process_pid):
-        """Специальная функция для сворачивания окон Zapret.bat"""
-        if not WIN32_AVAILABLE:
-            return
-        
-        try:
-            # Ждем запуска процессов
-            time.sleep(3)
-            
-            # Ищем окна по разным критериям
-            def find_bat_windows():
-                windows = []
-                def callback(hwnd, extra):
-                    if win32gui.IsWindowVisible(hwnd):
-                        window_text = win32gui.GetWindowText(hwnd).lower()
-                        # Ищем окна с winws, cmd, или консольные окна
-                        if any(keyword in window_text for keyword in ['winws', 'zapret', 'cmd', 'консоль']):
-                            windows.append(hwnd)
-                    return True
-                
-                win32gui.EnumWindows(callback, None)
-                return windows
-            
-            # Пытаемся найти окна несколько раз
-            found_windows = []
-            for attempt in range(20):  # Больше попыток для bat файлов
-                windows = find_bat_windows()
-                for hwnd in windows:
-                    if hwnd not in found_windows:
-                        found_windows.append(hwnd)
-                        # Сворачиваем окно
-                        win32gui.ShowWindow(hwnd, win32con.SW_MINIMIZE)
-                        # Скрываем с панели задач
-                        win32gui.ShowWindow(hwnd, win32con.SW_HIDE)
-                
-                time.sleep(1)
-            
-            # Создаем иконку в трее если нашли окна
-            if found_windows and PYSTRAY_AVAILABLE:
-                self.create_tray_icon("Zapret.bat (winws)", found_windows)
-                
-        except Exception as e:
+        except:
             pass
     
     def show_settings_menu(self):
@@ -975,12 +714,12 @@ PortalWG.exe
         checkboxes_frame = ctk.CTkFrame(self.root, fg_color="transparent")
         checkboxes_frame.pack(pady=20)
         
-        # Галочка 1: Включить автоподключение WARP
-        self.enable_auto_connect_var = ctk.BooleanVar(value=self.config.get("enable_auto_connect", True))
+        # Галочка 1: Отключить автоподключение WARP
+        self.disable_auto_connect_var = ctk.BooleanVar(value=self.config.get("disable_auto_connect", False))
         checkbox1 = ctk.CTkCheckBox(
             checkboxes_frame,
-            text="Включить автоподключение WARP",
-            variable=self.enable_auto_connect_var,
+            text="Отключить автоподключение WARP",
+            variable=self.disable_auto_connect_var,
             font=("Arial", 16),
             checkbox_width=30,
             checkbox_height=30
@@ -1011,18 +750,6 @@ PortalWG.exe
         )
         checkbox3.pack(pady=15, anchor="w", padx=50)
         
-        # Галочка 4: Сворачивать Zapret.bat в трей
-        self.minimize_zapret_bat_var = ctk.BooleanVar(value=self.config.get("minimize_zapret_bat_to_tray", False))
-        checkbox4 = ctk.CTkCheckBox(
-            checkboxes_frame,
-            text="Сворачивать Zapret.bat в трей",
-            variable=self.minimize_zapret_bat_var,
-            font=("Arial", 16),
-            checkbox_width=30,
-            checkbox_height=30
-        )
-        checkbox4.pack(pady=15, anchor="w", padx=50)
-        
         # Кнопка сохранить
         save_btn = ctk.CTkButton(
             self.root,
@@ -1050,10 +777,9 @@ PortalWG.exe
     
     def save_general_settings(self):
         """Сохранение общих настроек"""
-        self.config["enable_auto_connect"] = self.enable_auto_connect_var.get()
+        self.config["disable_auto_connect"] = self.disable_auto_connect_var.get()
         self.config["minimize_zapret2_to_tray"] = self.minimize_zapret2_var.get()
         self.config["minimize_portal_wg_to_tray"] = self.minimize_portal_wg_var.get()
-        self.config["minimize_zapret_bat_to_tray"] = self.minimize_zapret_bat_var.get()
         self.save_config()
         messagebox.showinfo("Успешно", "Настройки сохранены")
     
@@ -1264,66 +990,27 @@ PortalWG.exe
         
         # Заголовок
         title = ctk.CTkLabel(self.root, text="Настройки Zapret.bat", font=("Arial", 24, "bold"))
-        title.pack(pady=20)
+        title.pack(pady=30)
         
-        # Кнопка добавить файлы
-        btn_add = ctk.CTkButton(
+        # РљРЅРѕРїРєР° РѕР±Р·РѕСЂ
+        btn_browse = ctk.CTkButton(
             self.root,
-            text="Добавить .bat файлы",
-            command=self.add_bat_files,
+            text="Обзор (выбрать папку)",
+            command=self.browse_bat_folder,
             width=600,
             height=70,
             font=("Arial", 16)
         )
-        btn_add.pack(pady=10)
+        btn_browse.pack(pady=15)
         
-        # Отображение папки с файлами
-        if self.config.get("zapret_bat_files"):
-            first_file = self.config["zapret_bat_files"][0]
-            folder_path = os.path.dirname(first_file)
-            folder_label = ctk.CTkLabel(
-                self.root,
-                text=f"Папка: {folder_path}",
-                font=("Arial", 11),
-                text_color="gray"
-            )
-            folder_label.pack(pady=(0, 5))
-        
-        # Список выбранных файлов
-        if self.config.get("zapret_bat_files"):
-            files_frame = ctk.CTkScrollableFrame(self.root, width=700, height=270)
-            files_frame.pack(pady=5, padx=20)
-            
-            for bat_file in self.config["zapret_bat_files"]:
-                file_frame = ctk.CTkFrame(files_frame, fg_color="transparent")
-                file_frame.pack(fill="x", pady=2)
-                
-                file_label = ctk.CTkLabel(
-                    file_frame,
-                    text=os.path.basename(bat_file),
-                    font=("Arial", 12),
-                    anchor="w"
-                )
-                file_label.pack(side="left", fill="x", expand=True, padx=5)
-                
-                remove_btn = ctk.CTkButton(
-                    file_frame,
-                    text="✕",
-                    command=lambda f=bat_file: self.remove_bat_file(f),
-                    width=30,
-                    height=30,
-                    fg_color="red",
-                    hover_color="darkred"
-                )
-                remove_btn.pack(side="right", padx=5)
-        else:
-            no_files_label = ctk.CTkLabel(
-                self.root,
-                text="Нет выбранных файлов",
-                font=("Arial", 12),
-                text_color="gray"
-            )
-            no_files_label.pack(pady=10)
+        # Текущий путь
+        current_path = ctk.CTkLabel(
+            self.root,
+            text=f"Текущая папка: {self.config['zapret_bat_folder'] or 'Не задана'}",
+            font=("Arial", 12),
+            wraplength=700
+        )
+        current_path.pack(pady=10)
         
         # Кнопка назад
         back_btn = ctk.CTkButton(
@@ -1335,25 +1022,16 @@ PortalWG.exe
             fg_color="gray",
             hover_color="darkgray"
         )
-        back_btn.pack(pady=20)
+        back_btn.pack(pady=30)
     
-    def add_bat_files(self):
-        """Добавление bat-файлов"""
-        file_paths = native_dialog.askopenfilenames(
-            title="Выберите .bat файлы",
-            filetypes=[("Batch files", "*.bat"), ("All files", "*.*")]
+    def browse_bat_folder(self):
+        """Выбор папки с bat-файлами"""
+        folder_path = native_dialog.askdirectory(
+            title="Выберите папку с bat-файлами",
+            parent=self.root
         )
-        if file_paths:
-            for file_path in file_paths:
-                if file_path not in self.config["zapret_bat_files"]:
-                    self.config["zapret_bat_files"].append(file_path)
-            self.save_config()
-            self.show_bat_settings()  # Обновить окно
-    
-    def remove_bat_file(self, file_path):
-        """Удаление bat-файла из списка"""
-        if file_path in self.config["zapret_bat_files"]:
-            self.config["zapret_bat_files"].remove(file_path)
+        if folder_path:
+            self.config["zapret_bat_folder"] = folder_path
             self.save_config()
             self.show_bat_settings()  # Обновить окно
     
