@@ -2,8 +2,9 @@
     "portal_wg_path": "",
     "portal_wg_config": "",
     "zapret2_path": "",
-    "zapret_bat_folder": "C:/Users/Scane/Documents/Настраиваемые шаблоны Office",
-    "disable_auto_connect": true,
+    "zapret_bat_folder": "C:/Program Files (x86)/Zapret25.12.25",
     "minimize_zapret2_to_tray": true,
-    "minimize_portal_wg_to_tray": true
+    "minimize_portal_wg_to_tray": true,
+    "enable_auto_connect": true,
+    "minimize_zapret_bat_to_tray": true
 }
