@@ -2,9 +2,27 @@
     "portal_wg_path": "",
     "portal_wg_config": "",
     "zapret2_path": "",
-    "zapret_bat_folder": "C:/Program Files (x86)/Zapret25.12.25",
     "minimize_zapret2_to_tray": true,
     "minimize_portal_wg_to_tray": true,
     "enable_auto_connect": true,
-    "minimize_zapret_bat_to_tray": true
+    "minimize_zapret_bat_to_tray": true,
+    "zapret_bat_files": [
+        "C:/Program Files (x86)/Zapret25.12.25/general (ALT).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (ALT2).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (ALT3).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (ALT4).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (ALT5).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (ALT6).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (ALT7).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (ALT8).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (ALT9).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (ALT10).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (ALT11).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (FAKE TLS AUTO ALT).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (FAKE TLS AUTO ALT2).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (FAKE TLS AUTO ALT3).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (FAKE TLS AUTO).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (SIMPLE FAKE ALT).bat",
+        "C:/Program Files (x86)/Zapret25.12.25/general (SIMPLE FAKE ALT2).bat"
+    ]
 }

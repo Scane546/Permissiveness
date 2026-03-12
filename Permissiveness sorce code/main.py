@@ -208,6 +208,12 @@ PortalWG.exe
                     self.config["minimize_portal_wg_to_tray"] = False
                 if "minimize_zapret_bat_to_tray" not in self.config:
                     self.config["minimize_zapret_bat_to_tray"] = False
+                # Миграция со старой структуры (папка -> список файлов)
+                if "zapret_bat_folder" in self.config and "zapret_bat_files" not in self.config:
+                    self.config["zapret_bat_files"] = []
+                    del self.config["zapret_bat_folder"]
+                if "zapret_bat_files" not in self.config:
+                    self.config["zapret_bat_files"] = []
             except Exception as e:
                 self.config = {
                     "portal_wg_path": "",
@@ -800,43 +806,33 @@ PortalWG.exe
         title = ctk.CTkLabel(self.root, text="Выберите Bat-файл", font=("Arial", 24, "bold"))
         title.pack(pady=20)
         
-        # Создание прокручиваемого фрейма
-        scroll_frame = ctk.CTkScrollableFrame(self.root, width=700, height=450)
-        scroll_frame.pack(pady=10, padx=20, fill="both", expand=True)
-        
-        # Список bat-файлов
-        bat_files = [
-            "general (ALT).bat",
-            "general (ALT2).bat",
-            "general (ALT3).bat",
-            "general (ALT4).bat",
-            "general (ALT5).bat",
-            "general (ALT6).bat",
-            "general (ALT7).bat",
-            "general (ALT8).bat",
-            "general (ALT9).bat",
-            "general (ALT10).bat",
-            "general (ALT11).bat",
-            "general (FAKE TLS AUTO ALT).bat",
-            "general (FAKE TLS AUTO ALT2).bat",
-            "general (FAKE TLS AUTO ALT3).bat",
-            "general (FAKE TLS AUTO).bat",
-            "general (SIMPLE FAKE ALT).bat",
-            "general (SIMPLE FAKE ALT2).bat",
-            "general (SIMPLE FAKE).bat"
-        ]
-        
-        # Создание кнопок для каждого bat-файла
-        for bat_file in bat_files:
-            btn = ctk.CTkButton(
-                scroll_frame,
-                text=bat_file,
-                command=lambda f=bat_file: self.launch_bat_file(f),
-                width=650,
-                height=50,
-                font=("Arial", 14)
+        # Проверяем есть ли выбранные файлы
+        if not self.config.get("zapret_bat_files"):
+            # Если файлов нет - показываем сообщение
+            no_files_label = ctk.CTkLabel(
+                self.root, 
+                text="Нет выбранных bat-файлов.\nДобавьте файлы в настройках.",
+                font=("Arial", 16)
             )
-            btn.pack(pady=5)
+            no_files_label.pack(pady=50)
+        else:
+            # Создание прокручиваемого фрейма
+            scroll_frame = ctk.CTkScrollableFrame(self.root, width=700, height=450)
+            scroll_frame.pack(pady=10, padx=20, fill="both", expand=True)
+            
+            # Создание кнопок для каждого bat-файла
+            for bat_file_path in self.config["zapret_bat_files"]:
+                if os.path.exists(bat_file_path):
+                    bat_file_name = os.path.basename(bat_file_path)
+                    btn = ctk.CTkButton(
+                        scroll_frame,
+                        text=bat_file_name,
+                        command=lambda f=bat_file_path: self.launch_bat_file(f),
+                        width=650,
+                        height=50,
+                        font=("Arial", 14)
+                    )
+                    btn.pack(pady=5)
         
         # Кнопка назад
         back_btn = ctk.CTkButton(
@@ -850,14 +846,10 @@ PortalWG.exe
         )
         back_btn.pack(pady=10)
     
-    def launch_bat_file(self, bat_file):
+    def launch_bat_file(self, bat_file_path):
         """Запуск выбранного bat-файла"""
-        if not self.config["zapret_bat_folder"]:
-            return
-        
-        bat_path = os.path.join(self.config["zapret_bat_folder"], bat_file)
-        
-        if not os.path.exists(bat_path):
+        if not os.path.exists(bat_file_path):
+            messagebox.showerror("Ошибка", f"Файл не найден:\n{bat_file_path}")
             return
         
         # Завершение всех VPN процессов
@@ -865,19 +857,18 @@ PortalWG.exe
         
         # Запуск bat-файла
         try:
-            process = subprocess.Popen([bat_path], cwd=self.config["zapret_bat_folder"], shell=True)
+            bat_folder = os.path.dirname(bat_file_path)
+            process = subprocess.Popen([bat_file_path], cwd=bat_folder, shell=True)
             
             # Сворачивание в трей если включено
             if self.config.get("minimize_zapret_bat_to_tray", False):
-                # Ищем окна с разными вариантами названий
-                # winws, cmd, консольные окна с zapret
                 threading.Thread(target=self.minimize_bat_windows, args=(process.pid,), daemon=True).start()
             
             # Уведомление только если процессы не были завершены
             if len(killed) == 0:
                 messagebox.showinfo("Уведомление", "Ни один процесс не был завершен")
-        except:
-            pass
+        except Exception as e:
+            messagebox.showerror("Ошибка", f"Не удалось запустить файл:\n{str(e)}")
     
     def minimize_bat_windows(self, process_pid):
         """Специальная функция для сворачивания окон Zapret.bat"""
@@ -1270,27 +1261,66 @@ PortalWG.exe
         
         # Заголовок
         title = ctk.CTkLabel(self.root, text="Настройки Zapret.bat", font=("Arial", 24, "bold"))
-        title.pack(pady=30)
+        title.pack(pady=20)
         
-        # РљРЅРѕРїРєР° РѕР±Р·РѕСЂ
-        btn_browse = ctk.CTkButton(
+        # Кнопка добавить файлы
+        btn_add = ctk.CTkButton(
             self.root,
-            text="Обзор (выбрать папку)",
-            command=self.browse_bat_folder,
+            text="Добавить .bat файлы",
+            command=self.add_bat_files,
             width=600,
             height=70,
             font=("Arial", 16)
         )
-        btn_browse.pack(pady=15)
+        btn_add.pack(pady=10)
         
-        # Текущий путь
-        current_path = ctk.CTkLabel(
-            self.root,
-            text=f"Текущая папка: {self.config['zapret_bat_folder'] or 'Не задана'}",
-            font=("Arial", 12),
-            wraplength=700
-        )
-        current_path.pack(pady=10)
+        # Отображение папки с файлами
+        if self.config.get("zapret_bat_files"):
+            first_file = self.config["zapret_bat_files"][0]
+            folder_path = os.path.dirname(first_file)
+            folder_label = ctk.CTkLabel(
+                self.root,
+                text=f"Папка: {folder_path}",
+                font=("Arial", 11),
+                text_color="gray"
+            )
+            folder_label.pack(pady=(0, 5))
+        
+        # Список выбранных файлов
+        if self.config.get("zapret_bat_files"):
+            files_frame = ctk.CTkScrollableFrame(self.root, width=700, height=270)
+            files_frame.pack(pady=5, padx=20)
+            
+            for bat_file in self.config["zapret_bat_files"]:
+                file_frame = ctk.CTkFrame(files_frame, fg_color="transparent")
+                file_frame.pack(fill="x", pady=2)
+                
+                file_label = ctk.CTkLabel(
+                    file_frame,
+                    text=os.path.basename(bat_file),
+                    font=("Arial", 12),
+                    anchor="w"
+                )
+                file_label.pack(side="left", fill="x", expand=True, padx=5)
+                
+                remove_btn = ctk.CTkButton(
+                    file_frame,
+                    text="✕",
+                    command=lambda f=bat_file: self.remove_bat_file(f),
+                    width=30,
+                    height=30,
+                    fg_color="red",
+                    hover_color="darkred"
+                )
+                remove_btn.pack(side="right", padx=5)
+        else:
+            no_files_label = ctk.CTkLabel(
+                self.root,
+                text="Нет выбранных файлов",
+                font=("Arial", 12),
+                text_color="gray"
+            )
+            no_files_label.pack(pady=10)
         
         # Кнопка назад
         back_btn = ctk.CTkButton(
@@ -1302,16 +1332,25 @@ PortalWG.exe
             fg_color="gray",
             hover_color="darkgray"
         )
-        back_btn.pack(pady=30)
+        back_btn.pack(pady=20)
     
-    def browse_bat_folder(self):
-        """Выбор папки с bat-файлами"""
-        folder_path = native_dialog.askdirectory(
-            title="Выберите папку с bat-файлами",
-            parent=self.root
+    def add_bat_files(self):
+        """Добавление bat-файлов"""
+        file_paths = native_dialog.askopenfilenames(
+            title="Выберите .bat файлы",
+            filetypes=[("Batch files", "*.bat"), ("All files", "*.*")]
         )
-        if folder_path:
-            self.config["zapret_bat_folder"] = folder_path
+        if file_paths:
+            for file_path in file_paths:
+                if file_path not in self.config["zapret_bat_files"]:
+                    self.config["zapret_bat_files"].append(file_path)
+            self.save_config()
+            self.show_bat_settings()  # Обновить окно
+    
+    def remove_bat_file(self, file_path):
+        """Удаление bat-файла из списка"""
+        if file_path in self.config["zapret_bat_files"]:
+            self.config["zapret_bat_files"].remove(file_path)
             self.save_config()
             self.show_bat_settings()  # Обновить окно
     

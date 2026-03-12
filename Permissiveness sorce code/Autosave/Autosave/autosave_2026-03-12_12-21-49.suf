@@ -3206,7 +3206,7 @@ end
 <AppFldSCDesc>Uninstall %ProductName%</AppFldSCDesc>
 <SCComment>Removes %ProductName% from your computer.</SCComment>
 <UseCustomAppFldSCIcon>1</UseCustomAppFldSCIcon>
-<AppFldCustomIconFN>%AppFolder%\assets\images\ico4.ico</AppFldCustomIconFN>
+<AppFldCustomIconFN>%AppFolder%\ico4.ico</AppFldCustomIconFN>
 <AppFolderSCIconIndex>0</AppFolderSCIconIndex>
 <LFCreate>0</LFCreate>
 <LFFilename>%TempFolder%\%ProductName% Uninstall Log.txt</LFFilename>
@@ -4293,7 +4293,7 @@ g_HandleSystemReboot();
 <DependencyModules/>
 <PrimerFiles>
 <PrimerFile>
-<SourcePath>C:\Users\Scane\Desktop\Permissiveness\assets\images\ico4.ico</SourcePath>
+<SourcePath>C:\Users\Scane\Desktop\Permissiveness\ico4.ico</SourcePath>
 <DeleteOnExit>0</DeleteOnExit>
 <NeededByUninstall>0</NeededByUninstall>
 <BuildConfigs>
@@ -4406,7 +4406,7 @@ g_HandleSystemReboot();
 </SessionVar>
 <SessionVar>
 <Name>%ProductVer%</Name>
-<Value>1.4</Value>
+<Value>1.3</Value>
 <Type>1</Type>
 </SessionVar>
 <SessionVar>
@@ -4466,9 +4466,9 @@ g_HandleSystemReboot();
 <CodeSigningTool>0</CodeSigningTool>
 <Arguments/>
 <UseCustomIcon>1</UseCustomIcon>
-<CustomIconFile>C:\Users\Scane\Desktop\Permissiveness\assets\images\ico4.ico</CustomIconFile>
-<ResourceFileVersion>1.4</ResourceFileVersion>
-<ResourceProductVersion>1.4</ResourceProductVersion>
+<CustomIconFile>C:\Users\Scane\Desktop\Permissiveness\ico4.ico</CustomIconFile>
+<ResourceFileVersion>1.3</ResourceFileVersion>
+<ResourceProductVersion>1.3</ResourceProductVersion>
 <ResourceCompanyName>Scane546</ResourceCompanyName>
 <ResourceProductName>Permissiveness</ResourceProductName>
 <ResourceComments/>

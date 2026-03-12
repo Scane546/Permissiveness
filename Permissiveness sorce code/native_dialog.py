@@ -70,6 +70,36 @@ def askopenfilename(title="Select File", filetypes=None, parent=None):
         print(f"Error in askopenfilename: {e}")
         return ""
 
+def askopenfilenames(title="Select Files", filetypes=None, parent=None):
+    """Выбор нескольких файлов"""
+    try:
+        from tkinter import filedialog
+        import tkinter as tk
+        
+        # Создаем временное скрытое окно если parent не передан
+        if parent is None:
+            root = tk.Tk()
+            root.withdraw()
+            root.attributes('-topmost', True)
+            result = filedialog.askopenfilenames(
+                title=title or "Выберите файлы",
+                filetypes=filetypes or [("All files", "*.*")],
+                parent=root
+            )
+            root.destroy()
+            return list(result) if result else []
+        else:
+            result = filedialog.askopenfilenames(
+                title=title or "Выберите файлы",
+                filetypes=filetypes or [("All files", "*.*")],
+                parent=parent
+            )
+            return list(result) if result else []
+        
+    except Exception as e:
+        print(f"Error in askopenfilenames: {e}")
+        return []
+
 # Определяем IShellItem интерфейс
 class IShellItem(IUnknown):
     _iid_ = GUID('{43826D1E-E718-42EE-BC55-A1E261C37BFE}')
