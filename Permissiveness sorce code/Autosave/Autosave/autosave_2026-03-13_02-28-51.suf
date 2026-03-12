@@ -1,0 +1,4495 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<DocumentData>
+<ProductID>{AFB904C4-C255-4540-B97E-A75A34F1FFB0}</ProductID>
+<ProductVersion>9.5.0.0</ProductVersion>
+<ProductType>Commercial</ProductType>
+<ArchiveFiles>
+<FileData>
+<FldRef>0</FldRef>
+<FullName>C:\Users\Scane\Desktop\Permissiveness\config.json</FullName>
+<FileName>config.json</FileName>
+<Source>C:\Users\Scane\Desktop\Permissiveness</Source>
+<Ext>json</Ext>
+<RTSource>Archive</RTSource>
+<Desc/>
+<Recurse>1</Recurse>
+<MatchMode>0</MatchMode>
+<Dest>%AppFolder%</Dest>
+<Overwrite>3</Overwrite>
+<Backup>0</Backup>
+<Protect>0</Protect>
+<InstallOrder>1000</InstallOrder>
+<SCStartRoot>0</SCStartRoot>
+<SCStartProgs>0</SCStartProgs>
+<SCAppFld>0</SCAppFld>
+<SCStartup>0</SCStartup>
+<SCDesk>0</SCDesk>
+<SCQLaunch>0</SCQLaunch>
+<SCStartPinOption>0</SCStartPinOption>
+<SCCust>0</SCCust>
+<CustSCPath/>
+<SCDesc>config</SCDesc>
+<SCComment/>
+<SCArgs/>
+<SCWork/>
+<UseExtIco>0</UseExtIco>
+<IcoFN/>
+<IcoIdx>0</IcoIdx>
+<IcoShowMd>0</IcoShowMd>
+<IcoHK>0</IcoHK>
+<RegTTF>0</RegTTF>
+<TTFName/>
+<RegOCX>0</RegOCX>
+<RegTLB>0</RegTLB>
+<SupInUse>0</SupInUse>
+<Compress>1</Compress>
+<UseOrigAttr>1</UseOrigAttr>
+<Attr>0</Attr>
+<NoCRC>0</NoCRC>
+<NoRemove>0</NoRemove>
+<Shared>0</Shared>
+<OSCond>
+<OS>32768</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+</OSCond>
+<RTCond/>
+<BuildConfigs>
+<Cfg>All</Cfg>
+</BuildConfigs>
+<Package>None</Package>
+<Packages/>
+<Notes/>
+<CompSize>0</CompSize>
+<CRC>0</CRC>
+<StoreOnly>0</StoreOnly>
+</FileData>
+<FileData>
+<FldRef>0</FldRef>
+<FullName>C:\Users\Scane\Desktop\Permissiveness\processes_to_kill.txt</FullName>
+<FileName>processes_to_kill.txt</FileName>
+<Source>C:\Users\Scane\Desktop\Permissiveness</Source>
+<Ext>txt</Ext>
+<RTSource>Archive</RTSource>
+<Desc/>
+<Recurse>1</Recurse>
+<MatchMode>0</MatchMode>
+<Dest>%AppFolder%</Dest>
+<Overwrite>3</Overwrite>
+<Backup>0</Backup>
+<Protect>0</Protect>
+<InstallOrder>1000</InstallOrder>
+<SCStartRoot>0</SCStartRoot>
+<SCStartProgs>0</SCStartProgs>
+<SCAppFld>0</SCAppFld>
+<SCStartup>0</SCStartup>
+<SCDesk>0</SCDesk>
+<SCQLaunch>0</SCQLaunch>
+<SCStartPinOption>0</SCStartPinOption>
+<SCCust>0</SCCust>
+<CustSCPath/>
+<SCDesc>processes_to_kill</SCDesc>
+<SCComment/>
+<SCArgs/>
+<SCWork/>
+<UseExtIco>0</UseExtIco>
+<IcoFN/>
+<IcoIdx>0</IcoIdx>
+<IcoShowMd>0</IcoShowMd>
+<IcoHK>0</IcoHK>
+<RegTTF>0</RegTTF>
+<TTFName/>
+<RegOCX>0</RegOCX>
+<RegTLB>0</RegTLB>
+<SupInUse>0</SupInUse>
+<Compress>1</Compress>
+<UseOrigAttr>1</UseOrigAttr>
+<Attr>0</Attr>
+<NoCRC>0</NoCRC>
+<NoRemove>0</NoRemove>
+<Shared>0</Shared>
+<OSCond>
+<OS>32768</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+</OSCond>
+<RTCond/>
+<BuildConfigs>
+<Cfg>All</Cfg>
+</BuildConfigs>
+<Package>None</Package>
+<Packages/>
+<Notes/>
+<CompSize>0</CompSize>
+<CRC>0</CRC>
+<StoreOnly>0</StoreOnly>
+</FileData>
+<FileData>
+<FldRef>1</FldRef>
+<FullName/>
+<FileName>*.*</FileName>
+<Source>C:\Users\Scane\Desktop\Permissiveness\assets</Source>
+<Ext>*</Ext>
+<RTSource>Archive</RTSource>
+<Desc/>
+<Recurse>1</Recurse>
+<MatchMode>0</MatchMode>
+<Dest>%AppFolder%\assets</Dest>
+<Overwrite>1</Overwrite>
+<Backup>0</Backup>
+<Protect>0</Protect>
+<InstallOrder>1000</InstallOrder>
+<SCStartRoot>0</SCStartRoot>
+<SCStartProgs>0</SCStartProgs>
+<SCAppFld>0</SCAppFld>
+<SCStartup>0</SCStartup>
+<SCDesk>0</SCDesk>
+<SCQLaunch>0</SCQLaunch>
+<SCStartPinOption>0</SCStartPinOption>
+<SCCust>0</SCCust>
+<CustSCPath/>
+<SCDesc/>
+<SCComment/>
+<SCArgs/>
+<SCWork/>
+<UseExtIco>0</UseExtIco>
+<IcoFN/>
+<IcoIdx>0</IcoIdx>
+<IcoShowMd>0</IcoShowMd>
+<IcoHK>0</IcoHK>
+<RegTTF>1</RegTTF>
+<TTFName/>
+<RegOCX>1</RegOCX>
+<RegTLB>1</RegTLB>
+<SupInUse>0</SupInUse>
+<Compress>1</Compress>
+<UseOrigAttr>1</UseOrigAttr>
+<Attr>0</Attr>
+<NoCRC>0</NoCRC>
+<NoRemove>0</NoRemove>
+<Shared>0</Shared>
+<OSCond>
+<OS>32768</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+</OSCond>
+<RTCond/>
+<BuildConfigs>
+<Cfg>All</Cfg>
+</BuildConfigs>
+<Package>None</Package>
+<Packages/>
+<Notes/>
+<CompSize>0</CompSize>
+<CRC>0</CRC>
+<StoreOnly>0</StoreOnly>
+</FileData>
+<FileData>
+<FldRef>0</FldRef>
+<FullName>C:\Users\Scane\Desktop\Permissiveness\Permissiveness.exe</FullName>
+<FileName>Permissiveness.exe</FileName>
+<Source>C:\Users\Scane\Desktop\Permissiveness</Source>
+<Ext>exe</Ext>
+<RTSource>Archive</RTSource>
+<Desc/>
+<Recurse>1</Recurse>
+<MatchMode>0</MatchMode>
+<Dest>%AppFolder%</Dest>
+<Overwrite>1</Overwrite>
+<Backup>0</Backup>
+<Protect>0</Protect>
+<InstallOrder>1000</InstallOrder>
+<SCStartRoot>0</SCStartRoot>
+<SCStartProgs>0</SCStartProgs>
+<SCAppFld>0</SCAppFld>
+<SCStartup>0</SCStartup>
+<SCDesk>0</SCDesk>
+<SCQLaunch>0</SCQLaunch>
+<SCStartPinOption>0</SCStartPinOption>
+<SCCust>0</SCCust>
+<CustSCPath/>
+<SCDesc>Permissiveness</SCDesc>
+<SCComment/>
+<SCArgs/>
+<SCWork/>
+<UseExtIco>0</UseExtIco>
+<IcoFN/>
+<IcoIdx>0</IcoIdx>
+<IcoShowMd>0</IcoShowMd>
+<IcoHK>0</IcoHK>
+<RegTTF>0</RegTTF>
+<TTFName/>
+<RegOCX>0</RegOCX>
+<RegTLB>0</RegTLB>
+<SupInUse>0</SupInUse>
+<Compress>1</Compress>
+<UseOrigAttr>1</UseOrigAttr>
+<Attr>0</Attr>
+<NoCRC>0</NoCRC>
+<NoRemove>0</NoRemove>
+<Shared>0</Shared>
+<OSCond>
+<OS>32768</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>0</OS>
+<OS>0</OS>
+<OS>0</OS>
+<OS>0</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+</OSCond>
+<RTCond/>
+<BuildConfigs>
+<Cfg>All</Cfg>
+</BuildConfigs>
+<Package>None</Package>
+<Packages/>
+<Notes/>
+<CompSize>0</CompSize>
+<CRC>0</CRC>
+<StoreOnly>0</StoreOnly>
+</FileData>
+</ArchiveFiles>
+<ExternalFiles/>
+<BeforeInstallingScreens>
+<Screen>
+<Type>100</Type>
+<Name>Welcome to Setup</Name>
+<BannerStyle>0</BannerStyle>
+<TemplateName>Welcome to Setup</TemplateName>
+<OverrideProjTheme>0</OverrideProjTheme>
+<StyleData>
+<CstClrs>1</CstClrs>
+<TBBG format="hex">ffffff</TBBG>
+<BDYBG format="hex">ece9d8</BDYBG>
+<FTBG format="hex">ff0000</FTBG>
+<TBTXT format="hex">000000</TBTXT>
+<BDYTXT format="hex">33cccc</BDYTXT>
+<CBG format="hex">ff0000</CBG>
+<C3DFACE format="hex">ff0000</C3DFACE>
+<C3DHLT format="hex">33cccc</C3DHLT>
+<C3DLIT format="hex">33cccc</C3DLIT>
+<C3DSH format="hex">33cccc</C3DSH>
+<CBTNTXT format="hex">33cccc</CBTNTXT>
+<CTEXT format="hex">33cccc</CTEXT>
+<CDISTXT format="hex">ff0000</CDISTXT>
+<CPRGRS format="hex">ff0000</CPRGRS>
+<C3DSHDK format="hex">33cccc</C3DSHDK>
+<TBIMG>Default_Top_Banner.jpg</TBIMG>
+<SBIMG>Default_Side_Banner.jpg</SBIMG>
+<BDIMG>Áåç èìåíè-1.png</BDIMG>
+<BDFILL>1</BDFILL>
+<HDSEP>0</HDSEP>
+<FTSEP>0</FTSEP>
+<CstFnts>1</CstFnts>
+<Fonts>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Fonts>
+<CAOff>
+<TP>0</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>1</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>2</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<TBTXTX>10</TBTXTX>
+<TBTXTY>10</TBTXTY>
+<ScreenW>650</ScreenW>
+<ScreenH>400</ScreenH>
+</StyleData>
+<Events>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïåðåä îòîáðàæåíèåì äèàëîãà.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Back</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Íàçàä".
+
+-- ïåðåõîä íà ïðåäûäóùèé äèàëîã
+Screen.Back();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Next</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Äàëåå".
+
+-- ïåðåõîä íà ñëåäóþùèé äèàëîã
+Screen.Next();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Cancel</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Îòìåíà".
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- ñïðàøèâàåì ïîäòâåðæäåíèÿ ïîëüçîâàòåëÿ íà âûõîä èç ïðèëîæåíèÿ
+if g_ConfirmSetupAbort() then
+	Application.Exit(EXIT_REASON_USER_ABORTED);
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Help</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Ñïðàâêà".
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Ctrl Message</Name>
+<Args>number e_CtrlID, number e_MsgID, table e_Details</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè âçàèìîäåéñòâèè ïîëüçîâàòåëÿ
+-- ñ ýëåìåíòàìè óïðàâëåíèÿ íà òåêóùåì äèàëîãå.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+<Controls>
+<Control>
+<Type>1</Type>
+<ID>103</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>75</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>101</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>76</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>100</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>77</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>102</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>78</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>200</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>1</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>300</ID>
+<Visible>0</Visible>
+<Enabled>1</Enabled>
+<TabOrder>0</TabOrder>
+<IsHeading>1</IsHeading>
+</Control>
+</Controls>
+<Languages>
+<SUF70Messages>
+<Language>
+<Name>Russian</Name>
+<Default>1</Default>
+<Primary>25</Primary>
+<Secondary/>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>Óñòàíîâêà %ProductName%</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Äîáðî ïîæàëîâàòü!</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Âàñ ïðèâåòñòâóåò Ìàñòåð óñòàíîâêè %ProductName% %ProductVer%</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Äàëåå &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Íàçàä</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Îòìåíà</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Ñïðàâêà</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_STATICTEXT_BODY>
+Ïðèâåò! Ýòî èíñòàëëÿòîð %ProductName% %ProductVer%.
+
+Âñþ íåíóæíóþ ôèãíþ, êîòîðóþ çäåñü îáû÷íî ïèøóò, ìû, åñòåñòâåííî, ïðîïóñòèì.
+
+Æìÿêàé "Äàëåå".</IDS_CTRL_STATICTEXT_BODY>
+<IDS_CTRL_HEADINGTEXT_BODY>Çäàðîâà</IDS_CTRL_HEADINGTEXT_BODY>
+</Messages>
+</SUF70Messages>
+<SUF70Messages>
+<Language>
+<Name>English</Name>
+<Default>0</Default>
+<Primary>9</Primary>
+<Secondary>
+<ID>1</ID>
+<ID>2</ID>
+<ID>3</ID>
+<ID>4</ID>
+<ID>5</ID>
+<ID>6</ID>
+<ID>7</ID>
+<ID>8</ID>
+<ID>9</ID>
+<ID>10</ID>
+<ID>11</ID>
+<ID>12</ID>
+<ID>13</ID>
+</Secondary>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>%ProductName% Setup</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Welcome</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Welcome to the installer for %ProductName% %ProductVer%</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Next &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Back</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Cancel</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Help</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_STATICTEXT_BODY>Welcome to the installer for %ProductName% %ProductVer%.
+
+It is strongly recommended that you exit all Windows programs before continuing with this installation.
+
+If you have any other programs running, please click Cancel, close the programs, and run this setup again.
+
+Otherwise, click Next to continue.
+</IDS_CTRL_STATICTEXT_BODY>
+<IDS_CTRL_HEADINGTEXT_BODY>Welcome</IDS_CTRL_HEADINGTEXT_BODY>
+</Messages>
+</SUF70Messages>
+</Languages>
+</Screen>
+<Screen>
+<Type>125</Type>
+<Name>License Agreement</Name>
+<BannerStyle>0</BannerStyle>
+<TemplateName>License Agreement</TemplateName>
+<OverrideProjTheme>1</OverrideProjTheme>
+<StyleData>
+<CstClrs>1</CstClrs>
+<TBBG format="hex">ffffff</TBBG>
+<BDYBG format="hex">ece9d8</BDYBG>
+<FTBG format="hex">ff0000</FTBG>
+<TBTXT format="hex">000000</TBTXT>
+<BDYTXT format="hex">33cccc</BDYTXT>
+<CBG format="hex">ff0000</CBG>
+<C3DFACE format="hex">ff0000</C3DFACE>
+<C3DHLT format="hex">33cccc</C3DHLT>
+<C3DLIT format="hex">33cccc</C3DLIT>
+<C3DSH format="hex">33cccc</C3DSH>
+<CBTNTXT format="hex">33cccc</CBTNTXT>
+<CTEXT format="hex">000000</CTEXT>
+<CDISTXT format="hex">ff0000</CDISTXT>
+<CPRGRS format="hex">ff0000</CPRGRS>
+<C3DSHDK format="hex">33cccc</C3DSHDK>
+<TBIMG>C:\ProgramData\IndigoRose\Setup Factory\9.0\Themes\Permissiveness Theme\Default_Top_Banner.jpg</TBIMG>
+<SBIMG>C:\ProgramData\IndigoRose\Setup Factory\9.0\Themes\Permissiveness Theme\Default_Side_Banner.jpg</SBIMG>
+<BDIMG>C:\ProgramData\IndigoRose\Setup Factory\9.0\Themes\Permissiveness Theme\Áåç èìåíè-1.png</BDIMG>
+<BDFILL>1</BDFILL>
+<HDSEP>0</HDSEP>
+<FTSEP>0</FTSEP>
+<CstFnts>1</CstFnts>
+<Fonts>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Fonts>
+<CAOff>
+<TP>0</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>1</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>2</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<TBTXTX>10</TBTXTX>
+<TBTXTY>10</TBTXTY>
+<ScreenW>650</ScreenW>
+<ScreenH>400</ScreenH>
+</StyleData>
+<Checked>0</Checked>
+<Events>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïåðåä îòîáðàæåíèåì äèàëîãà.
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- êíîïêà "Äàëåå" îòêëþ÷åíà äî òåõ ïîð, ïîêà íå áóäåò âûáðàíî ñîãëàñèå ñ ëèöåíçèåé.
+g_LicenseAgreementScreen_UpdateNextButton();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Back</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Íàçàä".
+
+-- ïåðåõîä íà ïðåäûäóùèé äèàëîã
+Screen.Back();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Next</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Äàëåå".
+-- Ïîäñêàçêà: Íà ýòîì ýòàïå âû ìîæåòå ââåñòè ïðîâåðî÷íûå äåéñòâèÿ,
+-- êîòîðûå áóäóò âûïîëíåíû ïðåæäå, ÷åì ïîëüçîâàòåëü óâèäèò ñëåäóþùèé äèàëîã.
+
+-- ïåðåõîä íà ñëåäóþùèé äèàëîã
+Screen.Next();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Cancel</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Îòìåíà".
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- ñïðàøèâàåì ïîäòâåðæäåíèÿ ïîëüçîâàòåëÿ íà âûõîä èç ïðèëîæåíèÿ
+if g_ConfirmSetupAbort() then
+	Application.Exit(EXIT_REASON_USER_ABORTED);
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Help</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Ñïðàâêà".
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Ctrl Message</Name>
+<Args>number e_CtrlID, number e_MsgID, table e_Details</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè âçàèìîäåéñòâèè ïîëüçîâàòåëÿ
+-- ñ ýëåìåíòàìè óïðàâëåíèÿ íà òåêóùåì äèàëîãå.
+
+if (e_CtrlID == CTRL_RADIOBTN_AGREE or e_CtrlID == CTRL_RADIOBTN_DISAGREE) then
+	-- Ïðîâåðÿåòñÿ ñîáûòèå ïðè âûáîðå îäíîãî èç ýëåìåíòîâ óïðàâëåíèÿ "RadioButton".
+	-- Â çàâèñèìîñòè îò ñäåëàííîãî âûáîðà, èçìåíÿåòñÿ ñîñòîÿíèå êíîïêè "Äàëåå".
+	if (e_MsgID == MSGID_CLICKED) then
+		-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+		-- åñëè ñ ëèöåíçèåé ñîãëàñíû, òî êíîïêà "Äàëåå" ñòàíîâèòñÿ àêòèâíîé.
+		g_LicenseAgreementScreen_UpdateNextButton();
+	end
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+<Controls>
+<Control>
+<Type>1</Type>
+<ID>103</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>75</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>101</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>76</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>100</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>-10</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>102</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>-9</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>3</Type>
+<ID>400</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>0</TabOrder>
+<IsHTML>0</IsHTML>
+<TextAlign>0</TextAlign>
+<VertScroll>1</VertScroll>
+<HorizScroll>0</HorizScroll>
+<RTLReadingOrder>0</RTLReadingOrder>
+<Style>1</Style>
+<ReadOnly>1</ReadOnly>
+<SpecifyType>1</SpecifyType>
+<Variable/>
+</Control>
+<Control>
+<Type>5</Type>
+<ID>602</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>35</TabOrder>
+<Group>1</Group>
+<StartID>602</StartID>
+<EndID>603</EndID>
+</Control>
+<Control>
+<Type>5</Type>
+<ID>603</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>40</TabOrder>
+<Group>0</Group>
+<StartID>602</StartID>
+<EndID>603</EndID>
+</Control>
+</Controls>
+<Languages>
+<SUF70Messages>
+<Language>
+<Name>Russian</Name>
+<Default>1</Default>
+<Primary>25</Primary>
+<Secondary/>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>Óñòàíîâêà %ProductName%</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Ëèöåíçèîííîå ñîãëàøåíèå</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Ïîæàëóéñòà, îçíàêîìüòåñü ñ ëèöåíçèîííûì ñîãëàøåíèåì.</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Äàëåå &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Íàçàä</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Îòìåíà</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Ñïðàâêà</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_SCROLLTEXT_BODY>Òàê, íó òóò ÿ ïðîñòî îò áàëäû çàêèíó ëèöóõó, èáî òàê ïðàâèëüíî. 
+
+Åñëè ÷åñòíî, äàæå ÿ åãî íå ÷èòàë — âçÿë ñ Ãèòõàáà õðåíü êàêóþ-òî, è âñ¸.
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</IDS_CTRL_SCROLLTEXT_BODY>
+<IDS_CTRL_RADIOBTN_AGREE>ß ïðèíèìàþ óñëîâèÿ ëèöåíçèîííîãî ñîãëàøåíèÿ.</IDS_CTRL_RADIOBTN_AGREE>
+<IDS_CTRL_RADIOBTN_DISAGREE>ß íå ñîãëàñåí ñ ïóíêòàìè ëèöåíçèîííîãî ñîãëàøåíèÿ.</IDS_CTRL_RADIOBTN_DISAGREE>
+<IDS_CTRL_SCROLLTEXT_FILE/>
+</Messages>
+</SUF70Messages>
+<SUF70Messages>
+<Language>
+<Name>English</Name>
+<Default>0</Default>
+<Primary>9</Primary>
+<Secondary>
+<ID>1</ID>
+<ID>2</ID>
+<ID>3</ID>
+<ID>4</ID>
+<ID>5</ID>
+<ID>6</ID>
+<ID>7</ID>
+<ID>8</ID>
+<ID>9</ID>
+<ID>10</ID>
+<ID>11</ID>
+<ID>12</ID>
+<ID>13</ID>
+</Secondary>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>%ProductName% Setup</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>License Agreement</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Please read the following license agreement carefully.</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Next &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Back</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Cancel</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Help</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_SCROLLTEXT_BODY>Insert your license agreement text here...</IDS_CTRL_SCROLLTEXT_BODY>
+<IDS_CTRL_RADIOBTN_AGREE>I agree to the terms of this license agreement</IDS_CTRL_RADIOBTN_AGREE>
+<IDS_CTRL_RADIOBTN_DISAGREE>I do not agree to the terms of this license agreement</IDS_CTRL_RADIOBTN_DISAGREE>
+<IDS_CTRL_SCROLLTEXT_FILE/>
+</Messages>
+</SUF70Messages>
+</Languages>
+</Screen>
+<Screen>
+<Type>110</Type>
+<Name>Select Install Folder</Name>
+<BannerStyle>0</BannerStyle>
+<TemplateName>Select Install Folder</TemplateName>
+<OverrideProjTheme>0</OverrideProjTheme>
+<StyleData>
+<CstClrs>1</CstClrs>
+<TBBG format="hex">ffffff</TBBG>
+<BDYBG format="hex">ece9d8</BDYBG>
+<FTBG format="hex">ff0000</FTBG>
+<TBTXT format="hex">000000</TBTXT>
+<BDYTXT format="hex">33cccc</BDYTXT>
+<CBG format="hex">ff0000</CBG>
+<C3DFACE format="hex">ff0000</C3DFACE>
+<C3DHLT format="hex">33cccc</C3DHLT>
+<C3DLIT format="hex">33cccc</C3DLIT>
+<C3DSH format="hex">33cccc</C3DSH>
+<CBTNTXT format="hex">33cccc</CBTNTXT>
+<CTEXT format="hex">33cccc</CTEXT>
+<CDISTXT format="hex">ff0000</CDISTXT>
+<CPRGRS format="hex">ff0000</CPRGRS>
+<C3DSHDK format="hex">33cccc</C3DSHDK>
+<TBIMG>Default_Top_Banner.jpg</TBIMG>
+<SBIMG>Default_Side_Banner.jpg</SBIMG>
+<BDIMG>Áåç èìåíè-1.png</BDIMG>
+<BDFILL>1</BDFILL>
+<HDSEP>0</HDSEP>
+<FTSEP>0</FTSEP>
+<CstFnts>1</CstFnts>
+<Fonts>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Fonts>
+<CAOff>
+<TP>0</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>1</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>2</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<TBTXTX>10</TBTXTX>
+<TBTXTY>10</TBTXTY>
+<ScreenW>650</ScreenW>
+<ScreenH>400</ScreenH>
+</StyleData>
+<Variable>%AppFolder%</Variable>
+<Events>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïåðåä îòîáðàæåíèåì äèàëîãà.
+
+-- Âû÷èñëåíèå ðàçìåðà ñâîáîäíîãî ìåñòà íåîáõîäèìîãî äëÿ óñòàíîâêè ïðîäóêòà.
+_SpaceRequired = SetupData.CalculateRequiredSpace();
+
+-- Ïðåîáðàçîâàíèå ôîðìàòà äàííûõ ê ñîîòâåòñòâóþùèì åäèíèöàì èçìåðåíèÿ (íàïðèìåð "0 áàéò").
+local strSpaceRequired = String.GetFormattedSize(_SpaceRequired);
+
+-- Ñîõðàíåíèå ðåçóëüòàòà â ïåðåìåííîé, ÷òîáû èñïîëüçîâàòü åãî â ñòðîêîâîì ýëåìåíòå äèàëîãà.
+SessionVar.Set("%SpaceRequired%", strSpaceRequired);
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- îáíîâëåíèå äàííûõ ïîëÿ äëÿ ñòðîêè "Òðåáóåòñÿ íà äèñêå:".
+g_UpdateStaticTextCtrl(CTRL_STATICTEXT_SPACEREQUIRED, "IDS_CTRL_STATICTEXT_SPACEREQUIRED");
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Back</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Íàçàä".
+
+-- ïåðåõîä íà ïðåäûäóùèé äèàëîã
+Screen.Back();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Next</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Äàëåå".
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- ïðîâåðêà ïðàâèëüíîñòè ïóòè äëÿ ïàïêè óñòàíîâêè (èìååò ñîîòâåòñòâóþùèé ôîðìàò ñòðîêè).
+if(g_IsValidPath(strInstallFolderPath)) then
+
+	-- Åñëè íà âûáðàííîì äèñêå äîñòàòî÷íî ñâîáîäíîãî ìåñòà, òî âûïîëíÿåòñÿ ïåðåõîä ê ñëåäóþùåìó äèàëîãó.
+	if(_SpaceAvailable &gt;= _SpaceRequired) then
+		-- Ñâîáîäíîãî ìåñòà íà äèñêå äîñòàòî÷íî... ïîýòîìó
+		-- ïåðåõîä íà ñëåäóþùèé äèàëîã
+		Screen.Next();
+	else
+		-- íà äèñêå íåäîñòàòî÷íî ñâîáîäíîãî ìåñòà...
+		
+		-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+		-- ñïðàøèâàåì ïîëüçîâàòåëÿ î äàëüíåéøèõ äåéñòâèÿõ
+		if g_ConfirmFreeSpaceOverride() then
+			-- Ïîëüçîâàòåëü ðåøèë ïðîäîëæèòü óñòàíîâêó... ïîýòîìó
+			-- ïåðåõîä íà ñëåäóþùèé äèàëîã
+			Screen.Next();
+		end
+	end
+else
+	-- Ïóòü ê ïàïêå ÿâëÿåòñÿ íåäåéñòâèòåëüíûì...
+	
+	local strTitle = SetupData.GetLocalizedString("MSG_INVALID_ENTRY");
+	local strPrompt;
+
+	-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+	-- ïðîâåðêà ôîðìàòà ñòðîêè, êîòîðàÿ ñîäåðæèò ïóòü ê óñòàíàâëèâàåìîé ïàïêå.
+	if(g_ContainsValidPathChars(strInstallFolderPath)) then
+		-- Ñòðîêà èìååò íåâåðíûé ôîðìàò.
+		strPrompt = SetupData.GetLocalizedString("ERR_INVALID_PATH");
+	else
+		-- Â ñòðîêå ñîäåðæàòñÿ íåäîïóñòèìûå ñèìâîëû.
+		strPrompt = SetupData.GetLocalizedString("ERR_INVALID_CHARACTERS") .. "\r\n/ * ? \" &lt; &gt; |";		
+	end
+
+	-- Ñîîáùàåì ïîëüçîâàòåëþ î òîì, ÷òîáû îí õîðîøåíüêî ïîäóìàë :)
+	Dialog.Message(strTitle, strPrompt, MB_OK, MB_ICONEXCLAMATION);
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Cancel</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Îòìåíà".
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- ñïðàøèâàåì ïîäòâåðæäåíèÿ ïîëüçîâàòåëÿ íà âûõîä èç ïðèëîæåíèÿ
+if g_ConfirmSetupAbort() then
+	Application.Exit(EXIT_REASON_USER_ABORTED);
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Help</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Ñïðàâêà".
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Ctrl Message</Name>
+<Args>number e_CtrlID, number e_MsgID, table e_Details</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè âçàèìîäåéñòâèè ïîëüçîâàòåëÿ
+-- ñ ýëåìåíòàìè óïðàâëåíèÿ íà òåêóùåì äèàëîãå.
+
+if(e_CtrlID == CTRL_BUTTON_BROWSE) then
+	-- Îáðàáîòêà ñîáûòèÿ ïðè íàæàòèè êíîïêè "Îáçîð...".
+
+	-- Åñëè êíîïêà áûëà íàæàòà, òî îòêðûâàåì äèàëîã ñ âûáîðîì ïàïêè óñòàíîâêè
+	-- è îáíîâëÿåì ïàïêó óñòàíîâêè.
+	if (e_MsgID == MSGID_CLICKED) then
+
+		-- Ïîëó÷åíèå òåêñòîâîé ìåòêè äëÿ ïîëÿ ñ ïàïêîé óñòàíîâêè
+		-- (ýòà ñòðîêà áóäåò èñïîëüçîâàíà äëÿ çàãîëîâêà îêíà ñ âûáîðîì ïàïêè óñòàíîâêè).
+		local strPrompt = Screen.GetLocalizedString("IDS_CTRL_STATICTEXT_LABEL_01");
+		strPrompt = SessionVar.Expand(strPrompt);
+		
+		-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+		-- îòîáðàæåíèå äèàëîãà äëÿ èçìåíåíèÿ ïóòè óñòàíîâêè ïðîäóêòà.
+		g_EditFieldFolderBrowse(CTRL_EDIT_FOLDER, strPrompt);
+	end
+end
+
+
+if(e_CtrlID == CTRL_EDIT_FOLDER) then
+	-- Îáðàáîòêà ñîáûòèÿ äëÿ ýëåìåíòà óïðàâëåíèÿ ñ ïàïêîé óñòàíîâêè...
+
+	-- Åñëè â ýëåìåíòå ïðîèçîøëè èçìåíåíèÿ, íàïðèìåð, èçìåíèëñÿ ïóòü óñòàíîâêè,
+	-- òî âû÷èñëÿåòñÿ ðàçìåð äîñòóïíîãî ìåñòà íà âûáðàííîì äèñêå.
+	if (e_MsgID == MSGID_ONCHANGED) then
+
+		strInstallFolderPath = e_Details.Text;
+		
+		-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+		-- âû÷èñëåíèå ñâîáîäíîãî ìåñòà, äîñòóïíîãî íà âûáðàííîì äèñêå.
+		_SpaceAvailable = g_GetFreeSpaceInBytes(strInstallFolderPath);
+
+		-- Ïðåîáðàçîâàíèå çíà÷åíèÿ %SpaceAvailable% ê ñîîòâåòñòâóþùèì åäèíèöàì èçìåðåíèÿì (íàïðèìåð, "0 áàéò").
+		SessionVar.Set("%SpaceAvailable%", String.GetFormattedSize(_SpaceAvailable) );
+
+		-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+		-- îáíîâëåíèå äàííûõ ïîëÿ äëÿ ñòðîêè "Ñâîáîäíî íà äèñêå:".
+		g_UpdateStaticTextCtrl(CTRL_STATICTEXT_SPACEAVAILABLE, "IDS_CTRL_STATICTEXT_SPACEAVAILABLE");
+	end
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+<Controls>
+<Control>
+<Type>1</Type>
+<ID>103</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>75</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>101</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>76</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>100</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>-10</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>102</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>-9</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>203</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>1</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>211</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>2</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>6</Type>
+<ID>801</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>3</TabOrder>
+<TextAlign>0</TextAlign>
+<VertScroll>0</VertScroll>
+<HorizScroll>0</HorizScroll>
+<RTLReadingOrder>0</RTLReadingOrder>
+<Style>0</Style>
+<Mode>0</Mode>
+<MaskReturnMode>1</MaskReturnMode>
+<ReadOnly>0</ReadOnly>
+<StartNewRow>1</StartNewRow>
+<SizeColumns>4</SizeColumns>
+<Variable>%AppFolder%</Variable>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>110</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>4</TabOrder>
+<FTButton>0</FTButton>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>208</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>5</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>207</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>6</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+</Controls>
+<Languages>
+<SUF70Messages>
+<Language>
+<Name>Russian</Name>
+<Default>1</Default>
+<Primary>25</Primary>
+<Secondary/>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>Óñòàíîâêà %ProductName%</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Âûáîð ïàïêè äëÿ óñòàíîâêè</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Â êàêóþ ïàïêó âû õîòèòå óñòàíîâèòü %ProductName%?</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Äàëåå &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Íàçàä</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Îòìåíà</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Ñïðàâêà</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_BUTTON_BROWSE>Î&amp;áçîð...</IDS_CTRL_BUTTON_BROWSE>
+<IDS_CTRL_EDIT_FOLDER>%AppFolder%</IDS_CTRL_EDIT_FOLDER>
+<IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>Âûáèðàé íóæíûé ïóòü. Åñëè íà C-øíèêå ìàëî ìåñòà, òî ìåíÿé. Åñëè íîðì, òî æìÿêàé "Äàëåå".</IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>
+<IDS_CTRL_STATICTEXT_LABEL_01>Óñòàíîâèòü %ProductName% â:</IDS_CTRL_STATICTEXT_LABEL_01>
+<IDS_CTRL_STATICTEXT_SPACEREQUIRED>Òðåáóåòñÿ íà äèñêå: %SpaceRequired%</IDS_CTRL_STATICTEXT_SPACEREQUIRED>
+<IDS_CTRL_STATICTEXT_SPACEAVAILABLE>Ñâîáîäíî íà äèñêå:  %SpaceAvailable%</IDS_CTRL_STATICTEXT_SPACEAVAILABLE>
+</Messages>
+</SUF70Messages>
+<SUF70Messages>
+<Language>
+<Name>English</Name>
+<Default>0</Default>
+<Primary>9</Primary>
+<Secondary>
+<ID>1</ID>
+<ID>2</ID>
+<ID>3</ID>
+<ID>4</ID>
+<ID>5</ID>
+<ID>6</ID>
+<ID>7</ID>
+<ID>8</ID>
+<ID>9</ID>
+<ID>10</ID>
+<ID>11</ID>
+<ID>12</ID>
+<ID>13</ID>
+</Secondary>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>%ProductName% Setup</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Installation Folder</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Where would you like %ProductName% to be installed?</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Next &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Back</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Cancel</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Help</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_BUTTON_BROWSE>C&amp;hange...</IDS_CTRL_BUTTON_BROWSE>
+<IDS_CTRL_EDIT_FOLDER>%AppFolder%</IDS_CTRL_EDIT_FOLDER>
+<IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>The software will be installed in the folder listed below. To select a different location, either type in a new path, or click Change to browse for an existing folder.</IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>
+<IDS_CTRL_STATICTEXT_LABEL_01>Install %ProductName% to:</IDS_CTRL_STATICTEXT_LABEL_01>
+<IDS_CTRL_STATICTEXT_SPACEREQUIRED>Space required: %SpaceRequired%</IDS_CTRL_STATICTEXT_SPACEREQUIRED>
+<IDS_CTRL_STATICTEXT_SPACEAVAILABLE>Space available on selected drive: %SpaceAvailable%</IDS_CTRL_STATICTEXT_SPACEAVAILABLE>
+</Messages>
+</SUF70Messages>
+</Languages>
+</Screen>
+<Screen>
+<Type>100</Type>
+<Name>Ready to Install</Name>
+<BannerStyle>0</BannerStyle>
+<TemplateName>Ready to Install</TemplateName>
+<OverrideProjTheme>0</OverrideProjTheme>
+<StyleData>
+<CstClrs>1</CstClrs>
+<TBBG format="hex">ffffff</TBBG>
+<BDYBG format="hex">ece9d8</BDYBG>
+<FTBG format="hex">ff0000</FTBG>
+<TBTXT format="hex">000000</TBTXT>
+<BDYTXT format="hex">33cccc</BDYTXT>
+<CBG format="hex">ff0000</CBG>
+<C3DFACE format="hex">ff0000</C3DFACE>
+<C3DHLT format="hex">33cccc</C3DHLT>
+<C3DLIT format="hex">33cccc</C3DLIT>
+<C3DSH format="hex">33cccc</C3DSH>
+<CBTNTXT format="hex">33cccc</CBTNTXT>
+<CTEXT format="hex">33cccc</CTEXT>
+<CDISTXT format="hex">ff0000</CDISTXT>
+<CPRGRS format="hex">ff0000</CPRGRS>
+<C3DSHDK format="hex">33cccc</C3DSHDK>
+<TBIMG>Default_Top_Banner.jpg</TBIMG>
+<SBIMG>Default_Side_Banner.jpg</SBIMG>
+<BDIMG>Áåç èìåíè-1.png</BDIMG>
+<BDFILL>1</BDFILL>
+<HDSEP>0</HDSEP>
+<FTSEP>0</FTSEP>
+<CstFnts>1</CstFnts>
+<Fonts>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Fonts>
+<CAOff>
+<TP>0</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>1</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>2</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<TBTXTX>10</TBTXTX>
+<TBTXTY>10</TBTXTY>
+<ScreenW>650</ScreenW>
+<ScreenH>400</ScreenH>
+</StyleData>
+<Events>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïåðåä îòîáðàæåíèåì äèàëîãà.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Back</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Íàçàä".
+
+-- ïåðåõîä íà ïðåäûäóùèé äèàëîã
+Screen.Back();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Next</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Äàëåå".
+
+-- ïåðåõîä íà ñëåäóþùèé äèàëîã
+Screen.Next();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Cancel</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Îòìåíà".
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- ñïðàøèâàåì ïîäòâåðæäåíèÿ ïîëüçîâàòåëÿ íà âûõîä èç ïðèëîæåíèÿ
+if g_ConfirmSetupAbort() then
+	Application.Exit(EXIT_REASON_USER_ABORTED);
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Help</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Ñïðàâêà".
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Ctrl Message</Name>
+<Args>number e_CtrlID, number e_MsgID, table e_Details</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè âçàèìîäåéñòâèè ïîëüçîâàòåëÿ
+-- ñ ýëåìåíòàìè óïðàâëåíèÿ íà òåêóùåì äèàëîãå.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+<Controls>
+<Control>
+<Type>1</Type>
+<ID>103</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>75</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>101</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>76</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>100</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>-10</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>102</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>-9</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>200</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>0</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>300</ID>
+<Visible>0</Visible>
+<Enabled>1</Enabled>
+<TabOrder>1</TabOrder>
+<IsHeading>1</IsHeading>
+</Control>
+</Controls>
+<Languages>
+<SUF70Messages>
+<Language>
+<Name>Russian</Name>
+<Default>1</Default>
+<Primary>25</Primary>
+<Secondary/>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>Óñòàíîâêà %ProductName%</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Âñ¸ ãîòîâî ê óñòàíîâêå</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Ìàñòåð ãîòîâ íà÷àòü óñòàíîâêó %ProductName% %ProductVer%</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Äàëåå &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Íàçàä</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Îòìåíà</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Ñïðàâêà</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_STATICTEXT_BODY>
+Åñëè âñ¸ ó÷¸ë, ïîñòàâèë âñå ãàëî÷êè ãäå íàäî è òàê äàëåå, òî ìîæåøü íàæèìàòü "Äàëåå".</IDS_CTRL_STATICTEXT_BODY>
+<IDS_CTRL_HEADINGTEXT_BODY>Çàãîëîâîê</IDS_CTRL_HEADINGTEXT_BODY>
+</Messages>
+</SUF70Messages>
+<SUF70Messages>
+<Language>
+<Name>English</Name>
+<Default>0</Default>
+<Primary>9</Primary>
+<Secondary>
+<ID>1</ID>
+<ID>2</ID>
+<ID>3</ID>
+<ID>4</ID>
+<ID>5</ID>
+<ID>6</ID>
+<ID>7</ID>
+<ID>8</ID>
+<ID>9</ID>
+<ID>10</ID>
+<ID>11</ID>
+<ID>12</ID>
+<ID>13</ID>
+</Secondary>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>%ProductName% Setup</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Ready to Install</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>You are now ready to install %ProductName% %ProductVer%</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Next &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Back</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Cancel</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Help</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_STATICTEXT_BODY>The installer now has enough information to install %ProductName% on your computer.
+
+
+The following settings will be used:
+
+Install folder:        %AppFolder%
+
+Shortcut folder:    %AppShortcutFolderName%
+
+
+Please click Next to proceed with the installation.</IDS_CTRL_STATICTEXT_BODY>
+<IDS_CTRL_HEADINGTEXT_BODY>Title</IDS_CTRL_HEADINGTEXT_BODY>
+</Messages>
+</SUF70Messages>
+</Languages>
+</Screen>
+</BeforeInstallingScreens>
+<DuringInstScreenData>
+<ShowProgress>1</ShowProgress>
+<Screens>
+<Screen>
+<Type>130</Type>
+<Name>One Progress Bar (While Installing)</Name>
+<BannerStyle>0</BannerStyle>
+<TemplateName>One Progress Bar (While Installing)</TemplateName>
+<OverrideProjTheme>0</OverrideProjTheme>
+<StyleData>
+<CstClrs>1</CstClrs>
+<TBBG format="hex">ffffff</TBBG>
+<BDYBG format="hex">ece9d8</BDYBG>
+<FTBG format="hex">ff0000</FTBG>
+<TBTXT format="hex">000000</TBTXT>
+<BDYTXT format="hex">33cccc</BDYTXT>
+<CBG format="hex">ff0000</CBG>
+<C3DFACE format="hex">ff0000</C3DFACE>
+<C3DHLT format="hex">33cccc</C3DHLT>
+<C3DLIT format="hex">33cccc</C3DLIT>
+<C3DSH format="hex">33cccc</C3DSH>
+<CBTNTXT format="hex">33cccc</CBTNTXT>
+<CTEXT format="hex">33cccc</CTEXT>
+<CDISTXT format="hex">ff0000</CDISTXT>
+<CPRGRS format="hex">ff0000</CPRGRS>
+<C3DSHDK format="hex">33cccc</C3DSHDK>
+<TBIMG>Default_Top_Banner.jpg</TBIMG>
+<SBIMG>Default_Side_Banner.jpg</SBIMG>
+<BDIMG>Áåç èìåíè-1.png</BDIMG>
+<BDFILL>1</BDFILL>
+<HDSEP>0</HDSEP>
+<FTSEP>0</FTSEP>
+<CstFnts>1</CstFnts>
+<Fonts>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Fonts>
+<CAOff>
+<TP>0</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>1</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>2</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<TBTXTX>10</TBTXTX>
+<TBTXTY>10</TBTXTY>
+<ScreenW>650</ScreenW>
+<ScreenH>400</ScreenH>
+</StyleData>
+<IsWhileInstallingMode>1</IsWhileInstallingMode>
+<Events>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïåðåä îòîáðàæåíèåì äèàëîãà.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Progress</Name>
+<Args>number e_Stage, string e_CurrentItemText, number e_CurrentItemPct, number e_StagePct</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíÿòüñÿ äî òåõ ïîð, ïîêà èäåò óñòàíîâêà ôàéëîâ.
+
+--[[
+Ïðèìå÷àíèå: 
+	Ïðîöåññ óñòàíîâêè ôàéëîâ ñîñòîèò èç 4-õ ýòàïîâ: 
+
+	1. Ïîäãîòîâêà ê óñòàíîâêå
+	2. Óñòàíîâêà ôàéëîâ
+	3. Ñîçäàíèå äåèíñòàëëÿöèè
+	4. Ñîçäàíèå ÿðëûêîâ
+
+	Êàæäûé èç ýòàïîâ ïðîöåññà óñòàíîâêè èìååò ÿçûêîâóþ ñòðîêó,
+	êîòîðàÿ îïèñûâàåò ýòî ñîñòîÿíèå, íàïðèìåð, "Óñòàíîâêà ôàéëîâ...".
+	Ýòî ïîçâîëÿåò ïîääåðæèâàòü ëîêàëèçàöèþ äèíàìè÷åñêèõ ñòðîê,
+	íàðÿäó ñ äðóãèìè ïåðåâåäåííûìè ñòðîêàìè â ÿçûêîâîì ôàéëå.
+]]
+
+-- Ïîëó÷åíèå ID ñòðîêè, ÷òîáû ñîîáùèòü î òåêóùåì ýòàïå ïðîöåññà óñòàíîâêè...
+local strStringID;
+if(e_Stage == INSTALL_STAGE_PREPARING) then
+	strStringID = "MSG_PROG_PREPARING";
+elseif(e_Stage == INSTALL_STAGE_INSTALLING_FILES) then
+	strStringID = "MSG_PROG_INSTALLING_FILES";
+elseif(e_Stage == INSTALL_STAGE_CREATING_UNINSTALL) then
+	strStringID = "MSG_PROG_CREATING_UNINSTALL";
+elseif(e_Stage == INSTALL_STAGE_CREATING_SHORTCUTS) then
+	strStringID = "MSG_PROG_CREATING_SHORTCUTS";
+end
+
+-- ... è ÷òåíèå ñîîòâåòñòâóþùåé ñòðîêè èç ÿçûêîâîãî ôàéëà.
+local strStageMessage = SetupData.GetLocalizedString(strStringID);
+
+-- Îáíîâëåíèå èíäèêàòîðà äëÿ îòîáðàæåíèÿ òåêóùåãî ñîñòîÿíèÿ.
+DlgStaticText.SetProperties(CTRL_STATICTEXT_LABEL_01, {Text=strStageMessage});
+
+-- Åñëè òåêóùèé ýëåìåíò ÿâëÿåòñÿ ïóòåì ê ôàéëó, òî ïðîâåðÿåòñÿ åãî äëèíà...
+-- Ñëèøêîì äëèííàÿ ñòðîêà ìîæåò íå ïîìåñòèòüñÿ â ýëåìåíòå äèàëîãà,
+-- ïîýòîìó ñëåäóþùåå äåéñòâèå ñîêðàòèò òåêñò äî 72 ñèìâîëîâ.
+local strAbbreviatedItemText = String.AbbreviateFilePath(e_CurrentItemText, 72);
+
+-- Îáíîâëåíèå òåêñòà äëÿ òåêóùåãî ýëåìåíòà (íàïðèìåð, óñòàíàâëèâàåìîãî ôàéëà).
+DlgStaticText.SetProperties(CTRL_STATICTEXT_LABEL_02, {Text=strAbbreviatedItemText});
+
+-- Îáíîâëåíèå èíäèêàòîðà âûïîëíåíèÿ.
+DlgProgressBar.SetPos(CTRL_PROGRESS_BAR_01, e_StagePct);
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Cancel</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Îòìåíà".
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- ñïðàøèâàåì ïîäòâåðæäåíèÿ ïîëüçîâàòåëÿ íà âûõîä èç ïðèëîæåíèÿ
+if g_ConfirmSetupAbort() then
+	Application.Exit(EXIT_REASON_USER_ABORTED);
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+<Controls>
+<Control>
+<Type>1</Type>
+<ID>102</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>78</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>203</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>1</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>211</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>2</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>212</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>3</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>7</Type>
+<ID>900</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>4</TabOrder>
+<Style>1</Style>
+<Min>0</Min>
+<Max>100</Max>
+<XPStyleBars>0</XPStyleBars>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>213</ID>
+<Visible>0</Visible>
+<Enabled>1</Enabled>
+<TabOrder>2</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>214</ID>
+<Visible>0</Visible>
+<Enabled>1</Enabled>
+<TabOrder>3</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>7</Type>
+<ID>901</ID>
+<Visible>0</Visible>
+<Enabled>1</Enabled>
+<TabOrder>4</TabOrder>
+<Style>0</Style>
+<Min>0</Min>
+<Max>100</Max>
+<XPStyleBars>0</XPStyleBars>
+</Control>
+</Controls>
+<Languages>
+<SUF70Messages>
+<Language>
+<Name>Russian</Name>
+<Default>1</Default>
+<Primary>25</Primary>
+<Secondary/>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>Óñòàíîâêà %ProductName%</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Âûïîëíÿåòñÿ óñòàíîâêà</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Ïîæàëóéñòà, ïîäîæäèòå...</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Îòìåíà</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>Òàê ñèäèì æäåì íå ðûïåìñÿ  ïîêà óñòàíàâëèâàåòñÿ %ProductName%</IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>
+<IDS_CTRL_STATICTEXT_LABEL_01>Äåéñòâèòåëëüíî õîä óñòàíîâêè...</IDS_CTRL_STATICTEXT_LABEL_01>
+<IDS_CTRL_STATICTEXT_LABEL_02>Äà, äà, äà âûïîëíåíèå îïåðàöèé..</IDS_CTRL_STATICTEXT_LABEL_02>
+<IDS_CTRL_PROGRESS_BAR_01>ÓÑÒÀÍÎÂÊÀ...</IDS_CTRL_PROGRESS_BAR_01>
+<IDS_CTRL_STATICTEXT_LABEL_03>Ïðîöåññ êîïèðîâàíèÿ.</IDS_CTRL_STATICTEXT_LABEL_03>
+<IDS_CTRL_STATICTEXT_LABEL_04>Âûïîëíåíèå îïåðàöèé...</IDS_CTRL_STATICTEXT_LABEL_04>
+<IDS_CTRL_PROGRESS_BAR_02>êîïèðîâàíèå ôàéëîâ...</IDS_CTRL_PROGRESS_BAR_02>
+</Messages>
+</SUF70Messages>
+<SUF70Messages>
+<Language>
+<Name>English</Name>
+<Default>0</Default>
+<Primary>9</Primary>
+<Secondary>
+<ID>1</ID>
+<ID>2</ID>
+<ID>3</ID>
+<ID>4</ID>
+<ID>5</ID>
+<ID>6</ID>
+<ID>7</ID>
+<ID>8</ID>
+<ID>9</ID>
+<ID>10</ID>
+<ID>11</ID>
+<ID>12</ID>
+<ID>13</ID>
+</Secondary>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>%ProductName% Setup</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Installing %ProductName%</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Please wait...</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Cancel</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS/>
+<IDS_CTRL_STATICTEXT_LABEL_01/>
+<IDS_CTRL_STATICTEXT_LABEL_02/>
+<IDS_CTRL_PROGRESS_BAR_01/>
+<IDS_CTRL_STATICTEXT_LABEL_03>Progress Two</IDS_CTRL_STATICTEXT_LABEL_03>
+<IDS_CTRL_STATICTEXT_LABEL_04>Performing Actions...</IDS_CTRL_STATICTEXT_LABEL_04>
+<IDS_CTRL_PROGRESS_BAR_02/>
+</Messages>
+</SUF70Messages>
+</Languages>
+</Screen>
+</Screens>
+</DuringInstScreenData>
+<AfterInstallingScreens>
+<Screen>
+<Type>150</Type>
+<Name>Check Boxes</Name>
+<BannerStyle>0</BannerStyle>
+<TemplateName>Check Boxes</TemplateName>
+<OverrideProjTheme>0</OverrideProjTheme>
+<StyleData>
+<CstClrs>1</CstClrs>
+<TBBG format="hex">ffffff</TBBG>
+<BDYBG format="hex">ece9d8</BDYBG>
+<FTBG format="hex">ff0000</FTBG>
+<TBTXT format="hex">000000</TBTXT>
+<BDYTXT format="hex">33cccc</BDYTXT>
+<CBG format="hex">ff0000</CBG>
+<C3DFACE format="hex">ff0000</C3DFACE>
+<C3DHLT format="hex">33cccc</C3DHLT>
+<C3DLIT format="hex">33cccc</C3DLIT>
+<C3DSH format="hex">33cccc</C3DSH>
+<CBTNTXT format="hex">33cccc</CBTNTXT>
+<CTEXT format="hex">33cccc</CTEXT>
+<CDISTXT format="hex">ff0000</CDISTXT>
+<CPRGRS format="hex">ff0000</CPRGRS>
+<C3DSHDK format="hex">33cccc</C3DSHDK>
+<TBIMG>Default_Top_Banner.jpg</TBIMG>
+<SBIMG>Default_Side_Banner.jpg</SBIMG>
+<BDIMG>Áåç èìåíè-1.png</BDIMG>
+<BDFILL>1</BDFILL>
+<HDSEP>0</HDSEP>
+<FTSEP>0</FTSEP>
+<CstFnts>1</CstFnts>
+<Fonts>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Fonts>
+<CAOff>
+<TP>0</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>1</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>2</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<TBTXTX>10</TBTXTX>
+<TBTXTY>10</TBTXTY>
+<ScreenW>650</ScreenW>
+<ScreenH>400</ScreenH>
+</StyleData>
+<NumCheckBoxes>3</NumCheckBoxes>
+<Check0>0</Check0>
+<Check1>2</Check1>
+<Check2>3</Check2>
+<Cols>1</Cols>
+<Distribute>0</Distribute>
+<Events>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïåðåä îòîáðàæåíèåì äèàëîãà.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Back</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Íàçàä".
+
+-- ïåðåõîä íà ïðåäûäóùèé äèàëîã
+Screen.Back();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Next</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Äàëåå".
+-- Ïîäñêàçêà: Íà ýòîì ýòàïå âû ìîæåòå ââåñòè ïðîâåðî÷íûå äåéñòâèÿ,
+-- êîòîðûå áóäóò âûïîëíåíû ïðåæäå, ÷åì ïîëüçîâàòåëü óâèäèò ñëåäóþùèé äèàëîã.
+
+-- Ñîçäàíèå ÿðëûêîâ ñîãëàñíî îòìå÷åííûì ïóíêòàì.
+-- Ýòîò áëîê ñöåíàðèÿ íåîáõîäèìî ñêîïèðîâàòü â ñöåíàðèè "On Post Install" ðàçäåëà "Äåéñòâèÿ".
+-- À çäåñü óäàëèòü èëè óñòàíîâèòü àòðèáóò êîììåíòàðèÿ.
+-- Åñëè âû áóäåòå èñïîëüçîâàòü ýòîò äèàëîã äëÿ ñîçäàíèÿ ÿðëûêîâ, òî íå çàáóäüòå ñíÿòü
+-- îòìåòêè ñ ñîîòâåòñòâóþùèõ ïóíêòîâ ñîçäàíèÿ ÿðëûêîâ â ñâîéñòâàõ ïðîåêòà.
+-- // ------------------------------------------------------------------------------------ \\ --
+if (desktop_icon) then
+    local iconfolder = Shell.GetFolder(SHF_DESKTOP);
+    Shell.CreateShortcut(iconfolder, SessionVar.Expand("%ProductName%"),
+        SessionVar.Expand("%AppFolder%\\Permissiveness.exe"), "", "", "", 0, SW_SHOWNORMAL, nil, "");
+end
+ 
+if (startup_icon) then
+    local iconfolder = Shell.GetFolder(SHF_STARTUP);
+    Shell.CreateShortcut(iconfolder, SessionVar.Expand("%ProductName%"),
+        SessionVar.Expand("%AppFolder%\\Permissiveness.exe"), "", "", "", 0, SW_SHOWNORMAL, nil, "");
+end
+ 
+if (quicklaunch_icon) then
+    local iconfolder = SessionVar.Expand("%ApplicationDataFolder%") ..
+        "\\Microsoft\\Internet Explorer\\Quick Launch";
+    Shell.CreateShortcut(iconfolder, SessionVar.Expand("%ProductName%"),
+        SessionVar.Expand("%AppFolder%\\Permissiveness.exe"), "", "", "", 0, SW_SHOWNORMAL, nil, "");
+end
+ 
+if (startmenu_icon) then
+    local iconfolder = Shell.GetFolder(SHF_STARTMENU);
+    Shell.CreateShortcut(iconfolder, SessionVar.Expand("%ProductName%"),
+        SessionVar.Expand("%AppFolder%\\Permissiveness.exe"), "", "", "", 0, SW_SHOWNORMAL, nil, "");
+end
+ 
+if (programs_icon) then
+    local iconfolder = Shell.GetFolder(SHF_STARTMENUPROGRAMS);
+    Shell.CreateShortcut(iconfolder, SessionVar.Expand("%ProductName%"),
+        SessionVar.Expand("%AppFolder%\\Permissiveness.exe"), "", "", "", 0, SW_SHOWNORMAL, nil, "");
+end
+ 
+if (appfolder_icon) then
+    local iconfolder = Shell.GetFolder(SHF_STARTMENUPROGRAMS);
+    Shell.CreateShortcut(iconfolder .. SessionVar.Expand("\\%AppShortcutFolderName%"),
+        SessionVar.Expand("%ProductName%"), SessionVar.Expand("%AppFolder%\\Permissiveness.exe"),
+        "", "", "", 0, SW_SHOWNORMAL, nil, "");
+end
+-- \\ ------------------------------------------------------------------------------------ // --
+
+-- ïåðåõîä íà ñëåäóþùèé äèàëîã
+Screen.Next();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Cancel</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Îòìåíà".
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- ñïðàøèâàåì ïîäòâåðæäåíèÿ ïîëüçîâàòåëÿ íà âûõîä èç ïðèëîæåíèÿ
+if g_ConfirmSetupAbort() then
+	Application.Exit(EXIT_REASON_USER_ABORTED);
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Help</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Ñïðàâêà".
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Ctrl Message</Name>
+<Args>number e_CtrlID, number e_MsgID, table e_Details</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè âçàèìîäåéñòâèè ïîëüçîâàòåëÿ
+-- ñ ýëåìåíòàìè óïðàâëåíèÿ íà òåêóùåì äèàëîãå.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+<Controls>
+<Control>
+<Type>1</Type>
+<ID>103</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>75</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>101</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>76</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>100</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>-10</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>102</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>-9</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>203</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>0</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>204</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>33</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1300</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>1</TabOrder>
+<Checked>1</Checked>
+<Variable>desktop_icon</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1301</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>2</TabOrder>
+<Checked>0</Checked>
+<Variable>check02</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1302</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>3</TabOrder>
+<Checked>0</Checked>
+<Variable>quicklaunch_icon</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1303</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>4</TabOrder>
+<Checked>0</Checked>
+<Variable>startmenu_icon</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1304</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>5</TabOrder>
+<Checked>0</Checked>
+<Variable>check05</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1305</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>6</TabOrder>
+<Checked>0</Checked>
+<Variable>check06</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1306</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>7</TabOrder>
+<Checked>0</Checked>
+<Variable>check07</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1307</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>8</TabOrder>
+<Checked>0</Checked>
+<Variable>check08</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1308</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>9</TabOrder>
+<Checked>0</Checked>
+<Variable>check09</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1309</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>10</TabOrder>
+<Checked>0</Checked>
+<Variable>check10</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1310</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>11</TabOrder>
+<Checked>0</Checked>
+<Variable>check11</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1311</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>12</TabOrder>
+<Checked>0</Checked>
+<Variable>check12</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1312</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>13</TabOrder>
+<Checked>0</Checked>
+<Variable>check13</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1313</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>14</TabOrder>
+<Checked>0</Checked>
+<Variable>check14</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1314</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>15</TabOrder>
+<Checked>0</Checked>
+<Variable>check15</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1315</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>16</TabOrder>
+<Checked>0</Checked>
+<Variable>check16</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1316</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>17</TabOrder>
+<Checked>0</Checked>
+<Variable>check17</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1317</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>18</TabOrder>
+<Checked>0</Checked>
+<Variable>check18</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1318</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>19</TabOrder>
+<Checked>0</Checked>
+<Variable>check19</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1319</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>20</TabOrder>
+<Checked>0</Checked>
+<Variable>check20</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1320</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>21</TabOrder>
+<Checked>0</Checked>
+<Variable>check21</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1321</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>22</TabOrder>
+<Checked>0</Checked>
+<Variable>check22</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1322</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>23</TabOrder>
+<Checked>0</Checked>
+<Variable>check23</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1323</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>24</TabOrder>
+<Checked>0</Checked>
+<Variable>check24</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1324</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>25</TabOrder>
+<Checked>0</Checked>
+<Variable>check25</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1325</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>26</TabOrder>
+<Checked>0</Checked>
+<Variable>check26</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1326</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>27</TabOrder>
+<Checked>0</Checked>
+<Variable>check27</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1327</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>28</TabOrder>
+<Checked>0</Checked>
+<Variable>check28</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1328</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>29</TabOrder>
+<Checked>0</Checked>
+<Variable>check29</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1329</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>30</TabOrder>
+<Checked>0</Checked>
+<Variable>check30</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1330</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>31</TabOrder>
+<Checked>0</Checked>
+<Variable>check31</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1331</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>32</TabOrder>
+<Checked>0</Checked>
+<Variable>check32</Variable>
+</Control>
+</Controls>
+<Languages>
+<SUF70Messages>
+<Language>
+<Name>Russian</Name>
+<Default>1</Default>
+<Primary>25</Primary>
+<Secondary/>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>Óñòàíîâêà %ProductName%</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Äîïîëíèòåëüíûå çàäà÷è</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Êàêèå äîïîëíèòåëüíûå çàäà÷è íåîáõîäèìî âûïîëíèòü?</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Äàëåå &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Íàçàä</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Îòìåíà</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Ñïðàâêà</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>Íó òóò òû ñàì çíàåøü 
+"Âûáèðàé ñ óìîì"
+</IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>
+<IDS_CTRL_STATICTEXT_BOTTOMINSTRUCTIONS>Åñëè ãîòîòîâ  "Äàëåå".</IDS_CTRL_STATICTEXT_BOTTOMINSTRUCTIONS>
+<IDS_CTRL_CHECK_BOX_01>Ñîçäàòü ÿðëûê íà ðàáî÷åì ñòîëå</IDS_CTRL_CHECK_BOX_01>
+<IDS_CTRL_CHECK_BOX_03>Ñîçäàòü ÿðëûê â ìåíþ áûñòðîãî äîñòóïà</IDS_CTRL_CHECK_BOX_03>
+<IDS_CTRL_CHECK_BOX_04>Ñîçäàòü ÿðëûê â ìåíþ ÏÓÑÊ</IDS_CTRL_CHECK_BOX_04>
+</Messages>
+</SUF70Messages>
+<SUF70Messages>
+<Language>
+<Name>English</Name>
+<Default>0</Default>
+<Primary>9</Primary>
+<Secondary>
+<ID>1</ID>
+<ID>2</ID>
+<ID>3</ID>
+<ID>4</ID>
+<ID>5</ID>
+<ID>6</ID>
+<ID>7</ID>
+<ID>8</ID>
+<ID>9</ID>
+<ID>10</ID>
+<ID>11</ID>
+<ID>12</ID>
+<ID>13</ID>
+</Secondary>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>%ProductName% Setup</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Options</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Select the options you want and click Next to continue.</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Next &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Back</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Cancel</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Help</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>Please select from the following options:</IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>
+<IDS_CTRL_STATICTEXT_BOTTOMINSTRUCTIONS>Note: You may select as many options as you want.
+</IDS_CTRL_STATICTEXT_BOTTOMINSTRUCTIONS>
+<IDS_CTRL_CHECK_BOX_01>Option 01</IDS_CTRL_CHECK_BOX_01>
+<IDS_CTRL_CHECK_BOX_03>Option 03</IDS_CTRL_CHECK_BOX_03>
+<IDS_CTRL_CHECK_BOX_04>Option 04</IDS_CTRL_CHECK_BOX_04>
+</Messages>
+</SUF70Messages>
+</Languages>
+</Screen>
+<Screen>
+<Type>170</Type>
+<Name>WizardFinish_CheckBox</Name>
+<BannerStyle>0</BannerStyle>
+<TemplateName>WizardFinish_CheckBox</TemplateName>
+<OverrideProjTheme>0</OverrideProjTheme>
+<StyleData>
+<CstClrs>1</CstClrs>
+<TBBG format="hex">ffffff</TBBG>
+<BDYBG format="hex">ece9d8</BDYBG>
+<FTBG format="hex">ff0000</FTBG>
+<TBTXT format="hex">000000</TBTXT>
+<BDYTXT format="hex">33cccc</BDYTXT>
+<CBG format="hex">ff0000</CBG>
+<C3DFACE format="hex">ff0000</C3DFACE>
+<C3DHLT format="hex">33cccc</C3DHLT>
+<C3DLIT format="hex">33cccc</C3DLIT>
+<C3DSH format="hex">33cccc</C3DSH>
+<CBTNTXT format="hex">33cccc</CBTNTXT>
+<CTEXT format="hex">33cccc</CTEXT>
+<CDISTXT format="hex">ff0000</CDISTXT>
+<CPRGRS format="hex">ff0000</CPRGRS>
+<C3DSHDK format="hex">33cccc</C3DSHDK>
+<TBIMG>Default_Top_Banner.jpg</TBIMG>
+<SBIMG>Default_Side_Banner.jpg</SBIMG>
+<BDIMG>Áåç èìåíè-1.png</BDIMG>
+<BDFILL>1</BDFILL>
+<HDSEP>0</HDSEP>
+<FTSEP>0</FTSEP>
+<CstFnts>1</CstFnts>
+<Fonts>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Fonts>
+<CAOff>
+<TP>0</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>1</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>2</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<TBTXTX>10</TBTXTX>
+<TBTXTY>10</TBTXTY>
+<ScreenW>650</ScreenW>
+<ScreenH>400</ScreenH>
+</StyleData>
+<CustomCtrlList>
+<CustomCtrlInfo Left="38" Top="235" Width="258" Height="36" ID="1300"/>
+<CustomCtrlInfo Left="38" Top="278" Width="259" Height="30" ID="1301"/>
+<CustomCtrlInfo Left="15" Top="22" Width="635" Height="92" ID="211"/>
+</CustomCtrlList>
+<Events>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïåðåä îòîáðàæåíèåì äèàëîãà.
+
+-- Ïîëó÷åíèå êîäà îøèáêè ïðè âûïîëíåíèè ïîñëåäíåé îïåðàöèè.
+error = Application.GetLastError();
+
+-- Åñëè áûë ïîëó÷åí êîä îøèáêè, òî îòîáðàçèì å¸ íà ýêðàíå.
+if (error ~= 0) then
+    Dialog.Message("Error", _tblErrorMessages[error], MB_OK, MB_ICONEXCLAMATION);
+end
+
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Back</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Íàçàä".
+
+-- ïåðåõîä íà ïðåäûäóùèé äèàëîã
+Screen.Back();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Next</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Ãîòîâî".
+
+-- åñëè îòìå÷åí 1-é ÷åêáîêñ, òî áóäåò âûïîëíåí çàïóñê óñòàíîâëåííîãî ïðèëîæåíèÿ
+if check01 then
+	File.Run(SessionVar.Expand("%AppFolder%").."\\Permissiveness.exe", "", "", SW_SHOWNORMAL, false);
+end
+
+-- åñëè îòìå÷åí 2-é ÷åêáîêñ, òî áóäåò âûïîëíåí ïåðåõîä íà óêàçàííóþ àäðåñ â Èíòåðíåòå.
+if check02 then
+	File.Open("https://github.com/Scane546/Permissiveness/", "", SW_SHOWNORMAL);
+end
+
+
+-- çàâåðøåíèå ðàáîòû èíñòàëëÿòîðà
+Application.Exit();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Cancel</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Îòìåíà".
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- ñïðàøèâàåì ïîäòâåðæäåíèÿ ïîëüçîâàòåëÿ íà âûõîä èç ïðèëîæåíèÿ
+if g_ConfirmSetupAbort() then
+	Application.Exit(EXIT_REASON_USER_ABORTED);
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Help</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Ñïðàâêà".
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Ctrl Message</Name>
+<Args>number e_CtrlID, number e_MsgID, table e_Details</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè âçàèìîäåéñòâèè ïîëüçîâàòåëÿ
+-- ñ ýëåìåíòàìè óïðàâëåíèÿ íà òåêóùåì äèàëîãå.
+
+if (e_MsgID == MSGID_CLICKED) then
+	-- ïî ýëåìåíòó óïðàâëåíèÿ áûë ñäåëàí êëèê...
+
+	if (e_CtrlID == CTRL_BUTTON_01) then
+
+		-- Ââåäèòå çäåñü âàø êîä îáðàáîòêè ñîáûòèÿ.
+		
+		Dialog.Message("Click","You clicked on Button 01", MB_OK, MB_ICONNONE);
+	end
+	
+	if (e_CtrlID == CTRL_BUTTON_02) then
+
+		-- Ââåäèòå çäåñü âàø êîä îáðàáîòêè ñîáûòèÿ.
+		
+		Dialog.Message("Click","You clicked on Button 02", MB_OK, MB_ICONNONE);
+	end
+
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+<Controls>
+<Control>
+<Type>1</Type>
+<ID>100</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>-10</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>102</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>-9</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1300</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>1</TabOrder>
+<Checked>1</Checked>
+<Variable>check01</Variable>
+</Control>
+<Control>
+<Type>10</Type>
+<ID>1301</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>2</TabOrder>
+<Checked>0</Checked>
+<Variable>check02</Variable>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>211</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>3</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>103</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>75</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>101</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>76</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+</Controls>
+<Languages>
+<SUF70Messages>
+<Language>
+<Name>Russian</Name>
+<Default>1</Default>
+<Primary>25</Primary>
+<Secondary/>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>Óñòàíîâêà %ProductName%</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT/>
+<IDS_SUBHEADER_TEXT/>
+<IDS_CTRL_BUTTON_NEXT>&amp;Ãîòîâî</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Íàçàä</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Îòìåíà</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Ñïðàâêà</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS/>
+<IDS_CTRL_STATICTEXT_BOTTOMINSTRUCTIONS/>
+<IDS_CTRL_CHECK_BOX_01>Çàïóñòèòü ïðèëîæåíèå</IDS_CTRL_CHECK_BOX_01>
+<IDS_CTRL_CHECK_BOX_02>Ìîé Git Hub, åñëè èíòåðåñíî æìè</IDS_CTRL_CHECK_BOX_02>
+<IDS_CTRL_STATICTEXT_LABEL_01>Òû çàâåðøèë äàííûé êâåñò ïî óñòàíîâêå, à ÿ — âèäèìî, ïî ñîçäàíèþ ñåòàïíèêà. Òàê ÷òî çäåñü íàøè ñ òîáîé ïóòè ðàñõîäÿòñÿ. </IDS_CTRL_STATICTEXT_LABEL_01>
+</Messages>
+</SUF70Messages>
+<SUF70Messages>
+<Language>
+<Name>English</Name>
+<Default>0</Default>
+<Primary>9</Primary>
+<Secondary>
+<ID>1</ID>
+<ID>2</ID>
+<ID>3</ID>
+<ID>4</ID>
+<ID>5</ID>
+<ID>6</ID>
+<ID>7</ID>
+<ID>8</ID>
+<ID>9</ID>
+<ID>10</ID>
+<ID>11</ID>
+<ID>12</ID>
+<ID>13</ID>
+</Secondary>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>%ProductName% Setup</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT/>
+<IDS_SUBHEADER_TEXT/>
+<IDS_CTRL_BUTTON_NEXT>&amp;Finish</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Back</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Cancel</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Help</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_CHECK_BOX_01>Run installed application</IDS_CTRL_CHECK_BOX_01>
+<IDS_CTRL_CHECK_BOX_02>Go to Web site http://www.yourwebsite.com</IDS_CTRL_CHECK_BOX_02>
+<IDS_CTRL_STATICTEXT_LABEL_01>Ââåäèòå çäåñü òåêñò.</IDS_CTRL_STATICTEXT_LABEL_01>
+</Messages>
+</SUF70Messages>
+</Languages>
+</Screen>
+</AfterInstallingScreens>
+<Packages/>
+<SerialLists>
+<SerialListData>
+<Name>List 1</Name>
+<BuildConfigs>
+<Cfg>All</Cfg>
+</BuildConfigs>
+<Serials/>
+</SerialListData>
+</SerialLists>
+<UninstallData>
+<CreateUninstall>1</CreateUninstall>
+<CfgFile>uninstall.xml</CfgFile>
+<UninstallFilesFolder>%AppFolder%\Uninstall</UninstallFilesFolder>
+<UninstallEXELocation>%AppFolder%\uninstall.exe</UninstallEXELocation>
+<AllowSilent>1</AllowSilent>
+<StartSilent>1</StartSilent>
+<ShowBGWindow>0</ShowBGWindow>
+<MainWindowSettings>
+<ShowBackGroundWindow>0</ShowBackGroundWindow>
+<WindowStyle>0</WindowStyle>
+<WindowAppearance>1</WindowAppearance>
+<SolidBackColor format="hex">008080</SolidBackColor>
+<GradientBackColor format="hex">b4c2e3</GradientBackColor>
+<GradientForeColor format="hex">5971b6</GradientForeColor>
+<ImageFile/>
+<UseCustomIcon>0</UseCustomIcon>
+<CustomIcon/>
+<HideTaskbarIcon>0</HideTaskbarIcon>
+<AlwaysOnTop>0</AlwaysOnTop>
+<Headline>%ProductName% Uninstall</Headline>
+<HeadingFont>
+<FontData>
+<FontName>Arial</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-37</Height>
+<Weight>700</Weight>
+<Italic>1</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</HeadingFont>
+<HeadlineTextColor format="hex">ffffff</HeadlineTextColor>
+<Headline3DColor format="hex">000000</Headline3DColor>
+<HeadlineAlign>0</HeadlineAlign>
+<Headline3d>1</Headline3d>
+<SubHeading>v%ProductVer%</SubHeading>
+<SubHeadingFont>
+<FontData>
+<FontName>Arial</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-18</Height>
+<Weight>700</Weight>
+<Italic>1</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</SubHeadingFont>
+<SubHeadingTextColor format="hex">ffffff</SubHeadingTextColor>
+<SubHeading3DColor format="hex">000000</SubHeading3DColor>
+<SubHeadingAlign>0</SubHeadingAlign>
+<SubHeading3d>1</SubHeading3d>
+<Footer>%Copyright% %CompanyName%. All rights reserved. %CompanyURL%</Footer>
+<FooterFont>
+<FontData>
+<FontName>Arial</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-16</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</FooterFont>
+<FooterTextColor format="hex">ffffff</FooterTextColor>
+<Footer3DColor format="hex">000000</Footer3DColor>
+<FooterAlign>0</FooterAlign>
+<Footer3d>1</Footer3d>
+</MainWindowSettings>
+<OverwriteDatFile>1</OverwriteDatFile>
+<OverwriteCtrlPanel>1</OverwriteCtrlPanel>
+<OverwriteSC>1</OverwriteSC>
+<CreateCPEntry>1</CreateCPEntry>
+<RegKeyName>%ProductName%%ProductVer%</RegKeyName>
+<CPDesc>%ProductName%</CPDesc>
+<UseCustomCPIcon>1</UseCustomCPIcon>
+<CustCPIconFN>%AppFolder%\ico4.ico</CustCPIconFN>
+<CustCPIconIndex>0</CustCPIconIndex>
+<CPSIPublisher>%CompanyName%</CPSIPublisher>
+<CPSIPublisherURL>%CompanyURL%</CPSIPublisherURL>
+<CPSIHelpContactName>%CompanyName% Support Department</CPSIHelpContactName>
+<CPSIHelpURL>%CompanyURL%</CPSIHelpURL>
+<CPSIProductVer>%ProductVer%</CPSIProductVer>
+<CPSIRegOwner/>
+<CPSIRegCompany/>
+<CPSIUpdateInfoURL/>
+<CPSIReadmeLink/>
+<CPSIComments/>
+<CPSIInstallLocation>%AppFolder%</CPSIInstallLocation>
+<CPSIVersionMajor/>
+<CPSIVersionMinor/>
+<CreateAppFldSC>1</CreateAppFldSC>
+<AppFldSCDesc>Uninstall %ProductName%</AppFldSCDesc>
+<SCComment>Removes %ProductName% from your computer.</SCComment>
+<UseCustomAppFldSCIcon>1</UseCustomAppFldSCIcon>
+<AppFldCustomIconFN>%AppFolder%\assets\images\ico4.ico</AppFldCustomIconFN>
+<AppFolderSCIconIndex>0</AppFolderSCIconIndex>
+<LFCreate>0</LFCreate>
+<LFFilename>%TempFolder%\%ProductName% Uninstall Log.txt</LFFilename>
+<LFCmdLineOverride>0</LFCmdLineOverride>
+<LFWriteMode>0</LFWriteMode>
+<LFActionDetailLevel>1</LFActionDetailLevel>
+<BeforeScreens>
+<Screen>
+<Type>100</Type>
+<Name>Welcome to Uninstall</Name>
+<BannerStyle>1</BannerStyle>
+<TemplateName>Welcome to Uninstall</TemplateName>
+<OverrideProjTheme>0</OverrideProjTheme>
+<StyleData>
+<CstClrs>1</CstClrs>
+<TBBG format="hex">ffffff</TBBG>
+<BDYBG format="hex">ece9d8</BDYBG>
+<FTBG format="hex">ff0000</FTBG>
+<TBTXT format="hex">000000</TBTXT>
+<BDYTXT format="hex">33cccc</BDYTXT>
+<CBG format="hex">ff0000</CBG>
+<C3DFACE format="hex">ff0000</C3DFACE>
+<C3DHLT format="hex">33cccc</C3DHLT>
+<C3DLIT format="hex">33cccc</C3DLIT>
+<C3DSH format="hex">33cccc</C3DSH>
+<CBTNTXT format="hex">33cccc</CBTNTXT>
+<CTEXT format="hex">33cccc</CTEXT>
+<CDISTXT format="hex">ff0000</CDISTXT>
+<CPRGRS format="hex">ff0000</CPRGRS>
+<C3DSHDK format="hex">33cccc</C3DSHDK>
+<TBIMG>Default_Top_Banner.jpg</TBIMG>
+<SBIMG>Default_Side_Banner.jpg</SBIMG>
+<BDIMG>Áåç èìåíè-1.png</BDIMG>
+<BDFILL>1</BDFILL>
+<HDSEP>0</HDSEP>
+<FTSEP>0</FTSEP>
+<CstFnts>1</CstFnts>
+<Fonts>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Fonts>
+<CAOff>
+<TP>0</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>1</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>2</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<TBTXTX>10</TBTXTX>
+<TBTXTY>10</TBTXTY>
+<ScreenW>650</ScreenW>
+<ScreenH>400</ScreenH>
+</StyleData>
+<Events>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïåðåä îòîáðàæåíèåì äèàëîãà.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Back</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Íàçàä".
+
+-- ïåðåõîä íà ïðåäûäóùèé äèàëîã
+Screen.Back();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Next</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Äàëåå".
+
+-- ïåðåõîä íà ñëåäóþùèé äèàëîã
+Screen.Next();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Cancel</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Îòìåíà".
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- ñïðàøèâàåì ïîäòâåðæäåíèÿ ïîëüçîâàòåëÿ íà âûõîä èç ïðèëîæåíèÿ
+if g_ConfirmSetupAbort() then
+	Application.Exit(EXIT_REASON_USER_ABORTED);
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Help</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Ñïðàâêà".
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Ctrl Message</Name>
+<Args>number e_CtrlID, number e_MsgID, table e_Details</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè âçàèìîäåéñòâèè ïîëüçîâàòåëÿ
+-- ñ ýëåìåíòàìè óïðàâëåíèÿ íà òåêóùåì äèàëîãå.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+<Controls>
+<Control>
+<Type>1</Type>
+<ID>103</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>75</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>101</ID>
+<Visible>1</Visible>
+<Enabled>0</Enabled>
+<TabOrder>76</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>100</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>-10</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>102</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>-9</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>200</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>1</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>300</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>0</TabOrder>
+<IsHeading>1</IsHeading>
+</Control>
+</Controls>
+<Languages>
+<SUF70Messages>
+<Language>
+<Name>Russian</Name>
+<Default>1</Default>
+<Primary>25</Primary>
+<Secondary/>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>Óäàëåíèå %ProductName%</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Äîáðî ïîæàëîâàòü!</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Âàñ ïðèâåòñòâóåò Ìàñòåð óäàëåíèÿ %ProductName% %ProductVer%</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Äàëåå &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Íàçàä</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Îòìåíà</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Ñïðàâêà</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_STATICTEXT_BODY>Ýòîò Ìàñòåð ïîìîæåò âàì âûïîëíèòü óäàëåíèå %ProductName% %ProductVer% èç âàøåãî êîìïüþòåðà.
+
+Ïåðåä íà÷àëîì óäàëåíèÿ, ïîæàëóéñòà, óáåäèòåñü ÷òî %ProductName% çàêðûòà.
+
+Äëÿ íà÷àëà ïðîöåññà óäàëåíèÿ íàæìèòå êíîïêó "Äàëåå".</IDS_CTRL_STATICTEXT_BODY>
+<IDS_CTRL_HEADINGTEXT_BODY>Äîáðî ïîæàëîâàòü!</IDS_CTRL_HEADINGTEXT_BODY>
+</Messages>
+</SUF70Messages>
+<SUF70Messages>
+<Language>
+<Name>English</Name>
+<Default>0</Default>
+<Primary>9</Primary>
+<Secondary>
+<ID>1</ID>
+<ID>2</ID>
+<ID>3</ID>
+<ID>4</ID>
+<ID>5</ID>
+<ID>6</ID>
+<ID>7</ID>
+<ID>8</ID>
+<ID>9</ID>
+<ID>10</ID>
+<ID>11</ID>
+<ID>12</ID>
+<ID>13</ID>
+</Secondary>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>%ProductName% Uninstaller</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Welcome</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Welcome to the uninstaller for %ProductName% %ProductVer%</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Next &gt;</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Back</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Cancel</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Help</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_STATICTEXT_BODY>This program will uninstall %ProductName% %ProductVer%.
+
+If %ProductName% is currently running, please close it before proceeding with the uninstallation.
+
+Otherwise, click Next to continue.
+</IDS_CTRL_STATICTEXT_BODY>
+<IDS_CTRL_HEADINGTEXT_BODY>Uninstall %ProductName%</IDS_CTRL_HEADINGTEXT_BODY>
+</Messages>
+</SUF70Messages>
+</Languages>
+</Screen>
+</BeforeScreens>
+<DuringInstScreenData>
+<ShowProgress>1</ShowProgress>
+<Screens>
+<Screen>
+<Type>130</Type>
+<Name>One Progress Bar (While Uninstalling)</Name>
+<BannerStyle>2</BannerStyle>
+<TemplateName>One Progress Bar (While Uninstalling)</TemplateName>
+<OverrideProjTheme>0</OverrideProjTheme>
+<StyleData>
+<CstClrs>1</CstClrs>
+<TBBG format="hex">ffffff</TBBG>
+<BDYBG format="hex">ece9d8</BDYBG>
+<FTBG format="hex">ff0000</FTBG>
+<TBTXT format="hex">000000</TBTXT>
+<BDYTXT format="hex">33cccc</BDYTXT>
+<CBG format="hex">ff0000</CBG>
+<C3DFACE format="hex">ff0000</C3DFACE>
+<C3DHLT format="hex">33cccc</C3DHLT>
+<C3DLIT format="hex">33cccc</C3DLIT>
+<C3DSH format="hex">33cccc</C3DSH>
+<CBTNTXT format="hex">33cccc</CBTNTXT>
+<CTEXT format="hex">33cccc</CTEXT>
+<CDISTXT format="hex">ff0000</CDISTXT>
+<CPRGRS format="hex">ff0000</CPRGRS>
+<C3DSHDK format="hex">33cccc</C3DSHDK>
+<TBIMG>Default_Top_Banner.jpg</TBIMG>
+<SBIMG>Default_Side_Banner.jpg</SBIMG>
+<BDIMG>Áåç èìåíè-1.png</BDIMG>
+<BDFILL>1</BDFILL>
+<HDSEP>0</HDSEP>
+<FTSEP>0</FTSEP>
+<CstFnts>1</CstFnts>
+<Fonts>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Fonts>
+<CAOff>
+<TP>0</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>1</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>2</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<TBTXTX>10</TBTXTX>
+<TBTXTY>10</TBTXTY>
+<ScreenW>650</ScreenW>
+<ScreenH>400</ScreenH>
+</StyleData>
+<IsWhileInstallingMode>1</IsWhileInstallingMode>
+<Events>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïåðåä îòîáðàæåíèåì äèàëîãà.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Progress</Name>
+<Args>number e_Stage, string e_CurrentItemText, number e_CurrentItemPct, number e_StagePct</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíÿòüñÿ äî òåõ ïîð, ïîêà èäåò äåèíñòàëëÿöèÿ ôàéëîâ.
+
+--[[
+Ïðèìå÷àíèå: 
+	Ïðîöåññ äåèíñòàëëÿöèè ôàéëîâ ñîñòîèò èç 2-õ ýòàïîâ: 
+
+	1. Óäàëåíèå ôàéëîâ
+	2. Óäàëåíèå ÿðëûêîâ
+
+	Êàæäûé èç ýòàïîâ ïðîöåññà óñòàíîâêè èìååò ÿçûêîâóþ ñòðîêó,
+	êîòîðàÿ îïèñûâàåò ýòî ñîñòîÿíèå, íàïðèìåð, "Óäàëåíèå ôàéëîâ...".
+	Ýòî ïîçâîëÿåò ïîääåðæèâàòü ëîêàëèçàöèþ äèíàìè÷åñêèõ ñòðîê,
+	íàðÿäó ñ äðóãèìè ïåðåâåäåííûìè ñòðîêàìè â ÿçûêîâîì ôàéëå.
+]]
+
+-- Ïîëó÷åíèå ID ñòðîêè, ÷òîáû ñîîáùèòü î òåêóùåì ýòàïå ïðîöåññà äåèíñòàëëÿöèè...
+local strStringID;
+if(e_Stage == UNINSTALL_STAGE_REMOVING_FILES) then
+	strStringID = "MSG_PROG_UNINSTALL_REMOVING_FILES";
+elseif(e_Stage == UNINSTALL_STAGE_REMOVING_SHORTCUTS) then
+	strStringID = "MSG_PROG_UNINSTALL_REMOVING_SHORTCUTS";
+end
+
+-- ... è ÷òåíèå ñîîòâåòñòâóþùåé ñòðîêè èç ÿçûêîâîãî ôàéëà.
+local strStageMessage = SetupData.GetLocalizedString(strStringID);
+
+-- Îáíîâëåíèå ñîîáùåíèÿ î òåêóùåì ñîñòîÿíèè ýòàïà.
+DlgStaticText.SetProperties(CTRL_STATICTEXT_LABEL_01, {Text=strStageMessage});
+
+-- Åñëè òåêóùèé ýëåìåíò ÿâëÿåòñÿ ïóòåì ê ôàéëó, òî ïðîâåðÿåòñÿ åãî äëèíà...
+-- Ñëèøêîì äëèííàÿ ñòðîêà ìîæåò íå ïîìåñòèòüñÿ â ýëåìåíòå äèàëîãà,
+-- ïîýòîìó ñëåäóþùåå äåéñòâèå ñîêðàòèò òåêñò äî 72 ñèìâîëîâ.
+local strAbbreviatedItemText = String.AbbreviateFilePath(e_CurrentItemText, 72);
+
+-- Îáíîâëåíèå òåêñòà äëÿ òåêóùåãî ýëåìåíòà (íàïðèìåð, óäàëÿåìîãî ôàéëà).
+DlgStaticText.SetProperties(CTRL_STATICTEXT_LABEL_02, {Text=strAbbreviatedItemText});
+
+-- Îáíîâëåíèå èíäèêàòîðà âûïîëíåíèÿ.
+DlgProgressBar.SetPos(CTRL_PROGRESS_BAR_01, e_StagePct);
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Cancel</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Îòìåíà".
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- ñïðàøèâàåì ïîäòâåðæäåíèÿ ïîëüçîâàòåëÿ íà âûõîä èç ïðèëîæåíèÿ
+if g_ConfirmSetupAbort() then
+	Application.Exit(EXIT_REASON_USER_ABORTED);
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+<Controls>
+<Control>
+<Type>1</Type>
+<ID>102</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>78</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>203</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>1</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>211</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>2</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>212</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>3</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>7</Type>
+<ID>900</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>4</TabOrder>
+<Style>0</Style>
+<Min>0</Min>
+<Max>100</Max>
+<XPStyleBars>1</XPStyleBars>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>213</ID>
+<Visible>0</Visible>
+<Enabled>1</Enabled>
+<TabOrder>2</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>214</ID>
+<Visible>0</Visible>
+<Enabled>1</Enabled>
+<TabOrder>3</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>7</Type>
+<ID>901</ID>
+<Visible>0</Visible>
+<Enabled>1</Enabled>
+<TabOrder>4</TabOrder>
+<Style>0</Style>
+<Min>0</Min>
+<Max>100</Max>
+<XPStyleBars>0</XPStyleBars>
+</Control>
+</Controls>
+<Languages>
+<SUF70Messages>
+<Language>
+<Name>Russian</Name>
+<Default>1</Default>
+<Primary>25</Primary>
+<Secondary/>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>Óäàëåíèå %ProductName%</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Âûïîëíÿåòñÿ óäàëåíèå</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Ïîæàëóéñòà, ïîäîæäèòå...</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Îòìåíà</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>Ïîäîæäèòå ïîæàëóéñòà, ïîêà Ìàñòåð âûïîëíèò âñå îïåðàöèè ïî óäàëåíèþ %ProductName% èç âàøåãî êîìïüþòåðà.</IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS>
+<IDS_CTRL_STATICTEXT_LABEL_01>Îáùèé õîä óäàëåíèÿ.</IDS_CTRL_STATICTEXT_LABEL_01>
+<IDS_CTRL_STATICTEXT_LABEL_02>Âûïîëíåíèå îïåðàöèé...</IDS_CTRL_STATICTEXT_LABEL_02>
+<IDS_CTRL_PROGRESS_BAR_01>óäàëåíèå...</IDS_CTRL_PROGRESS_BAR_01>
+<IDS_CTRL_STATICTEXT_LABEL_03>Óäàëåíèå êîìïîíåíòîâ.</IDS_CTRL_STATICTEXT_LABEL_03>
+<IDS_CTRL_STATICTEXT_LABEL_04>Âûïîëíåíèå îïåðàöèé...</IDS_CTRL_STATICTEXT_LABEL_04>
+<IDS_CTRL_PROGRESS_BAR_02>óäàëåíèå ôàéëîâ...</IDS_CTRL_PROGRESS_BAR_02>
+</Messages>
+</SUF70Messages>
+<SUF70Messages>
+<Language>
+<Name>English</Name>
+<Default>0</Default>
+<Primary>9</Primary>
+<Secondary>
+<ID>1</ID>
+<ID>2</ID>
+<ID>3</ID>
+<ID>4</ID>
+<ID>5</ID>
+<ID>6</ID>
+<ID>7</ID>
+<ID>8</ID>
+<ID>9</ID>
+<ID>10</ID>
+<ID>11</ID>
+<ID>12</ID>
+<ID>13</ID>
+</Secondary>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>%ProductName% Uninstaller</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Removing %ProductName%</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Please wait...</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Cancel</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_STATICTEXT_TOPINSTRUCTIONS/>
+<IDS_CTRL_STATICTEXT_LABEL_01> </IDS_CTRL_STATICTEXT_LABEL_01>
+<IDS_CTRL_STATICTEXT_LABEL_02> </IDS_CTRL_STATICTEXT_LABEL_02>
+<IDS_CTRL_PROGRESS_BAR_01/>
+<IDS_CTRL_STATICTEXT_LABEL_03>Progress Two</IDS_CTRL_STATICTEXT_LABEL_03>
+<IDS_CTRL_STATICTEXT_LABEL_04>Performing Actions...</IDS_CTRL_STATICTEXT_LABEL_04>
+<IDS_CTRL_PROGRESS_BAR_02/>
+</Messages>
+</SUF70Messages>
+</Languages>
+</Screen>
+</Screens>
+</DuringInstScreenData>
+<AfterScreens>
+<Screen>
+<Type>100</Type>
+<Name>Finished Uninstall</Name>
+<BannerStyle>1</BannerStyle>
+<TemplateName>Finished Uninstall</TemplateName>
+<OverrideProjTheme>0</OverrideProjTheme>
+<StyleData>
+<CstClrs>1</CstClrs>
+<TBBG format="hex">ffffff</TBBG>
+<BDYBG format="hex">ece9d8</BDYBG>
+<FTBG format="hex">ff0000</FTBG>
+<TBTXT format="hex">000000</TBTXT>
+<BDYTXT format="hex">33cccc</BDYTXT>
+<CBG format="hex">ff0000</CBG>
+<C3DFACE format="hex">ff0000</C3DFACE>
+<C3DHLT format="hex">33cccc</C3DHLT>
+<C3DLIT format="hex">33cccc</C3DLIT>
+<C3DSH format="hex">33cccc</C3DSH>
+<CBTNTXT format="hex">33cccc</CBTNTXT>
+<CTEXT format="hex">33cccc</CTEXT>
+<CDISTXT format="hex">ff0000</CDISTXT>
+<CPRGRS format="hex">ff0000</CPRGRS>
+<C3DSHDK format="hex">33cccc</C3DSHDK>
+<TBIMG>Default_Top_Banner.jpg</TBIMG>
+<SBIMG>Default_Side_Banner.jpg</SBIMG>
+<BDIMG>Áåç èìåíè-1.png</BDIMG>
+<BDFILL>1</BDFILL>
+<HDSEP>0</HDSEP>
+<FTSEP>0</FTSEP>
+<CstFnts>1</CstFnts>
+<Fonts>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<FontData>
+<FontName>GothicRus</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-27</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Fonts>
+<CAOff>
+<TP>0</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>1</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<CAOff>
+<TP>2</TP>
+<L>15</L>
+<T>15</T>
+<R>15</R>
+<B>15</B>
+</CAOff>
+<TBTXTX>10</TBTXTX>
+<TBTXTY>10</TBTXTY>
+<ScreenW>650</ScreenW>
+<ScreenH>400</ScreenH>
+</StyleData>
+<Events>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïåðåä îòîáðàæåíèåì äèàëîãà.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Back</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Íàçàä".
+
+-- ïåðåõîä íà ïðåäûäóùèé äèàëîã
+Screen.Back();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Next</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Äàëåå".
+
+-- ïåðåõîä íà ñëåäóþùèé äèàëîã
+Screen.Next();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Cancel</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Îòìåíà".
+
+-- Ôóíêöèÿ èç îáùåãî ñöåíàðèÿ _SUF70_Global_Functions.lua:
+-- ñïðàøèâàåì ïîäòâåðæäåíèÿ ïîëüçîâàòåëÿ íà âûõîä èç ïðèëîæåíèÿ
+if g_ConfirmSetupAbort() then
+	Application.Exit(EXIT_REASON_USER_ABORTED);
+end
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Help</Name>
+<Args/>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè íàæàòèè íà êíîïêó "Ñïðàâêà".
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Ctrl Message</Name>
+<Args>number e_CtrlID, number e_MsgID, table e_Details</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû ïðè âçàèìîäåéñòâèè ïîëüçîâàòåëÿ
+-- ñ ýëåìåíòàìè óïðàâëåíèÿ íà òåêóùåì äèàëîãå.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+<Controls>
+<Control>
+<Type>1</Type>
+<ID>103</ID>
+<Visible>0</Visible>
+<Enabled>0</Enabled>
+<TabOrder>75</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>101</ID>
+<Visible>1</Visible>
+<Enabled>0</Enabled>
+<TabOrder>76</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>100</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>-10</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>1</Type>
+<ID>102</ID>
+<Visible>1</Visible>
+<Enabled>0</Enabled>
+<TabOrder>-9</TabOrder>
+<FTButton>1</FTButton>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>200</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>0</TabOrder>
+<IsHeading>0</IsHeading>
+</Control>
+<Control>
+<Type>2</Type>
+<ID>300</ID>
+<Visible>1</Visible>
+<Enabled>1</Enabled>
+<TabOrder>1</TabOrder>
+<IsHeading>1</IsHeading>
+</Control>
+</Controls>
+<Languages>
+<SUF70Messages>
+<Language>
+<Name>Russian</Name>
+<Default>1</Default>
+<Primary>25</Primary>
+<Secondary/>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>Óäàëåíèå %ProductName%</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Óäàëåíèå çàâåðøåíî!</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>Óäàëåíèå óñïåøíî çàâåðøåíî.</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Ãîòîâî</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Íàçàä</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Îòìåíà</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Ñïðàâêà</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_STATICTEXT_BODY>Óäàëåíèå %ProductName% %ProductVer% èç âàøåãî êîìïüþòåðà óñïåøíî çàâåðøåíî.
+
+
+
+
+
+
+
+
+Äëÿ âûõîäà èç Ìàñòåðà íàæìèòå êíîïêó "Ãîòîâî".</IDS_CTRL_STATICTEXT_BODY>
+<IDS_CTRL_HEADINGTEXT_BODY>Óäàëåíèå çàâåðøåíî!</IDS_CTRL_HEADINGTEXT_BODY>
+</Messages>
+</SUF70Messages>
+<SUF70Messages>
+<Language>
+<Name>English</Name>
+<Default>0</Default>
+<Primary>9</Primary>
+<Secondary>
+<ID>1</ID>
+<ID>2</ID>
+<ID>3</ID>
+<ID>4</ID>
+<ID>5</ID>
+<ID>6</ID>
+<ID>7</ID>
+<ID>8</ID>
+<ID>9</ID>
+<ID>10</ID>
+<ID>11</ID>
+<ID>12</ID>
+<ID>13</ID>
+</Secondary>
+</Language>
+<Messages>
+<IDS_WINDOW_TITLE>%ProductName% Uninstaller</IDS_WINDOW_TITLE>
+<IDS_HEADER_TEXT>Uninstallation Finished</IDS_HEADER_TEXT>
+<IDS_SUBHEADER_TEXT>The uninstallation has completed successfully.</IDS_SUBHEADER_TEXT>
+<IDS_CTRL_BUTTON_NEXT>&amp;Finish</IDS_CTRL_BUTTON_NEXT>
+<IDS_CTRL_BUTTON_BACK>&lt; &amp;Back</IDS_CTRL_BUTTON_BACK>
+<IDS_CTRL_BUTTON_CANCEL>&amp;Cancel</IDS_CTRL_BUTTON_CANCEL>
+<IDS_CTRL_BUTTON_HELP>&amp;Help</IDS_CTRL_BUTTON_HELP>
+<IDS_CTRL_STATICTEXT_BODY>%ProductName% %ProductVer% has been uninstalled.
+
+Please click Finish to exit.
+</IDS_CTRL_STATICTEXT_BODY>
+<IDS_CTRL_HEADINGTEXT_BODY>Uninstallation Successful</IDS_CTRL_HEADINGTEXT_BODY>
+</Messages>
+</SUF70Messages>
+</Languages>
+</Screen>
+</AfterScreens>
+<Events>
+<Event>
+<Name>On Startup</Name>
+<Args/>
+<Script/>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Pre Uninstall</Name>
+<Args/>
+<Script/>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Uninstall Error</Name>
+<Args>number e_ErrorCode, string e_ErrorMsgID</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû â ñëó÷àå îøèáêè, âî âðåìÿ äåèíñòàëëÿöèè ôàéëîâ.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Post Uninstall</Name>
+<Args/>
+<Script/>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Shutdown</Name>
+<Args/>
+<Script>
+-- Ýòà ôóíêöèÿ âûçûâàåòñÿ â êîíöå, ïîñëå âñåõ îñòàëüíûõ äåéñòâèé.
+-- Âûïîëíÿåò ïåðåçàãðóçêó ÏÊ, åñëè òðåáóåòñÿ óñëîâèÿìè óñòàíîâêè.
+-- Ôóíêöèÿ èç _SUF70_Global_Functions.lua.
+-- Íå èçìåíÿéòå ýòîò ñöåíàðèé, åñëè íè÷åãî íå ïîíèìàåòå.
+g_HandleSystemReboot();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+</UninstallData>
+<ProjectData>
+<LogFile>
+<Create>0</Create>
+<Filename>%TempFolder%\%ProductName% Setup Log.txt</Filename>
+<WriteMode>0</WriteMode>
+<ActionDetailLevel>1</ActionDetailLevel>
+</LogFile>
+<EnableSilentMode>0</EnableSilentMode>
+<StartInSilentMode>0</StartInSilentMode>
+<VerifyArchive>0</VerifyArchive>
+<UserProfile>1</UserProfile>
+<UserPrivilegeLevel>0</UserPrivilegeLevel>
+<MainWindowSettings>
+<ShowBackGroundWindow>0</ShowBackGroundWindow>
+<WindowStyle>0</WindowStyle>
+<WindowAppearance>1</WindowAppearance>
+<SolidBackColor format="hex">008080</SolidBackColor>
+<GradientBackColor format="hex">b4c2e3</GradientBackColor>
+<GradientForeColor format="hex">5971b6</GradientForeColor>
+<ImageFile/>
+<UseCustomIcon>1</UseCustomIcon>
+<CustomIcon>%TempLaunchFolder%\ico4.ico</CustomIcon>
+<HideTaskbarIcon>0</HideTaskbarIcon>
+<AlwaysOnTop>0</AlwaysOnTop>
+<Headline>%ProductName%</Headline>
+<HeadingFont>
+<FontData>
+<FontName>Arial</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-37</Height>
+<Weight>700</Weight>
+<Italic>1</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</HeadingFont>
+<HeadlineTextColor format="hex">ffffff</HeadlineTextColor>
+<Headline3DColor format="hex">000000</Headline3DColor>
+<HeadlineAlign>0</HeadlineAlign>
+<Headline3d>1</Headline3d>
+<SubHeading>v%ProductVer%</SubHeading>
+<SubHeadingFont>
+<FontData>
+<FontName>Arial</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-18</Height>
+<Weight>700</Weight>
+<Italic>1</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</SubHeadingFont>
+<SubHeadingTextColor format="hex">ffffff</SubHeadingTextColor>
+<SubHeading3DColor format="hex">000000</SubHeading3DColor>
+<SubHeadingAlign>0</SubHeadingAlign>
+<SubHeading3d>1</SubHeading3d>
+<Footer>%Copyright%. All rights reserved. %CompanyURL%</Footer>
+<FooterFont>
+<FontData>
+<FontName>Arial</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-16</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</FooterFont>
+<FooterTextColor format="hex">ffffff</FooterTextColor>
+<Footer3DColor format="hex">000000</Footer3DColor>
+<FooterAlign>0</FooterAlign>
+<Footer3d>1</Footer3d>
+</MainWindowSettings>
+<SetupExpiration>
+<ExpireByDate>0</ExpireByDate>
+<DateMethod>0</DateMethod>
+<NumDaysBld>30</NumDaysBld>
+<NumDaysRun>30</NumDaysRun>
+<AbortNotWriteDFR>1</AbortNotWriteDFR>
+<ExpireDate>1775672968</ExpireDate>
+<TellUserDate>0</TellUserDate>
+<ExpireByUses>0</ExpireByUses>
+<UsesMethod>1</UsesMethod>
+<NumUsesUser>1</NumUsesUser>
+<NumUsesSystem>2</NumUsesSystem>
+<AbortNotWritable>1</AbortNotWritable>
+<TellUserUses>0</TellUserUses>
+<UniqueKey>D7D4BF2D-82FC-47AF-B822-2770CDF94719</UniqueKey>
+<ShowContactInfo>0</ShowContactInfo>
+<ContactName>%CompanyName%</ContactName>
+<ContactURL>%CompanyURL%</ContactURL>
+<ContactEmail/>
+<ContactPhone/>
+</SetupExpiration>
+<SetupRequirements>
+<OSCond>
+<OS>32768</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>0</OS>
+<OS>0</OS>
+<OS>0</OS>
+<OS>0</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+<OS>65535</OS>
+</OSCond>
+<ScreenWidth>0</ScreenWidth>
+<ScreenHeight>0</ScreenHeight>
+<ColorDepth>0</ColorDepth>
+<RAM>0</RAM>
+<AdminReq>0</AdminReq>
+<Action>0</Action>
+</SetupRequirements>
+<Launcher/>
+<ProjectTheme>Permissiveness Theme</ProjectTheme>
+<ProjFileDesc>New Project</ProjFileDesc>
+<ProjFileAuthor/>
+<ProjFileCompany/>
+<ProjFileNotes/>
+<ProjFileCopyright>Copyright 2026 </ProjFileCopyright>
+<ProjFileURL/>
+<ProjFileEmail/>
+<ProjFileCreatedVer>9.5.0.0</ProjFileCreatedVer>
+<ProjFileSavedVer>9.5.0.0</ProjFileSavedVer>
+<BaseFolderArchive>C:\Users\Scane\Desktop\Permissiveness</BaseFolderArchive>
+<BaseFolderExternal/>
+<UseSkinFile>0</UseSkinFile>
+<SkinFilename/>
+<SkinSubStyle/>
+<ActionPlugins/>
+<DependencyModules/>
+<PrimerFiles>
+<PrimerFile>
+<SourcePath>C:\Users\Scane\Desktop\Permissiveness\assets\images\ico4.ico</SourcePath>
+<DeleteOnExit>0</DeleteOnExit>
+<NeededByUninstall>0</NeededByUninstall>
+<BuildConfigs>
+<Cfg>All</Cfg>
+</BuildConfigs>
+</PrimerFile>
+</PrimerFiles>
+<Events>
+<Event>
+<Name>Global Functions</Name>
+<Args/>
+<Script/>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Startup</Name>
+<Args/>
+<Script/>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Pre Install</Name>
+<Args/>
+<Script/>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Install Error</Name>
+<Args>number e_ErrorCode, string e_ErrorMsgID</Args>
+<Script>-- Ýòè äåéñòâèÿ áóäóò âûïîëíåíû â ñëó÷àå îøèáêè, âî âðåìÿ óñòàíîâêè ôàéëîâ.
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Post Install</Name>
+<Args/>
+<Script>function g_RestartExplorer()
+    -- Çàâåðøåíèå ïðîöåññà explorer.exe
+    Shell.Execute("", "taskkill", "/F /IM explorer.exe", "", SW_HIDE);
+    
+    -- Ïàóçà 500ìñ äëÿ êîððåêòíîãî çàâåðøåíèÿ ïðîöåññà
+    File.Sleep(500);
+    
+    -- Çàïóñê explorer.exe çàíîâî
+    Shell.Execute("", "explorer.exe", "", "", SW_HIDE);
+    
+    -- Ïàóçà 500ìñ äëÿ ñòàáèëèçàöèè
+    File.Sleep(500);
+end</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Shutdown</Name>
+<Args/>
+<Script>
+-- Ýòà ôóíêöèÿ âûçûâàåòñÿ â êîíöå, ïîñëå âñåõ îñòàëüíûõ äåéñòâèé.
+-- Âûïîëíÿåò ïåðåçàãðóçêó ÏÊ, åñëè òðåáóåòñÿ óñëîâèÿìè óñòàíîâêè.
+-- Ôóíêöèÿ èç _SUF70_Global_Functions.lua.
+-- Íå èçìåíÿéòå ýòîò ñöåíàðèé, åñëè íè÷åãî íå ïîíèìàåòå.
+g_HandleSystemReboot();
+</Script>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+</Events>
+</ProjectData>
+<LangSettings>
+<Language>
+<Name>Russian</Name>
+<Default>1</Default>
+<Primary>25</Primary>
+<Secondary/>
+</Language>
+<Language>
+<Name>English</Name>
+<Default>0</Default>
+<Primary>9</Primary>
+<Secondary>
+<ID>1</ID>
+<ID>2</ID>
+<ID>3</ID>
+<ID>4</ID>
+<ID>5</ID>
+<ID>6</ID>
+<ID>7</ID>
+<ID>8</ID>
+<ID>9</ID>
+<ID>10</ID>
+<ID>11</ID>
+<ID>12</ID>
+<ID>13</ID>
+</Secondary>
+</Language>
+</LangSettings>
+<SUF7SessionVars>
+<SessionVar>
+<Name>%ProductName%</Name>
+<Value>Permissiveness</Value>
+<Type>1</Type>
+</SessionVar>
+<SessionVar>
+<Name>%CompanyName%</Name>
+<Value>Sñànå546</Value>
+<Type>1</Type>
+</SessionVar>
+<SessionVar>
+<Name>%ProductVer%</Name>
+<Value>1.5</Value>
+<Type>1</Type>
+</SessionVar>
+<SessionVar>
+<Name>%Copyright%</Name>
+<Value>Copyright © 2015 %CompanyName%</Value>
+<Type>1</Type>
+</SessionVar>
+<SessionVar>
+<Name>%CompanyURL%</Name>
+<Value>https://github.com/Scane546/Permissiveness</Value>
+<Type>1</Type>
+</SessionVar>
+<SessionVar>
+<Name>%WindowTitle%</Name>
+<Value>%ProductName% Setup</Value>
+<Type>1</Type>
+</SessionVar>
+<SessionVar>
+<Name>%WindowTitleUninstall%</Name>
+<Value>%ProductName% Uninstaller</Value>
+<Type>1</Type>
+</SessionVar>
+<SessionVar>
+<Name>%AppFolder%</Name>
+<Value>%ProgramFilesFolder%\%ProductName%</Value>
+<Type>2</Type>
+</SessionVar>
+<SessionVar>
+<Name>%AppShortcutFolderName%</Name>
+<Value>%ProductName%</Value>
+<Type>2</Type>
+</SessionVar>
+</SUF7SessionVars>
+<BuildConfigurations>
+<BuildConfig>
+<Name>Default</Name>
+<PreBuildProg/>
+<PreBuildCmdLine/>
+<PreBuildWait>0</PreBuildWait>
+<PostBuildProg/>
+<PostBuildCmdLine/>
+<PostBuildWait>0</PostBuildWait>
+<Filename>Permissiveness_Setup.exe</Filename>
+<OutputFolder>C:\Users\Scane\Desktop</OutputFolder>
+<SegmentSizeMode>0</SegmentSizeMode>
+<CustomSegSize>0</CustomSegSize>
+<CustomSegSizeMode>0</CustomSegSizeMode>
+<Platform>1</Platform>
+<CollectLaunchUserInfo>0</CollectLaunchUserInfo>
+<CodeSignLocation/>
+<CodeSignCertificateFile/>
+<CodeSignPVKFile/>
+<CodeSignTimeStampURL/>
+<CodeSignDescription/>
+<CodeSignDescriptionURL/>
+<CodeSignSetups>0</CodeSignSetups>
+<CodeSigningTool>0</CodeSigningTool>
+<Arguments/>
+<UseCustomIcon>1</UseCustomIcon>
+<CustomIconFile>C:\Users\Scane\Desktop\Permissiveness\assets\images\ico4.ico</CustomIconFile>
+<ResourceFileVersion>1.5</ResourceFileVersion>
+<ResourceProductVersion>1.5</ResourceProductVersion>
+<ResourceCompanyName>Scane546</ResourceCompanyName>
+<ResourceProductName>Permissiveness</ResourceProductName>
+<ResourceComments/>
+<ResourceInternalName/>
+<ResourceFileDescription>Setup Application</ResourceFileDescription>
+<ResourceCopyright>Setup Engine Copyright © 1992-2015 Indigo Rose Corporation</ResourceCopyright>
+<ResourceTrademarks>Setup Factory is a trademark of Indigo Rose Corporation</ResourceTrademarks>
+<ResourcePrivateBuild/>
+<ResourceSpecialBuild/>
+<StampResources>1</StampResources>
+<CompressionType CompressionSetting="LZMA2_HIGH" DictionarySize="24" WordSize="32" CPUThreads="2"/>
+<Vars/>
+</BuildConfig>
+</BuildConfigurations>
+<GlobalScriptIncludes>
+<GlobalIncludeScriptFile>
+<Filename>#SUFDIR#\Includes\Scripts\_SUF70_Global_Functions.lua</Filename>
+<IRReq>1</IRReq>
+<BuildConfigs>
+<Cfg>All</Cfg>
+</BuildConfigs>
+</GlobalIncludeScriptFile>
+</GlobalScriptIncludes>
+</DocumentData>

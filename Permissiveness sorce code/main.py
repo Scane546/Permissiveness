@@ -31,6 +31,14 @@ try:
 except ImportError:
     PYSTRAY_AVAILABLE = False
 
+try:
+    import win32event
+    import win32api
+    import winerror
+    WIN32_MUTEX_AVAILABLE = True
+except ImportError:
+    WIN32_MUTEX_AVAILABLE = False
+
 # Настройка темы
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
@@ -71,6 +79,13 @@ class VPNManager:
         
         # Словарь для хранения иконок в трее и свернутых окон
         self.tray_icons = {}  # {app_name: {'icon': pystray_icon, 'windows': [hwnd1, hwnd2]}}
+        
+        # Иконка главного приложения в трее
+        self.main_tray_icon = None
+        self.is_minimized_to_tray = False
+        
+        # Перехват закрытия окна
+        self.root.protocol("WM_DELETE_WINDOW", self.minimize_main_to_tray)
         
         # Установка иконки приложения
         try:
@@ -679,7 +694,7 @@ PortalWG.exe
             
             # Создаем меню для иконки
             menu = pystray.Menu(
-                item('Развернуть', lambda: self.restore_windows(app_name)),
+                item('Развернуть', lambda: self.restore_windows(app_name), default=True),
                 item('Закрыть иконку', lambda: self.remove_tray_icon(app_name))
             )
             
@@ -1357,13 +1372,119 @@ PortalWG.exe
             self.save_config()
             self.show_bat_settings()  # Обновить окно
     
+    def minimize_main_to_tray(self):
+        """Сворачивание главного окна в трей"""
+        if not PYSTRAY_AVAILABLE:
+            self.root.destroy()
+            return
+        
+        try:
+            # Скрываем окно
+            self.root.withdraw()
+            self.is_minimized_to_tray = True
+            
+            # Создаем иконку в трее если еще не создана
+            if self.main_tray_icon is None:
+                icon_path = get_image_path("ico4.ico")
+                if not os.path.exists(icon_path):
+                    icon_path = get_image_path("icon.ico")
+                
+                image = Image.open(icon_path)
+                if image.mode != 'RGBA':
+                    image = image.convert('RGBA')
+                
+                menu = pystray.Menu(
+                    item('Открыть', self.restore_main_from_tray, default=True),
+                    item('Выход', self.quit_app)
+                )
+                
+                self.main_tray_icon = pystray.Icon(
+                    "permissiveness_main",
+                    image,
+                    "Permissiveness",
+                    menu
+                )
+                
+                threading.Thread(target=self.main_tray_icon.run, daemon=True).start()
+        except Exception as e:
+            self.root.destroy()
+    
+    def on_tray_click(self, icon, item):
+        """Обработчик клика по иконке в трее (двойной клик разворачивает)"""
+        # pystray передает button в item при клике
+        # Разворачиваем при любом клике левой кнопкой
+        self.restore_main_from_tray()
+    
+    def restore_main_from_tray(self):
+        """Разворачивание главного окна из трея"""
+        self.root.deiconify()
+        self.root.lift()
+        self.root.focus_force()
+        self.is_minimized_to_tray = False
+        
+        # Удаляем иконку из трея
+        if self.main_tray_icon:
+            self.main_tray_icon.stop()
+            self.main_tray_icon = None
+    
+    def quit_app(self):
+        """Полное закрытие приложения"""
+        if self.main_tray_icon:
+            self.main_tray_icon.stop()
+        self.root.quit()
+        self.root.destroy()
+        sys.exit(0)
+    
     def run(self):
         """Запуск приложения"""
         self.root.mainloop()
 
 
 if __name__ == "__main__":
+    # Проверка на единственный экземпляр
+    mutex = None
+    if WIN32_MUTEX_AVAILABLE:
+        mutex = win32event.CreateMutex(None, False, 'Global\\PermissivenessAppMutex')
+        last_error = win32api.GetLastError()
+        if last_error == winerror.ERROR_ALREADY_EXISTS:
+            # Приложение уже запущено - ищем окно и разворачиваем его
+            if WIN32_AVAILABLE:
+                def find_and_restore():
+                    hwnd = win32gui.FindWindow(None, "Permissiveness")
+                    if hwnd:
+                        # Если окно свернуто, разворачиваем
+                        if win32gui.IsIconic(hwnd):
+                            win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
+                        # Показываем окно
+                        win32gui.ShowWindow(hwnd, win32con.SW_SHOW)
+                        # Выводим на передний план
+                        win32gui.SetForegroundWindow(hwnd)
+                    else:
+                        # Окно скрыто в трее - создаем файл-сигнал
+                        signal_file = os.path.join(os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else ".", "restore_signal.tmp")
+                        with open(signal_file, 'w') as f:
+                            f.write('restore')
+                
+                find_and_restore()
+            sys.exit(0)
+    
     app = VPNManager()
+    
+    # Запускаем мониторинг сигнала восстановления
+    def monitor_restore_signal():
+        signal_file = os.path.join(os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else ".", "restore_signal.tmp")
+        while True:
+            time.sleep(0.5)
+            if os.path.exists(signal_file):
+                try:
+                    os.remove(signal_file)
+                    if app.is_minimized_to_tray:
+                        app.root.after(0, app.restore_main_from_tray)
+                except:
+                    pass
+    
+    threading.Thread(target=monitor_restore_signal, daemon=True).start()
+    
     app.run()
 
 
