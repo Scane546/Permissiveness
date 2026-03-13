@@ -22,6 +22,7 @@ pyinstaller --noconfirm --onefile --windowed ^
     --add-data "assets\images\Zapret2.ico;assets\images" ^
     --add-data "config.json;." ^
     --add-data "processes_to_kill.txt;." ^
+    --hidden-import "app_info" ^
     main.py
 
 if errorlevel 1 (

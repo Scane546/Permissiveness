@@ -9,6 +9,9 @@ import native_dialog
 import time
 import threading
 from PIL import Image, ImageTk
+import urllib.request
+import urllib.error
+from app_info import APP_VERSION, GITHUB_REPO, APP_NAME
 
 try:
     from pywinauto import Application
@@ -74,7 +77,7 @@ def get_image_path(image_name):
 class VPNManager:
     def __init__(self):
         self.root = ctk.CTk()
-        self.root.title("Permissiveness")
+        self.root.title(APP_NAME)
         self.root.geometry("800x600")
         
         # Словарь для хранения иконок в трее и свернутых окон
@@ -229,12 +232,17 @@ PortalWG.exe
                     del self.config["zapret_bat_folder"]
                 if "zapret_bat_files" not in self.config:
                     self.config["zapret_bat_files"] = []
+                # Удаляем старые поля version и github_repo из config если они есть
+                if "version" in self.config:
+                    del self.config["version"]
+                if "github_repo" in self.config:
+                    del self.config["github_repo"]
             except Exception as e:
                 self.config = {
                     "portal_wg_path": "",
                     "portal_wg_config": "",
                     "zapret2_path": "",
-                    "zapret_bat_folder": "",
+                    "zapret_bat_files": [],
                     "enable_auto_connect": True,
                     "minimize_zapret2_to_tray": False,
                     "minimize_portal_wg_to_tray": False,
@@ -244,8 +252,7 @@ PortalWG.exe
             self.config = {
                 "portal_wg_path": "",
                 "portal_wg_config": "",
-                "zapret2_path": "",
-                "zapret_bat_folder": "",
+                "zapret_bat_files": [],
                 "enable_auto_connect": True,
                 "minimize_zapret2_to_tray": False,
                 "minimize_portal_wg_to_tray": False,
@@ -964,6 +971,19 @@ PortalWG.exe
         )
         btn_general.pack(pady=15)
         
+        # Кнопка: Проверить обновления
+        btn_update = ctk.CTkButton(
+            self.root,
+            text="Проверить обновления",
+            command=self.check_for_updates,
+            width=600,
+            height=70,
+            font=("Arial", 16),
+            fg_color="green",
+            hover_color="darkgreen"
+        )
+        btn_update.pack(pady=15)
+        
         # Кнопка назад
         back_btn = ctk.CTkButton(
             self.root,
@@ -1434,6 +1454,166 @@ PortalWG.exe
         self.root.quit()
         self.root.destroy()
         sys.exit(0)
+    
+    def check_for_updates(self):
+        """Проверка обновлений на GitHub"""
+        try:
+            # Показываем что идет проверка
+            checking_window = ctk.CTkToplevel(self.root)
+            checking_window.title("Проверка обновлений")
+            checking_window.geometry("300x100")
+            checking_window.transient(self.root)
+            checking_window.grab_set()
+            
+            label = ctk.CTkLabel(checking_window, text="Проверка обновлений...", font=("Arial", 14))
+            label.pack(pady=30)
+            
+            # Проверяем в отдельном потоке
+            def check_thread():
+                try:
+                    repo = GITHUB_REPO
+                    # Используем /releases вместо /releases/latest чтобы получить все релизы включая пре-релизы
+                    url = f"https://api.github.com/repos/{repo}/releases"
+                    
+                    req = urllib.request.Request(url)
+                    req.add_header('User-Agent', 'Permissiveness-Updater')
+                    
+                    with urllib.request.urlopen(req, timeout=10) as response:
+                        releases = json.loads(response.read().decode())
+                    
+                    if not releases:
+                        checking_window.destroy()
+                        messagebox.showinfo("Обновления", "Релизы не найдены")
+                        return
+                    
+                    # Берем первый релиз (самый новый)
+                    data = releases[0]
+                    
+                    latest_version = data['tag_name'].replace('v', '').replace('V', '')
+                    current_version = APP_VERSION
+                    
+                    checking_window.destroy()
+                    
+                    if self.compare_versions(latest_version, current_version) > 0:
+                        # Есть новая версия
+                        download_url = None
+                        for asset in data.get('assets', []):
+                            if asset['name'].endswith('.exe'):
+                                download_url = asset['browser_download_url']
+                                break
+                        
+                        prerelease_text = " (Pre-release)" if data.get('prerelease') else ""
+                        message = f"Доступна новая версия: {latest_version}{prerelease_text}\nТекущая версия: {current_version}\n\n"
+                        if download_url:
+                            message += "Скачать обновление?"
+                            result = messagebox.askyesno("Обновление доступно", message)
+                            if result:
+                                self.download_update(download_url, latest_version)
+                        else:
+                            message += "Перейти на страницу релиза?"
+                            result = messagebox.askyesno("Обновление доступно", message)
+                            if result:
+                                import webbrowser
+                                webbrowser.open(data['html_url'])
+                    elif self.compare_versions(latest_version, current_version) < 0:
+                        # Текущая версия новее чем в репозитории
+                        messagebox.showinfo(
+                            "Ого!", 
+                            f"Ого! У тебя версия {current_version}, а в репозитории только {latest_version}!\n\n"
+                            f"Похоже у тебя версия новее чем у всех, ведь ее еще нет в репозитории.\n\n"
+                            f"Да ты крут! 😎"
+                        )
+                    else:
+                        messagebox.showinfo("Обновления", f"У вас установлена последняя версия ({current_version})")
+                
+                except urllib.error.HTTPError as e:
+                    checking_window.destroy()
+                    if e.code == 404:
+                        messagebox.showerror("Ошибка", "Репозиторий не найден или нет релизов")
+                    else:
+                        messagebox.showerror("Ошибка", f"Ошибка HTTP: {e.code}")
+                except Exception as e:
+                    checking_window.destroy()
+                    messagebox.showerror("Ошибка", f"Не удалось проверить обновления:\n{str(e)}")
+            
+            threading.Thread(target=check_thread, daemon=True).start()
+            
+        except Exception as e:
+            messagebox.showerror("Ошибка", f"Ошибка при проверке обновлений:\n{str(e)}")
+    
+    def compare_versions(self, v1, v2):
+        """Сравнение версий (возвращает 1 если v1 > v2, -1 если v1 < v2, 0 если равны)"""
+        try:
+            parts1 = [int(x) for x in v1.split('.')]
+            parts2 = [int(x) for x in v2.split('.')]
+            
+            # Дополняем нулями до одинаковой длины
+            while len(parts1) < len(parts2):
+                parts1.append(0)
+            while len(parts2) < len(parts1):
+                parts2.append(0)
+            
+            for p1, p2 in zip(parts1, parts2):
+                if p1 > p2:
+                    return 1
+                elif p1 < p2:
+                    return -1
+            return 0
+        except:
+            return 0
+    
+    def download_update(self, url, version):
+        """Скачивание и установка обновления"""
+        try:
+            # Окно прогресса
+            progress_window = ctk.CTkToplevel(self.root)
+            progress_window.title("Скачивание обновления")
+            progress_window.geometry("400x150")
+            progress_window.transient(self.root)
+            progress_window.grab_set()
+            
+            label = ctk.CTkLabel(progress_window, text="Скачивание обновления...", font=("Arial", 14))
+            label.pack(pady=20)
+            
+            progress_label = ctk.CTkLabel(progress_window, text="0%", font=("Arial", 12))
+            progress_label.pack(pady=10)
+            
+            def download_thread():
+                try:
+                    # Определяем путь для сохранения
+                    if getattr(sys, 'frozen', False):
+                        exe_dir = os.path.dirname(sys.executable)
+                        current_exe = sys.executable
+                        new_exe = os.path.join(exe_dir, f"Permissiveness_v{version}.exe")
+                    else:
+                        new_exe = f"Permissiveness_v{version}.exe"
+                    
+                    # Скачиваем файл
+                    def reporthook(block_num, block_size, total_size):
+                        if total_size > 0:
+                            percent = min(100, int(block_num * block_size * 100 / total_size))
+                            progress_label.configure(text=f"{percent}%")
+                    
+                    urllib.request.urlretrieve(url, new_exe, reporthook)
+                    
+                    progress_window.destroy()
+                    
+                    message = f"Обновление скачано: {new_exe}\n\n"
+                    if getattr(sys, 'frozen', False):
+                        message += "Для установки:\n1. Закройте приложение\n2. Удалите старый .exe\n3. Переименуйте новый файл"
+                    else:
+                        message += "Файл сохранен в текущей папке"
+                    
+                    messagebox.showinfo("Готово", message)
+                    
+                except Exception as e:
+                    progress_window.destroy()
+                    messagebox.showerror("Ошибка", f"Не удалось скачать обновление:\n{str(e)}")
+            
+            threading.Thread(target=download_thread, daemon=True).start()
+            
+        except Exception as e:
+            messagebox.showerror("Ошибка", f"Ошибка при скачивании:\n{str(e)}")
     
     def run(self):
         """Запуск приложения"""
