@@ -2756,10 +2756,11 @@ end
 <ScreenW>650</ScreenW>
 <ScreenH>400</ScreenH>
 </StyleData>
-<NumCheckBoxes>3</NumCheckBoxes>
+<NumCheckBoxes>4</NumCheckBoxes>
 <Check0>0</Check0>
-<Check1>2</Check1>
-<Check2>3</Check2>
+<Check1>1</Check1>
+<Check2>2</Check2>
+<Check3>3</Check3>
 <Cols>1</Cols>
 <Distribute>0</Distribute>
 <Events>
@@ -2937,7 +2938,7 @@ end
 <Enabled>1</Enabled>
 <TabOrder>2</TabOrder>
 <Checked>0</Checked>
-<Variable>check02</Variable>
+<Variable>startup_icon</Variable>
 </Control>
 <Control>
 <Type>10</Type>
@@ -3233,6 +3234,7 @@ end
 <IDS_CTRL_CHECK_BOX_01>—оздать €рлык на рабочем столе</IDS_CTRL_CHECK_BOX_01>
 <IDS_CTRL_CHECK_BOX_03>—оздать €рлык в меню быстрого доступа</IDS_CTRL_CHECK_BOX_03>
 <IDS_CTRL_CHECK_BOX_04>—оздать €рлык в меню ѕ”— </IDS_CTRL_CHECK_BOX_04>
+<IDS_CTRL_CHECK_BOX_02>«апускать при старте Windows</IDS_CTRL_CHECK_BOX_02>
 </Messages>
 </SUF70Messages>
 <SUF70Messages>
@@ -3270,6 +3272,7 @@ end
 <IDS_CTRL_CHECK_BOX_01>Option 01</IDS_CTRL_CHECK_BOX_01>
 <IDS_CTRL_CHECK_BOX_03>Option 03</IDS_CTRL_CHECK_BOX_03>
 <IDS_CTRL_CHECK_BOX_04>Option 04</IDS_CTRL_CHECK_BOX_04>
+<IDS_CTRL_CHECK_BOX_02>Option 02</IDS_CTRL_CHECK_BOX_02>
 </Messages>
 </SUF70Messages>
 </Languages>

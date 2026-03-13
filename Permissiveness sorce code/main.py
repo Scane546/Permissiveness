@@ -226,6 +226,8 @@ PortalWG.exe
                     self.config["minimize_portal_wg_to_tray"] = False
                 if "minimize_zapret_bat_to_tray" not in self.config:
                     self.config["minimize_zapret_bat_to_tray"] = False
+                if "minimize_main_to_tray" not in self.config:
+                    self.config["minimize_main_to_tray"] = True  # По умолчанию включено
                 # Миграция со старой структуры (папка -> список файлов)
                 if "zapret_bat_folder" in self.config and "zapret_bat_files" not in self.config:
                     self.config["zapret_bat_files"] = []
@@ -246,7 +248,8 @@ PortalWG.exe
                     "enable_auto_connect": True,
                     "minimize_zapret2_to_tray": False,
                     "minimize_portal_wg_to_tray": False,
-                    "minimize_zapret_bat_to_tray": False
+                    "minimize_zapret_bat_to_tray": False,
+                    "minimize_main_to_tray": True
                 }
         else:
             self.config = {
@@ -256,7 +259,8 @@ PortalWG.exe
                 "enable_auto_connect": True,
                 "minimize_zapret2_to_tray": False,
                 "minimize_portal_wg_to_tray": False,
-                "minimize_zapret_bat_to_tray": False
+                "minimize_zapret_bat_to_tray": False,
+                "minimize_main_to_tray": True
             }
             self.save_config()
     
@@ -1058,6 +1062,18 @@ PortalWG.exe
         )
         checkbox4.pack(pady=15, anchor="w", padx=50)
         
+        # Галочка 5: Сворачивать основное приложение в трей
+        self.minimize_main_to_tray_var = ctk.BooleanVar(value=self.config.get("minimize_main_to_tray", True))
+        checkbox5 = ctk.CTkCheckBox(
+            checkboxes_frame,
+            text="Сворачивать основное приложение в трей при закрытии",
+            variable=self.minimize_main_to_tray_var,
+            font=("Arial", 16),
+            checkbox_width=30,
+            checkbox_height=30
+        )
+        checkbox5.pack(pady=15, anchor="w", padx=50)
+        
         # Кнопка сохранить
         save_btn = ctk.CTkButton(
             self.root,
@@ -1089,6 +1105,7 @@ PortalWG.exe
         self.config["minimize_zapret2_to_tray"] = self.minimize_zapret2_var.get()
         self.config["minimize_portal_wg_to_tray"] = self.minimize_portal_wg_var.get()
         self.config["minimize_zapret_bat_to_tray"] = self.minimize_zapret_bat_var.get()
+        self.config["minimize_main_to_tray"] = self.minimize_main_to_tray_var.get()
         self.save_config()
         messagebox.showinfo("Успешно", "Настройки сохранены")
     
@@ -1394,6 +1411,11 @@ PortalWG.exe
     
     def minimize_main_to_tray(self):
         """Сворачивание главного окна в трей"""
+        # Проверяем настройку - если отключено, просто закрываем приложение
+        if not self.config.get("minimize_main_to_tray", True):
+            self.quit_app()
+            return
+        
         if not PYSTRAY_AVAILABLE:
             self.root.destroy()
             return
@@ -1530,6 +1552,16 @@ PortalWG.exe
                     checking_window.destroy()
                     if e.code == 404:
                         messagebox.showerror("Ошибка", "Репозиторий не найден или нет релизов")
+                    elif e.code == 403:
+                        messagebox.showerror(
+                            "Ошибка доступа", 
+                            "GitHub API ограничил доступ (403 Forbidden).\n\n"
+                            "Возможные причины:\n"
+                            "- Превышен лимит запросов (60 в час)\n"
+                            "- Проблемы с интернет-соединением\n"
+                            "- Блокировка GitHub в вашей сети\n\n"
+                            "Попробуйте позже или проверьте подключение."
+                        )
                     else:
                         messagebox.showerror("Ошибка", f"Ошибка HTTP: {e.code}")
                 except Exception as e:
